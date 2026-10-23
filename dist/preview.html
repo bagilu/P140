@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant" data-editor-preview="true">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="description" content="P140 花蓮公車時刻表模擬原型。選擇星期與時間，觀察多條模擬路線的公車位置。非即時車況。">
+ <meta name="theme-color" content="#166b63"><title>P140 編輯草稿預覽</title>
+ <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css">
+ <script defer src="vendor/leaflet.js"></script><script type="module" src="app.mjs"></script>
+</head>
+<body>
+ <main class="app">
+  <header class="controls">
+   <div class="toolbar">
+    <div class="brand"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="16" rx="4"/><path d="M5 10h14M8 21v-2m8 2v-2M9 6h6"/><circle cx="8.5" cy="15.5" r=".7"/><circle cx="15.5" cy="15.5" r=".7"/></svg></span><div><h1>花蓮公車<span class="version">P140 · V0.002</span></h1><p>讓一天的公車，在地圖上流動。</p></div></div>
+    <fieldset class="weekdays"><legend class="sr-only">選擇一般週排程的星期</legend><button data-day="1">一</button><button data-day="2">二</button><button data-day="3">三</button><button data-day="4">四</button><button data-day="5">五</button><button data-day="6">六</button><button data-day="7">日</button></fieldset>
+    <div class="playback"><time id="clock">08:00:00</time><button id="play" class="play" aria-label="播放模擬" disabled><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 3.5 16 10 6 16.5z"/></svg><span>播放</span></button><label class="speed"><span class="sr-only">播放倍速</span><select id="speed"><option value="1">1×</option><option value="30">30×</option><option value="60" selected>60×</option><option value="300">300×</option></select></label><button class="info" id="info" aria-label="查看模擬說明">?</button></div>
+   </div>
+   <div class="timeline"><label class="sr-only" for="timeline">模擬時間，0至24小時</label><input type="range" id="timeline" min="0" max="86400" step="1" value="28800" aria-valuetext="08:00:00"><div class="ticks" aria-hidden="true"><span>00:00</span><span>04:00</span><span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span><span>24:00</span></div></div>
+   <div class="notice"><span class="notice-badge"><i></i>時刻表模擬 · 非即時車況</span><span class="notice-copy">位置與到站時間為估算，行程後段可能累積較大誤差，請勿據此判斷候車時間。</span><span class="demo-badge">全部為模擬資料</span></div>
+  </header>
+  <section class="map-shell" aria-label="花蓮公車模擬地圖">
+   <div id="map" role="region" aria-label="可縮放與平移的花蓮市地圖"></div>
+   <div class="map-top"><div class="network-status"><span class="status-dot"></span><span id="day-label">星期五</span><span class="divider"></span><strong id="active-count">—</strong><span>輛行駛中</span><span id="dwell-count" class="dwell-count"></span></div><button id="reset-view" class="reset-view" title="回到初始地圖範圍" aria-label="回到初始地圖範圍"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4M7 10h6m-3-3v6"/></svg><span>全覽</span></button></div>
+   <div class="empty" id="empty" hidden><span class="empty-icon">☾</span><strong>這個時間，路網暫時安靜。</strong><p>目前沒有行駛中的模擬班次。</p><button id="jump-morning">前往 08:00</button></div>
+   <div class="loading" id="loading" role="status">正在讀取模擬路網…</div>
+   <div class="tile-warning" id="tile-warning" hidden>底圖暫時無法載入；公車模擬仍可操作。</div>
+   <div class="legend"><span class="legend-title">全路網<span>3 條模擬路線</span></span><div id="legend-items"></div><div class="trace-key"><span><i class="past-line"></i>已走過</span><span><i class="future-line"></i>即將行駛</span></div><p id="trace-overview-note">同線多車路徑可能重疊；點選公車看單班分界。</p><div id="trace-focus" hidden><span id="trace-focus-text"></span><button id="clear-focus" aria-label="取消公車路徑聚焦">取消</button></div></div>
+   <div class="map-caption">花蓮市區 · 道路幾何示範<br><span>工作台草稿 · 非正式乘車資訊</span></div>
+  </section>
+  <footer><span>慈濟大學 經營管理學系 <a href="https://tcubmdsbilab.github.io/P101/" target="_blank" rel="noopener">好玩實驗室</a> 作品</span><span>一般週排程 · 未納入國定假日與臨時異動</span></footer>
+ </main>
+ <dialog id="about"><div class="dialog-heading"><span class="eyebrow">P140 · PROTOTYPE V0.002</span><button id="close-info" aria-label="關閉說明">×</button></div><h2>看見排程，不代表實際車況。</h2><p>這是管理工作台匯出的暫存預覽。位置與道路可能尚未確認，逐站時間為估算；不能作為正式乘車資訊。</p><p>道路折線由 OSRM 依 OpenStreetMap 道路產生，尚未查證為實際公車走法。公車位置、停站與到站時間均為模擬。</p><div class="dialog-callout">途中誤差可能隨行程累積。請勿據此安排候車或轉乘，實際乘車請查詢營運單位與即時到站資訊。</div><h3>操作方式</h3><p>選星期、拖曳上方時間軸，或按播放觀察所有路線。1×、30×、60×、300× 為模擬倍速；修改時間與星期不會改變地圖視角。</p><p>每班行駛中公車的已走路段為虛線，前方路段為實線。同一路徑有多班車時線條可能重疊；點選公車可單獨看該班路徑，其他公車仍全部顯示。再次點選、點空白地圖、按取消或 Escape 可回到全路網。班次結束或切換星期時自動取消聚焦。</p><p>到站前30秒顯示站名，停靠20秒，離站後15秒隱藏。以上皆以模擬時間計算，並非實際時間精度。</p><div class="dialog-links"><a href="data/bus_network.json" download>下載模擬 JSON ↗</a><a href="data/network.schema.json" download>下載 JSON Schema ↗</a></div></dialog>
+</body>
+</html>

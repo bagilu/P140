@@ -1,0 +1,331 @@
+{
+  "recognitionVersion": "1.0.0",
+  "routeId": "hualien_310",
+  "shortName": "310",
+  "name": "310 花蓮轉運站－太魯閣遊客中心",
+  "color": "#166b63",
+  "source": {
+    "title": "使用者提供的統聯客運310路線圖與發車時刻表",
+    "url": "",
+    "date": "",
+    "notes": "來源為對話附件，生效日期未標示；所有地理位置與途中時間待補。",
+    "images": [
+      "editor-assets/310-route.png",
+      "editor-assets/310-schedule.png"
+    ]
+  },
+  "warnings": [
+    "原圖標示每日06:30–17:50，另一張發車表為07:10起；來源版本與生效日期需確認。",
+    "去程站序依路線示意圖辨識；回程暫依反向站序建立，實際停靠與位置需逐站核對。",
+    "圖例包含道路兩側站牌與去回程同站停靠，不能把同名站直接視為同一座標。",
+    "途中到站時間及停站時間未提供，必須另外估算。"
+  ],
+  "patterns": [
+    {
+      "id": "310_outbound",
+      "name": "去程",
+      "headsign": "太魯閣遊客中心",
+      "stops": [
+        {
+          "name": "花蓮轉運站",
+          "coord": null
+        },
+        {
+          "name": "花蓮文創園區",
+          "coord": null
+        },
+        {
+          "name": "東大門夜市",
+          "coord": null
+        },
+        {
+          "name": "花蓮醫院（將軍府）",
+          "coord": null
+        },
+        {
+          "name": "松園別館",
+          "coord": null
+        },
+        {
+          "name": "美崙濱海公園",
+          "coord": null
+        },
+        {
+          "name": "石雕博物館",
+          "coord": null
+        },
+        {
+          "name": "海星中興路口",
+          "coord": null
+        },
+        {
+          "name": "台肥花蓮深層海水園區",
+          "coord": null
+        },
+        {
+          "name": "花蓮觀光漁港",
+          "coord": null
+        },
+        {
+          "name": "東華大學美崙校區",
+          "coord": null
+        },
+        {
+          "name": "花蓮曼波園區（華西路）",
+          "coord": null
+        },
+        {
+          "name": "七星潭",
+          "coord": null
+        },
+        {
+          "name": "北埔",
+          "coord": null
+        },
+        {
+          "name": "康樂村（慈濟精舍）",
+          "coord": null
+        },
+        {
+          "name": "光隆博物館",
+          "coord": null
+        },
+        {
+          "name": "玩味蕃樂園",
+          "coord": null
+        },
+        {
+          "name": "新城老街",
+          "coord": null
+        },
+        {
+          "name": "新城公園",
+          "coord": null
+        },
+        {
+          "name": "新城火車站",
+          "coord": null
+        },
+        {
+          "name": "達基力藝術文化基地",
+          "coord": null
+        },
+        {
+          "name": "亞洲水泥廠",
+          "coord": null
+        },
+        {
+          "name": "太魯閣",
+          "coord": null
+        },
+        {
+          "name": "太魯閣遊客中心",
+          "coord": null
+        }
+      ],
+      "departures": [
+        {
+          "time": "07:10",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": "08:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": "11:40",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": "13:00",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "310_inbound",
+      "name": "回程",
+      "headsign": "花蓮轉運站",
+      "stops": [
+        {
+          "name": "太魯閣遊客中心",
+          "coord": null
+        },
+        {
+          "name": "太魯閣",
+          "coord": null
+        },
+        {
+          "name": "亞洲水泥廠",
+          "coord": null
+        },
+        {
+          "name": "達基力藝術文化基地",
+          "coord": null
+        },
+        {
+          "name": "新城火車站",
+          "coord": null
+        },
+        {
+          "name": "新城公園",
+          "coord": null
+        },
+        {
+          "name": "新城老街",
+          "coord": null
+        },
+        {
+          "name": "玩味蕃樂園",
+          "coord": null
+        },
+        {
+          "name": "光隆博物館",
+          "coord": null
+        },
+        {
+          "name": "康樂村（慈濟精舍）",
+          "coord": null
+        },
+        {
+          "name": "北埔",
+          "coord": null
+        },
+        {
+          "name": "七星潭",
+          "coord": null
+        },
+        {
+          "name": "花蓮曼波園區（華西路）",
+          "coord": null
+        },
+        {
+          "name": "東華大學美崙校區",
+          "coord": null
+        },
+        {
+          "name": "花蓮觀光漁港",
+          "coord": null
+        },
+        {
+          "name": "台肥花蓮深層海水園區",
+          "coord": null
+        },
+        {
+          "name": "海星中興路口",
+          "coord": null
+        },
+        {
+          "name": "石雕博物館",
+          "coord": null
+        },
+        {
+          "name": "美崙濱海公園",
+          "coord": null
+        },
+        {
+          "name": "松園別館",
+          "coord": null
+        },
+        {
+          "name": "花蓮醫院（將軍府）",
+          "coord": null
+        },
+        {
+          "name": "東大門夜市",
+          "coord": null
+        },
+        {
+          "name": "花蓮文創園區",
+          "coord": null
+        },
+        {
+          "name": "花蓮轉運站",
+          "coord": null
+        }
+      ],
+      "departures": [
+        {
+          "time": "09:20",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": "10:50",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": "14:20",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": "15:20",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    }
+  ]
+}

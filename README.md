@@ -1,96 +1,75 @@
-# P139 新人的考驗 V0.1
+# P140 花蓮公車 V0.003 — 管理工作台與前台模擬原型
 
-以照片練習記住團體成員姓名的封閉式網頁遊戲。V0.1 提供登入、團體授權、人物與別名管理、照片自動壓縮、個人熟悉優先級、隨機循環問答及個人錯誤回饋。
+本版是可操作的排程視覺化原型，所有路線、站位及班次均為合成示範。310 的名稱僅測試顯示數字路線，並不代表實際310路線。不得用於候車或轉乘判斷。
 
-## 安全與資料原則
+## 管理工作台 V0.003
 
-- 遵循 SBI-P-SDS v3.3：RLS Always On → No Direct Table Access → RPC Only → Least Data → Least Privilege。
-- P139 使用 P130 共用帳號；P139 保留自己的登入頁，不提供註冊、忘記密碼或密碼修改功能。
-- P139 管理團體成員與角色。登入成功不代表有權限，必須被加入團體。
-- 六張 P139 資料表均啟用 RLS，並撤銷 `anon` 與 `authenticated` 的直接資料表權限。前端資料操作只呼叫 P139 RPC。
-- RPC 使用 P139 專屬函式、固定 `search_path`、`auth.uid()` 身分確認及團體角色檢查。具 `SECURITY DEFINER` 的函式只授予必要角色執行權。
-- 照片放在非公開 `p139-private` Storage bucket。瀏覽器上傳的是先壓縮後的 JPEG；Storage policy 限定已授權成員讀取、管理者上傳或更換照片。
-- 每位使用者只能修改與查看自己的優先級及答題錯誤回饋。一般使用者不會取得其他人的錯誤紀錄。
-- ZIP 不含 `config.js`、Service Role Key 或真實照片。
+開啟 `admin.html`。前台主畫面維持 V0.002 的配置，工作台另外提供：官方來源圖片、外部AI辨識JSON匯入、草稿自動儲存與復原、逐站定位、政府站牌JSON候選比對、OSRM道路產生與必經點校正、逐站時間估算、發車班次編輯、草稿預覽、檢查匯出及多路線合併。詳細操作見 `docs/EDITOR_GUIDE.md`。
 
-## ZIP 內容
+內附310圖片辨識草稿 `dist/editor-data/310-recognition.json`，24站／方向、共8個發車班次，位置與途中時間留空。回程反向站序只是待核對草稿，不能直接發布。
 
-- `index.html`, `styles.css`, `app.js`：無建置步驟的前端。
-- `config-sample.js`：Supabase URL、anon/publishable key 與 P130 網址範本。
-- `Database/01_P139_Tables_Storage.sql`：P139 資料表、RLS 與私有照片 bucket。
-- `Database/02_P139_Functions.sql`：P139 RPC 與 Storage 權限檢查。
-- `Database/90_P139_Permissions.sql`：撤銷直接資料表存取並逐一授予 RPC 執行權。
-- `Database/99_P139_HealthCheck.sql`：交付前權限與物件檢查。
+目前不在工作台內直接呼叫AI，也未內建可用的政府站牌候選快照。先以ChatGPT辨識、匯入已下載政府站牌JSON，再執行候選比對。第一版每方向編輯一組行車時間，無法編輯同一路徑下的多組尖離峰設定；匯入遇到此情況會明確報錯。
 
-## 安裝順序
+## 使用方式
 
-### 1. 建立 P130 帳號
+選擇星期一至星期日，拖曳上方 00:00–24:00 時間軸，或以 1×／30×／60×／300× 播放。所有路線一起載入，沒有路線篩選。地圖可縮放、平移；改變時間與星期不重設視角。「全覽」才回到初始範圍。
 
-管理者與預計使用者先依機構流程在 P130 建立帳號並完成 Email 驗證。P139 不含註冊或密碼維護功能。
+公車顯示路線簡稱，移動時有方向箭頭，停靠時顯示暫停符號。站名在到站前30秒出現、停靠20秒期間保留、離站後15秒隱藏，均以模擬時間計算。畫面擁擠時優先保留車輛標記並避讓站名，標記錯開時以引線指向實際模擬位置。
 
-### 2. 安裝資料庫
+## 本版新增路徑顯示
 
-在共用 Supabase Project 的 SQL Editor 依序貼上並執行：
+所有行駛中班次會顯示沿道路的路徑：已走過為虛線，即將行駛為實線，分界隨公車移動及停靠更新。總覽採半透明線條，同路徑多班車可能互相重疊；點選公車時只畫該班路徑，所有車輛仍同時顯示。再次點選、點空白地圖、按取消或 Escape 回到總覽。班次結束或切換星期自動取消聚焦，不改變地圖視角。
 
-1. `Database/01_P139_Tables_Storage.sql`
-2. `Database/02_P139_Functions.sql`
-3. `Database/90_P139_Permissions.sql`
+JSON schemaVersion 仍為1.0.0；所有必要道路折線已存在，不需重複儲存已走／未走路段。資料版本仍保留原合成資料版本，與前台版本分離。
 
-這些檔案僅建立或調整 P139 命名的物件及 `p139-private` bucket；不變更其他 P 專案的資料表或全域權限。
+## 檔案
 
-### 3. 建立第一個團體與管理者
+- `dist/`：可直接靜態部署的前台。
+- `dist/data/bus_network.json`：前台一次讀取的完整合併檔。
+- `dist/data/routes/`：每條路線獨立編輯的原始 JSON，與合併檔使用相同封裝；`routes` 只有一條。
+- `dist/data/manifest.json`：列出獨立路線檔，供合併工具使用；前台不必再逐檔下載。
+- `dist/data/network.schema.json`：JSON Schema Draft 2020-12。
+- `docs/JSON_SPEC.md`：正式欄位與行為契約。
+- `scripts/merge_routes.mjs`：驗證並合併路線檔。
+- `tests/core.test.mjs`：停站、標籤、星期、跨午夜等邏輯測試。
+- `scripts/generate_data.py`：重建合成示範資料，會透過 OSRM 取得道路幾何；快取在 `scripts/cache/`。不需於前台執行。
 
-在 SQL Editor 執行以下呼叫，將名稱與 Email 換成實際資料。Email 必須已在 P130 註冊。呼叫由資料庫管理者在 SQL Editor 執行，不會開放給網站使用者。
+## 本機預覽
 
-```sql
-SELECT public.p139_bootstrap_organization('慈濟大學經營管理學系', 'admin@example.com');
+需要 Python 3；在專案根目錄執行：
+
+```bash
+python -m http.server 8000 --directory dist
 ```
 
-回傳的 `organization_id` 可留存作為管理紀錄。第一位管理者之後可在 P139「成員管理」加入已註冊的使用者，並指定一般成員或管理者角色。
+開啟 `http://localhost:8000/`。請勿直接雙擊 HTML；瀏覽器會限制 `file://` 的模組與 JSON 讀取。
 
-### 4. 檢查資料庫
+## GitHub Pages
 
-執行 `Database/99_P139_HealthCheck.sql`。每一列都應為 `PASS`。若出現 `FAIL`，先修正權限或缺少的 P139 物件，再部署前端。
+將 `dist/` **裡面的內容**放到 GitHub Pages 發布根目錄，保留 `data/` 與 `vendor/` 相對路徑。無資料庫、Auth、API金鑰或即時路由請求。底圖需要網路；地圖元件 Leaflet 1.9.4 已隨包提供。
 
-### 5. 設定前端
+## 更新資料與驗證
 
-1. 將 `config-sample.js` 複製成 `config.js`。
-2. 填入 Supabase Project URL 和 anon/publishable key，以及 P130 Account Center 網址。
-3. `config.js` 只放公開 anon/publishable key；絕不可填入 `service_role` key。
-4. 將資料夾內容部署至靜態網站主機。未登入者只會看到登入頁；尚未加入團體的已登入者看不到人物資料。
+修改獨立路線檔後執行：
 
-P139 使用獨立 `storageKey: P139-auth`，且 V0.1 不持久保存登入 Session；重新載入頁面後需重新登入。
+```bash
+node scripts/merge_routes.mjs
+node tests/core.test.mjs
+node tests/editor.test.mjs
+```
 
-## 操作方式
+JSON Schema 檢查結構；`core.mjs` 另檢查引用關係、星期、時間順序、沿線距離與班次唯一性。不同路線的內部識別碼以 routeId 作為範圍；本版資料另加 routeId 前綴，降低人為混淆。
 
-### 管理者
+## 已納入與限制
 
-登入後選擇團體，在「人物管理」輸入姓名與別名並上傳照片。瀏覽器會先將照片縮小至最長邊不超過 1200 px，再調整 JPEG 品質與尺寸，目標為 100 KB 以下；照片細節優先保留，個別圖片可能因內容差異略高於目標。上傳後可編輯資料或停用人物。
+已納入：三條合成路線、七個路徑型態（含區間車）、去回程、平日／週末差異、多車同時在途、停站、動態站名、前一服務日跨午夜班次。
 
-在「成員管理」輸入已註冊的 Email，將其加入目前團體。V0.1 不提供公開加入或自助註冊。
+不包含：工作台內AI辨識、政府站牌API認證串接、官方路線查證、即時車況、國定假日、臨時停駛、實測誤差區間。站位與時間只作原型測試，路由引擎的道路候選不代表官方公車路徑。未進行跨裝置60 FPS效能保證。
 
-### 一般成員
+## 警語
 
-在「我的優先級」為想熟悉的人物設定「最想熟悉」、「正在熟悉」或「之後再熟悉」。開始練習後，系統在該級別內隨機排列人物，完成一輪後重新洗牌，並盡量避免輪次交界連續出現相同人物。
+位置與到站時間為估算，行程後段可能累積較大誤差。秒數解析度只為動畫使用，不代表準確到秒。正式資料應記錄官方來源、取得日期及人工確認狀態。
 
-玩家輸入姓名或管理者設定的別名。答錯時，系統顯示正確姓名、過去三筆個人錯誤答案；若答案符合名單內另一人的姓名或別名，另外提示人物混淆。答題資料保留在 P139，僅回傳給本人。
+## 第三方
 
-## V0.1 範圍與限制
-
-- V0.1 為單一團體可運作的第一版骨架；管理者需由 SQL Editor 建立第一個團體，後續團體建立介面暫不提供。
-- 人物資料採逐筆管理，尚未提供 Excel/CSV 批次匯入。
-- 出題採自由回憶填答，不提供選擇題、排行榜或跨團體比較。
-- 照片壓縮在瀏覽器完成；建議管理者使用清楚、適合辨識的正面照片。
-
-## P-SDS v3.3 交付檢查
-
-- [x] 所有 P139 資料表啟用 RLS。
-- [x] 前端不直接讀寫 P139 資料表。
-- [x] RPC 專案命名並驗證登入身分、團體成員資格與管理角色。
-- [x] `anon` 不可呼叫管理或答題 RPC；`authenticated` 僅能執行列出的 P139 RPC。
-- [x] 函式固定 `search_path`；不使用動態 SQL。
-- [x] 照片 bucket 為 private，Storage policy 使用 P139 專屬命名與團體權限檢查。
-- [x] ZIP 只含 `config-sample.js`，不含 `config.js`、Service Role Key 或使用者照片。
-- [x] SQL 物件、政策、索引、RPC 均有 P139 命名；無 schema-wide GRANT/REVOKE 或 `ALTER DEFAULT PRIVILEGES`。
-- [x] 提供 P139 permissions 與 health check SQL。
-
+Leaflet 1.9.4：BSD-2-Clause，授權見 `dist/vendor/leaflet-LICENSE.txt`。道路幾何：OSRM / OpenStreetMap，需保留資料來源與 OpenStreetMap attribution。底圖為國土測繪中心臺灣通用電子地圖 WMTS，attribution 於畫面上持續顯示。
