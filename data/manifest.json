@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "P140-V0.006-301-310",
+  "generatedAt": "2026-10-24",
+  "routes": [
+    {
+      "routeId": "hualien_301",
+      "file": "routes/hualien_301.json",
+      "dataVersion": "hualien_301-2026-10-24-trial1",
+      "generatedAt": "2026-10-24"
+    },
+    {
+      "routeId": "hualien_310",
+      "file": "routes/hualien_310.json",
+      "dataVersion": "hualien_310-2026-10-24",
+      "generatedAt": "2026-10-24"
+    }
+  ]
+}

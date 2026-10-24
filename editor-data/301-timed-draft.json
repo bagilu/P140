@@ -1,0 +1,8283 @@
+{
+  "draftVersion": "1.0.0",
+  "routeId": "hualien_301",
+  "shortName": "301",
+  "name": "301 花蓮轉運站－東華大學（圖書館資訊大樓）",
+  "color": "#104a8e",
+  "isDemo": false,
+  "positionMode": "precise",
+  "source": {
+    "title": "使用者提供的太魯閣客運301五張官方資訊圖片",
+    "url": "https://tarokobus.webnode.tw/l/301/",
+    "date": "2026-10-24",
+    "notes": "班次依平假日表；每方向26站、15班，原表全程43分鐘。逐站時間為業者預估，使用動畫平滑並保留原表於原始JSON及sources資料夾，不再乘路由倍數。政府站位已配對，道路候選尚待檢查；生效日期未標示。",
+    "images": []
+  },
+  "warnings": [
+    "試製資料：政府站位已按名稱及站序配對；道路為OSRM候選，尚待管理者檢查實際行駛路線。",
+    "逐站時間來自附件的業者「預估到站時刻」，不是實測或即時GPS；原圖未標明生效日期。",
+    "附件「平假日」共用班次，暫對應星期一至日；國定假日、臨時停駛與改道未另外處理。",
+    "相鄰站同分鐘等衝突以動畫時間模型作最小幅度調整；原始分鐘與每站調整秒數均保留。",
+    "動畫時間模型假設中途與終點停站20秒，行駛速度上限50km/h僅作平滑限制，不代表實際道路速限或車速。",
+    "勿按工作台「產生估算」覆蓋本份逐站時間；該按鈕會改用路由倍數估算。"
+  ],
+  "patterns": [
+    {
+      "id": "301_outbound",
+      "name": "去程",
+      "headsign": "圖書館資訊大樓",
+      "stops": [
+        {
+          "id": "call_01",
+          "name": "花蓮轉運站",
+          "coord": [
+            121.6032,
+            23.99306
+          ],
+          "originalCoord": [
+            121.6032,
+            23.99306
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298840",
+          "locationPrecision": "stop",
+          "dwellSec": 0,
+          "arrivalOffsetSec": 0,
+          "departureOffsetSec": 0,
+          "officialArrivalOffsetSec": 0,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_02",
+          "name": "花蓮電影城",
+          "coord": [
+            121.6058,
+            23.98966
+          ],
+          "originalCoord": [
+            121.6058,
+            23.98966
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298839",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 60,
+          "departureOffsetSec": 80,
+          "officialArrivalOffsetSec": 60,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_03",
+          "name": "商校街",
+          "coord": [
+            121.6047,
+            23.98801
+          ],
+          "originalCoord": [
+            121.6047,
+            23.98801
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298837",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 120,
+          "departureOffsetSec": 140,
+          "officialArrivalOffsetSec": 120,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_04",
+          "name": "花蓮商校",
+          "coord": [
+            121.6018,
+            23.98658
+          ],
+          "originalCoord": [
+            121.6018,
+            23.98658
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298835",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 240,
+          "departureOffsetSec": 260,
+          "officialArrivalOffsetSec": 240,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_05",
+          "name": "郵政總局",
+          "coord": [
+            121.6039,
+            23.9839
+          ],
+          "originalCoord": [
+            121.6039,
+            23.9839
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298833",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 360,
+          "departureOffsetSec": 380,
+          "officialArrivalOffsetSec": 360,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_06",
+          "name": "明義國小",
+          "coord": [
+            121.6028,
+            23.9797
+          ],
+          "originalCoord": [
+            121.6028,
+            23.9797
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298829",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 540,
+          "departureOffsetSec": 560,
+          "officialArrivalOffsetSec": 540,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_07",
+          "name": "遠東百貨",
+          "coord": [
+            121.6006,
+            23.97764
+          ],
+          "originalCoord": [
+            121.6006,
+            23.97764
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298827",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 660,
+          "departureOffsetSec": 680,
+          "officialArrivalOffsetSec": 660,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_08",
+          "name": "花蓮文創園區",
+          "coord": [
+            121.6045,
+            23.97566
+          ],
+          "originalCoord": [
+            121.6045,
+            23.97566
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298825",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 780,
+          "departureOffsetSec": 800,
+          "officialArrivalOffsetSec": 780,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_09",
+          "name": "中華路",
+          "coord": [
+            121.6089,
+            23.97619
+          ],
+          "originalCoord": [
+            121.6089,
+            23.97619
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298823",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 900,
+          "departureOffsetSec": 920,
+          "officialArrivalOffsetSec": 900,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_10",
+          "name": "東大門夜市",
+          "coord": [
+            121.6111,
+            23.97445
+          ],
+          "originalCoord": [
+            121.6111,
+            23.97445
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298821",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1020,
+          "departureOffsetSec": 1040,
+          "officialArrivalOffsetSec": 1020,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_11",
+          "name": "重慶市場(石藝大街)",
+          "coord": [
+            121.6092,
+            23.97265
+          ],
+          "originalCoord": [
+            121.6092,
+            23.97265
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298819",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1080,
+          "departureOffsetSec": 1100,
+          "officialArrivalOffsetSec": 1080,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_12",
+          "name": "信義國小",
+          "coord": [
+            121.6066,
+            23.9709
+          ],
+          "originalCoord": [
+            121.6066,
+            23.9709
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298817",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1140,
+          "departureOffsetSec": 1160,
+          "officialArrivalOffsetSec": 1140,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_13",
+          "name": "南濱公園",
+          "coord": [
+            121.6083,
+            23.9676
+          ],
+          "originalCoord": [
+            121.6083,
+            23.9676
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298815",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1262,
+          "departureOffsetSec": 1282,
+          "officialArrivalOffsetSec": 1320,
+          "animationAdjustmentSec": -58
+        },
+        {
+          "id": "call_14",
+          "name": "武聖宮(榮光社區)",
+          "coord": [
+            121.6042,
+            23.9614
+          ],
+          "originalCoord": [
+            121.6042,
+            23.9614
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298813",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1345,
+          "departureOffsetSec": 1365,
+          "officialArrivalOffsetSec": 1320,
+          "animationAdjustmentSec": 25
+        },
+        {
+          "id": "call_15",
+          "name": "燕聲廣播",
+          "coord": [
+            121.6016,
+            23.9558
+          ],
+          "originalCoord": [
+            121.6016,
+            23.9558
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298811",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1414,
+          "departureOffsetSec": 1434,
+          "officialArrivalOffsetSec": 1380,
+          "animationAdjustmentSec": 34
+        },
+        {
+          "id": "call_16",
+          "name": "仁安社區",
+          "coord": [
+            121.5997,
+            23.95168
+          ],
+          "originalCoord": [
+            121.5997,
+            23.95168
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298809",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1470,
+          "departureOffsetSec": 1490,
+          "officialArrivalOffsetSec": 1500,
+          "animationAdjustmentSec": -30
+        },
+        {
+          "id": "call_17",
+          "name": "阿美麻糬",
+          "coord": [
+            121.5976,
+            23.94741
+          ],
+          "originalCoord": [
+            121.5976,
+            23.94741
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298807",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1529,
+          "departureOffsetSec": 1549,
+          "officialArrivalOffsetSec": 1500,
+          "animationAdjustmentSec": 29
+        },
+        {
+          "id": "call_18",
+          "name": "新天堂樂園",
+          "coord": [
+            121.5942,
+            23.93889
+          ],
+          "originalCoord": [
+            121.5942,
+            23.93889
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA302885",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1623,
+          "departureOffsetSec": 1643,
+          "officialArrivalOffsetSec": 1620,
+          "animationAdjustmentSec": 3
+        },
+        {
+          "id": "call_19",
+          "name": "光華樂活創意園區",
+          "coord": [
+            121.5942,
+            23.93594
+          ],
+          "originalCoord": [
+            121.5942,
+            23.93594
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298805",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1740,
+          "departureOffsetSec": 1760,
+          "officialArrivalOffsetSec": 1740,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_20",
+          "name": "中華紙漿",
+          "coord": [
+            121.5921,
+            23.9278
+          ],
+          "originalCoord": [
+            121.5921,
+            23.9278
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298803",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1860,
+          "departureOffsetSec": 1880,
+          "officialArrivalOffsetSec": 1860,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_21",
+          "name": "大學路口",
+          "coord": [
+            121.5544,
+            23.89584
+          ],
+          "originalCoord": [
+            121.5544,
+            23.89584
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298801",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2280,
+          "departureOffsetSec": 2300,
+          "officialArrivalOffsetSec": 2280,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_22",
+          "name": "東華大學",
+          "coord": [
+            121.5454,
+            23.8923
+          ],
+          "originalCoord": [
+            121.5454,
+            23.8923
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298799",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2382,
+          "departureOffsetSec": 2402,
+          "officialArrivalOffsetSec": 2400,
+          "animationAdjustmentSec": -18
+        },
+        {
+          "id": "call_23",
+          "name": "行政大樓",
+          "coord": [
+            121.5445,
+            23.89295
+          ],
+          "originalCoord": [
+            121.5445,
+            23.89295
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA300465",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2416,
+          "departureOffsetSec": 2436,
+          "officialArrivalOffsetSec": 2400,
+          "animationAdjustmentSec": 16
+        },
+        {
+          "id": "call_24",
+          "name": "原住民學院",
+          "coord": [
+            121.5457,
+            23.89485
+          ],
+          "originalCoord": [
+            121.5457,
+            23.89485
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA302887",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2463,
+          "departureOffsetSec": 2483,
+          "officialArrivalOffsetSec": 2460,
+          "animationAdjustmentSec": 3
+        },
+        {
+          "id": "call_25",
+          "name": "育成中心",
+          "coord": [
+            121.544,
+            23.89816
+          ],
+          "originalCoord": [
+            121.544,
+            23.89816
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA300467",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2520,
+          "departureOffsetSec": 2540,
+          "officialArrivalOffsetSec": 2520,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_26",
+          "name": "圖書館資訊大樓",
+          "coord": [
+            121.5419,
+            23.89754
+          ],
+          "originalCoord": [
+            121.5419,
+            23.89754
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA300470",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2580,
+          "departureOffsetSec": 2600,
+          "officialArrivalOffsetSec": 2580,
+          "animationAdjustmentSec": 0
+        }
+      ],
+      "segments": [
+        {
+          "from": "call_01",
+          "to": "call_02",
+          "path": [
+            [
+              121.602885,
+              23.993194
+            ],
+            [
+              121.603092,
+              23.993599
+            ],
+            [
+              121.603347,
+              23.993505
+            ],
+            [
+              121.603731,
+              23.993328
+            ],
+            [
+              121.604369,
+              23.993074
+            ],
+            [
+              121.60492,
+              23.993185
+            ],
+            [
+              121.605235,
+              23.99211
+            ],
+            [
+              121.605247,
+              23.992039
+            ],
+            [
+              121.60546,
+              23.991111
+            ],
+            [
+              121.605669,
+              23.990244
+            ],
+            [
+              121.605812,
+              23.989662
+            ]
+          ],
+          "via": [],
+          "durationSec": 81.9,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_02",
+          "to": "call_03",
+          "path": [
+            [
+              121.605812,
+              23.989662
+            ],
+            [
+              121.605989,
+              23.98894
+            ],
+            [
+              121.606206,
+              23.988044
+            ],
+            [
+              121.605462,
+              23.988069
+            ],
+            [
+              121.605354,
+              23.988053
+            ],
+            [
+              121.604719,
+              23.98793
+            ]
+          ],
+          "via": [],
+          "durationSec": 44.2,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_03",
+          "to": "call_04",
+          "path": [
+            [
+              121.604719,
+              23.98793
+            ],
+            [
+              121.604333,
+              23.987855
+            ],
+            [
+              121.604223,
+              23.987827
+            ],
+            [
+              121.603102,
+              23.987547
+            ],
+            [
+              121.602137,
+              23.987316
+            ],
+            [
+              121.601448,
+              23.987174
+            ],
+            [
+              121.601714,
+              23.986782
+            ],
+            [
+              121.601848,
+              23.986612
+            ]
+          ],
+          "via": [],
+          "durationSec": 66.8,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_04",
+          "to": "call_05",
+          "path": [
+            [
+              121.601848,
+              23.986612
+            ],
+            [
+              121.602072,
+              23.986327
+            ],
+            [
+              121.602159,
+              23.986217
+            ],
+            [
+              121.602465,
+              23.985829
+            ],
+            [
+              121.602906,
+              23.985286
+            ],
+            [
+              121.603438,
+              23.984631
+            ],
+            [
+              121.603882,
+              23.984028
+            ],
+            [
+              121.603956,
+              23.983939
+            ]
+          ],
+          "via": [],
+          "durationSec": 35.2,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_05",
+          "to": "call_06",
+          "path": [
+            [
+              121.603956,
+              23.983939
+            ],
+            [
+              121.604259,
+              23.983574
+            ],
+            [
+              121.604487,
+              23.983253
+            ],
+            [
+              121.604852,
+              23.982771
+            ],
+            [
+              121.604994,
+              23.982583
+            ],
+            [
+              121.605215,
+              23.982317
+            ],
+            [
+              121.605749,
+              23.981625
+            ],
+            [
+              121.605128,
+              23.981221
+            ],
+            [
+              121.604478,
+              23.980792
+            ],
+            [
+              121.603962,
+              23.980462
+            ],
+            [
+              121.603797,
+              23.980357
+            ],
+            [
+              121.603611,
+              23.980224
+            ],
+            [
+              121.603261,
+              23.979972
+            ],
+            [
+              121.603187,
+              23.979915
+            ],
+            [
+              121.602823,
+              23.979672
+            ]
+          ],
+          "via": [],
+          "durationSec": 71.7,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_06",
+          "to": "call_07",
+          "path": [
+            [
+              121.602823,
+              23.979672
+            ],
+            [
+              121.602744,
+              23.979619
+            ],
+            [
+              121.602328,
+              23.979352
+            ],
+            [
+              121.601904,
+              23.979079
+            ],
+            [
+              121.601649,
+              23.978907
+            ],
+            [
+              121.601442,
+              23.978795
+            ],
+            [
+              121.60115,
+              23.978611
+            ],
+            [
+              121.600974,
+              23.978488
+            ],
+            [
+              121.600729,
+              23.978337
+            ],
+            [
+              121.600305,
+              23.978038
+            ],
+            [
+              121.600424,
+              23.977865
+            ],
+            [
+              121.600605,
+              23.977643
+            ]
+          ],
+          "via": [],
+          "durationSec": 46.8,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_07",
+          "to": "call_08",
+          "path": [
+            [
+              121.600605,
+              23.977643
+            ],
+            [
+              121.600673,
+              23.977559
+            ],
+            [
+              121.600879,
+              23.977292
+            ],
+            [
+              121.601263,
+              23.976796
+            ],
+            [
+              121.601426,
+              23.976581
+            ],
+            [
+              121.601671,
+              23.976259
+            ],
+            [
+              121.602335,
+              23.975429
+            ],
+            [
+              121.603314,
+              23.975536
+            ],
+            [
+              121.604218,
+              23.975636
+            ],
+            [
+              121.604497,
+              23.975675
+            ]
+          ],
+          "via": [],
+          "durationSec": 67.2,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_08",
+          "to": "call_09",
+          "path": [
+            [
+              121.604497,
+              23.975675
+            ],
+            [
+              121.604875,
+              23.975728
+            ],
+            [
+              121.605107,
+              23.975751
+            ],
+            [
+              121.605329,
+              23.975779
+            ],
+            [
+              121.606144,
+              23.975878
+            ],
+            [
+              121.606385,
+              23.975913
+            ],
+            [
+              121.607422,
+              23.976042
+            ],
+            [
+              121.608127,
+              23.976118
+            ],
+            [
+              121.608767,
+              23.976186
+            ],
+            [
+              121.608897,
+              23.976207
+            ]
+          ],
+          "via": [],
+          "durationSec": 40.4,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_09",
+          "to": "call_10",
+          "path": [
+            [
+              121.608897,
+              23.976207
+            ],
+            [
+              121.609005,
+              23.976224
+            ],
+            [
+              121.60909,
+              23.976241
+            ],
+            [
+              121.609682,
+              23.976323
+            ],
+            [
+              121.609876,
+              23.976351
+            ],
+            [
+              121.610595,
+              23.975444
+            ],
+            [
+              121.61127,
+              23.974596
+            ],
+            [
+              121.61108,
+              23.974476
+            ]
+          ],
+          "via": [],
+          "durationSec": 42.9,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_10",
+          "to": "call_11",
+          "path": [
+            [
+              121.61108,
+              23.974476
+            ],
+            [
+              121.610877,
+              23.974347
+            ],
+            [
+              121.610735,
+              23.974256
+            ],
+            [
+              121.610574,
+              23.974155
+            ],
+            [
+              121.610908,
+              23.973729
+            ],
+            [
+              121.610316,
+              23.973332
+            ],
+            [
+              121.609783,
+              23.972987
+            ],
+            [
+              121.609214,
+              23.972631
+            ]
+          ],
+          "via": [],
+          "durationSec": 45.9,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_11",
+          "to": "call_12",
+          "path": [
+            [
+              121.609214,
+              23.972631
+            ],
+            [
+              121.609041,
+              23.972522
+            ],
+            [
+              121.60887,
+              23.972401
+            ],
+            [
+              121.608495,
+              23.972155
+            ],
+            [
+              121.60816,
+              23.971934
+            ],
+            [
+              121.607462,
+              23.97147
+            ],
+            [
+              121.606963,
+              23.971146
+            ],
+            [
+              121.606822,
+              23.971047
+            ],
+            [
+              121.606602,
+              23.970898
+            ]
+          ],
+          "via": [],
+          "durationSec": 33.6,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_12",
+          "to": "call_13",
+          "path": [
+            [
+              121.606602,
+              23.970898
+            ],
+            [
+              121.606123,
+              23.970574
+            ],
+            [
+              121.606359,
+              23.970283
+            ],
+            [
+              121.607489,
+              23.968824
+            ],
+            [
+              121.608396,
+              23.967663
+            ]
+          ],
+          "via": [],
+          "durationSec": 70.1,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_13",
+          "to": "call_14",
+          "path": [
+            [
+              121.608396,
+              23.967663
+            ],
+            [
+              121.608789,
+              23.96716
+            ],
+            [
+              121.608848,
+              23.96708
+            ],
+            [
+              121.608745,
+              23.966964
+            ],
+            [
+              121.607051,
+              23.965047
+            ],
+            [
+              121.60698,
+              23.964966
+            ],
+            [
+              121.6069,
+              23.964877
+            ],
+            [
+              121.605803,
+              23.963675
+            ],
+            [
+              121.605342,
+              23.963181
+            ],
+            [
+              121.605228,
+              23.963065
+            ],
+            [
+              121.604919,
+              23.962711
+            ],
+            [
+              121.604747,
+              23.962479
+            ],
+            [
+              121.604532,
+              23.962124
+            ],
+            [
+              121.6042,
+              23.9614
+            ]
+          ],
+          "via": [],
+          "durationSec": 65.8,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_14",
+          "to": "call_15",
+          "path": [
+            [
+              121.6042,
+              23.9614
+            ],
+            [
+              121.604181,
+              23.961359
+            ],
+            [
+              121.603727,
+              23.960345
+            ],
+            [
+              121.603529,
+              23.959902
+            ],
+            [
+              121.603471,
+              23.959791
+            ],
+            [
+              121.602962,
+              23.958765
+            ],
+            [
+              121.601949,
+              23.956515
+            ],
+            [
+              121.601865,
+              23.956314
+            ],
+            [
+              121.601622,
+              23.955792
+            ]
+          ],
+          "via": [],
+          "durationSec": 50.3,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_15",
+          "to": "call_16",
+          "path": [
+            [
+              121.601622,
+              23.955792
+            ],
+            [
+              121.601156,
+              23.954793
+            ],
+            [
+              121.600374,
+              23.953227
+            ],
+            [
+              121.600333,
+              23.953144
+            ],
+            [
+              121.600296,
+              23.953059
+            ],
+            [
+              121.599703,
+              23.951679
+            ]
+          ],
+          "via": [],
+          "durationSec": 36.5,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_16",
+          "to": "call_17",
+          "path": [
+            [
+              121.599703,
+              23.951679
+            ],
+            [
+              121.599567,
+              23.951363
+            ],
+            [
+              121.598764,
+              23.949651
+            ],
+            [
+              121.597926,
+              23.947907
+            ],
+            [
+              121.597788,
+              23.947958
+            ],
+            [
+              121.597652,
+              23.947644
+            ],
+            [
+              121.597553,
+              23.947428
+            ]
+          ],
+          "via": [],
+          "durationSec": 60.5,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_17",
+          "to": "call_18",
+          "path": [
+            [
+              121.597553,
+              23.947428
+            ],
+            [
+              121.597461,
+              23.947227
+            ],
+            [
+              121.59759,
+              23.94717
+            ],
+            [
+              121.597171,
+              23.946104
+            ],
+            [
+              121.59673,
+              23.945141
+            ],
+            [
+              121.596355,
+              23.944449
+            ],
+            [
+              121.596098,
+              23.943823
+            ],
+            [
+              121.595564,
+              23.942666
+            ],
+            [
+              121.595194,
+              23.941882
+            ],
+            [
+              121.595117,
+              23.941685
+            ],
+            [
+              121.59451,
+              23.940464
+            ],
+            [
+              121.594381,
+              23.940163
+            ],
+            [
+              121.5943,
+              23.939918
+            ],
+            [
+              121.594228,
+              23.939521
+            ],
+            [
+              121.594216,
+              23.939374
+            ],
+            [
+              121.594216,
+              23.939138
+            ],
+            [
+              121.594231,
+              23.938892
+            ]
+          ],
+          "via": [],
+          "durationSec": 90.1,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_18",
+          "to": "call_19",
+          "path": [
+            [
+              121.594231,
+              23.938892
+            ],
+            [
+              121.594376,
+              23.936505
+            ],
+            [
+              121.594083,
+              23.936468
+            ],
+            [
+              121.594116,
+              23.935936
+            ]
+          ],
+          "via": [],
+          "durationSec": 38.6,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_19",
+          "to": "call_20",
+          "path": [
+            [
+              121.594116,
+              23.935936
+            ],
+            [
+              121.594246,
+              23.933873
+            ],
+            [
+              121.594545,
+              23.933887
+            ],
+            [
+              121.594622,
+              23.932616
+            ],
+            [
+              121.594642,
+              23.93229
+            ],
+            [
+              121.59463,
+              23.932067
+            ],
+            [
+              121.594605,
+              23.931888
+            ],
+            [
+              121.594555,
+              23.931654
+            ],
+            [
+              121.594483,
+              23.93144
+            ],
+            [
+              121.5944,
+              23.931237
+            ],
+            [
+              121.594182,
+              23.930864
+            ],
+            [
+              121.593867,
+              23.930394
+            ],
+            [
+              121.592127,
+              23.927785
+            ]
+          ],
+          "via": [],
+          "durationSec": 95.4,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_20",
+          "to": "call_21",
+          "path": [
+            [
+              121.592127,
+              23.927785
+            ],
+            [
+              121.591688,
+              23.927127
+            ],
+            [
+              121.591245,
+              23.926412
+            ],
+            [
+              121.590799,
+              23.925614
+            ],
+            [
+              121.590446,
+              23.924988
+            ],
+            [
+              121.590324,
+              23.92481
+            ],
+            [
+              121.590097,
+              23.924535
+            ],
+            [
+              121.589835,
+              23.924263
+            ],
+            [
+              121.589295,
+              23.923826
+            ],
+            [
+              121.588647,
+              23.923345
+            ],
+            [
+              121.588235,
+              23.923001
+            ],
+            [
+              121.587764,
+              23.922573
+            ],
+            [
+              121.587104,
+              23.921956
+            ],
+            [
+              121.586519,
+              23.921373
+            ],
+            [
+              121.585713,
+              23.920541
+            ],
+            [
+              121.582902,
+              23.917697
+            ],
+            [
+              121.580341,
+              23.915102
+            ],
+            [
+              121.577817,
+              23.912508
+            ],
+            [
+              121.57628,
+              23.910935
+            ],
+            [
+              121.574714,
+              23.909318
+            ],
+            [
+              121.573776,
+              23.908328
+            ],
+            [
+              121.573766,
+              23.908318
+            ],
+            [
+              121.573061,
+              23.90761
+            ],
+            [
+              121.570844,
+              23.905347
+            ],
+            [
+              121.569743,
+              23.904199
+            ],
+            [
+              121.568254,
+              23.902716
+            ],
+            [
+              121.568055,
+              23.902561
+            ],
+            [
+              121.567981,
+              23.902504
+            ],
+            [
+              121.56772,
+              23.902282
+            ],
+            [
+              121.567318,
+              23.902011
+            ],
+            [
+              121.566671,
+              23.901684
+            ],
+            [
+              121.566625,
+              23.901662
+            ],
+            [
+              121.56634,
+              23.90153
+            ],
+            [
+              121.565134,
+              23.900954
+            ],
+            [
+              121.565106,
+              23.90094
+            ],
+            [
+              121.564153,
+              23.900432
+            ],
+            [
+              121.562375,
+              23.899604
+            ],
+            [
+              121.560583,
+              23.89876
+            ],
+            [
+              121.558534,
+              23.897802
+            ],
+            [
+              121.557456,
+              23.897293
+            ],
+            [
+              121.554627,
+              23.895958
+            ],
+            [
+              121.554396,
+              23.895847
+            ]
+          ],
+          "via": [],
+          "durationSec": 322.2,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_21",
+          "to": "call_22",
+          "path": [
+            [
+              121.554396,
+              23.895847
+            ],
+            [
+              121.553809,
+              23.895565
+            ],
+            [
+              121.553733,
+              23.895532
+            ],
+            [
+              121.553647,
+              23.895494
+            ],
+            [
+              121.553137,
+              23.895369
+            ],
+            [
+              121.552938,
+              23.895295
+            ],
+            [
+              121.552856,
+              23.895265
+            ],
+            [
+              121.55276,
+              23.895224
+            ],
+            [
+              121.550787,
+              23.89438
+            ],
+            [
+              121.549512,
+              23.893869
+            ],
+            [
+              121.549453,
+              23.893846
+            ],
+            [
+              121.549397,
+              23.893822
+            ],
+            [
+              121.547311,
+              23.892959
+            ],
+            [
+              121.546064,
+              23.892504
+            ],
+            [
+              121.545677,
+              23.892435
+            ],
+            [
+              121.545391,
+              23.892318
+            ]
+          ],
+          "via": [],
+          "durationSec": 104.3,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_22",
+          "to": "call_23",
+          "path": [
+            [
+              121.545391,
+              23.892318
+            ],
+            [
+              121.545271,
+              23.892269
+            ],
+            [
+              121.545142,
+              23.892217
+            ],
+            [
+              121.545004,
+              23.892269
+            ],
+            [
+              121.544924,
+              23.892279
+            ],
+            [
+              121.544823,
+              23.892243
+            ],
+            [
+              121.544648,
+              23.892176
+            ],
+            [
+              121.54461,
+              23.892162
+            ],
+            [
+              121.544568,
+              23.892252
+            ],
+            [
+              121.544549,
+              23.892292
+            ],
+            [
+              121.54452,
+              23.892363
+            ],
+            [
+              121.544482,
+              23.8925
+            ],
+            [
+              121.544351,
+              23.892781
+            ],
+            [
+              121.544316,
+              23.892856
+            ],
+            [
+              121.544427,
+              23.892902
+            ],
+            [
+              121.544507,
+              23.892935
+            ]
+          ],
+          "via": [],
+          "durationSec": 44.2,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_23",
+          "to": "call_24",
+          "path": [
+            [
+              121.544507,
+              23.892935
+            ],
+            [
+              121.544577,
+              23.892963
+            ],
+            [
+              121.544719,
+              23.893009
+            ],
+            [
+              121.544864,
+              23.893049
+            ],
+            [
+              121.545003,
+              23.893074
+            ],
+            [
+              121.545141,
+              23.89309
+            ],
+            [
+              121.545346,
+              23.893098
+            ],
+            [
+              121.545559,
+              23.89313
+            ],
+            [
+              121.545796,
+              23.893184
+            ],
+            [
+              121.545956,
+              23.893238
+            ],
+            [
+              121.546173,
+              23.893323
+            ],
+            [
+              121.546273,
+              23.893366
+            ],
+            [
+              121.546343,
+              23.893394
+            ],
+            [
+              121.546308,
+              23.893467
+            ],
+            [
+              121.545719,
+              23.894673
+            ],
+            [
+              121.545643,
+              23.894827
+            ]
+          ],
+          "via": [],
+          "durationSec": 76.3,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_24",
+          "to": "call_25",
+          "path": [
+            [
+              121.545643,
+              23.894827
+            ],
+            [
+              121.544963,
+              23.896211
+            ],
+            [
+              121.544719,
+              23.896707
+            ],
+            [
+              121.544712,
+              23.896721
+            ],
+            [
+              121.544654,
+              23.896842
+            ],
+            [
+              121.544587,
+              23.896979
+            ],
+            [
+              121.54439,
+              23.897385
+            ],
+            [
+              121.544011,
+              23.898165
+            ]
+          ],
+          "via": [],
+          "durationSec": 97.4,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_25",
+          "to": "call_26",
+          "path": [
+            [
+              121.544011,
+              23.898165
+            ],
+            [
+              121.543915,
+              23.898363
+            ],
+            [
+              121.543865,
+              23.898467
+            ],
+            [
+              121.543834,
+              23.898531
+            ],
+            [
+              121.543774,
+              23.898508
+            ],
+            [
+              121.543659,
+              23.898462
+            ],
+            [
+              121.541955,
+              23.897751
+            ],
+            [
+              121.541636,
+              23.89762
+            ],
+            [
+              121.541668,
+              23.897558
+            ],
+            [
+              121.541853,
+              23.897635
+            ]
+          ],
+          "via": [],
+          "durationSec": 92.2,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        }
+      ],
+      "departures": [
+        {
+          "id": "301_outbound_trip_01",
+          "time": "07:20",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_02",
+          "time": "09:20",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_03",
+          "time": "11:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_04",
+          "time": "12:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_05",
+          "time": "13:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_06",
+          "time": "15:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_07",
+          "time": "16:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_08",
+          "time": "17:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_09",
+          "time": "18:00",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_10",
+          "time": "18:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_11",
+          "time": "19:00",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_12",
+          "time": "19:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_13",
+          "time": "20:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_14",
+          "time": "21:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_outbound_trip_15",
+          "time": "22:40",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "sequenceConfirmed": true,
+      "timeSource": "業者預估逐站分鐘表＋已記錄的動畫平滑；不是路由時間倍數估算。"
+    },
+    {
+      "id": "301_inbound",
+      "name": "回程",
+      "headsign": "花蓮轉運站",
+      "stops": [
+        {
+          "id": "call_01",
+          "name": "圖書館資訊大樓",
+          "coord": [
+            121.5419,
+            23.89754
+          ],
+          "originalCoord": [
+            121.5419,
+            23.89754
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA300470",
+          "locationPrecision": "stop",
+          "dwellSec": 0,
+          "arrivalOffsetSec": 0,
+          "departureOffsetSec": 0,
+          "officialArrivalOffsetSec": 0,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_02",
+          "name": "育成中心",
+          "coord": [
+            121.5439,
+            23.8981
+          ],
+          "originalCoord": [
+            121.5439,
+            23.8981
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA300469",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 19,
+          "departureOffsetSec": 39,
+          "officialArrivalOffsetSec": 0,
+          "animationAdjustmentSec": 19
+        },
+        {
+          "id": "call_03",
+          "name": "原住民學院",
+          "coord": [
+            121.5456,
+            23.89464
+          ],
+          "originalCoord": [
+            121.5456,
+            23.89464
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA302888",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 70,
+          "departureOffsetSec": 90,
+          "officialArrivalOffsetSec": 60,
+          "animationAdjustmentSec": 10
+        },
+        {
+          "id": "call_04",
+          "name": "行政大樓",
+          "coord": [
+            121.5435,
+            23.89407
+          ],
+          "originalCoord": [
+            121.5435,
+            23.89407
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA300466",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 130,
+          "departureOffsetSec": 150,
+          "officialArrivalOffsetSec": 120,
+          "animationAdjustmentSec": 10
+        },
+        {
+          "id": "call_05",
+          "name": "東華大學",
+          "coord": [
+            121.5449,
+            23.89188
+          ],
+          "originalCoord": [
+            121.5449,
+            23.89188
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA303573",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 240,
+          "departureOffsetSec": 260,
+          "officialArrivalOffsetSec": 240,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_06",
+          "name": "大學路口",
+          "coord": [
+            121.5544,
+            23.8956
+          ],
+          "originalCoord": [
+            121.5544,
+            23.8956
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298800",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 397,
+          "departureOffsetSec": 417,
+          "officialArrivalOffsetSec": 420,
+          "animationAdjustmentSec": -23
+        },
+        {
+          "id": "call_07",
+          "name": "中華紙漿",
+          "coord": [
+            121.5924,
+            23.9279
+          ],
+          "originalCoord": [
+            121.5924,
+            23.9279
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298802",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 803,
+          "departureOffsetSec": 823,
+          "officialArrivalOffsetSec": 780,
+          "animationAdjustmentSec": 23
+        },
+        {
+          "id": "call_08",
+          "name": "光華樂活創意園區",
+          "coord": [
+            121.5945,
+            23.9361
+          ],
+          "originalCoord": [
+            121.5945,
+            23.9361
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298804",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 900,
+          "departureOffsetSec": 920,
+          "officialArrivalOffsetSec": 900,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_09",
+          "name": "新天堂樂園",
+          "coord": [
+            121.5945,
+            23.94003
+          ],
+          "originalCoord": [
+            121.5945,
+            23.94003
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA302886",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1020,
+          "departureOffsetSec": 1040,
+          "officialArrivalOffsetSec": 1020,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_10",
+          "name": "阿美麻糬",
+          "coord": [
+            121.598,
+            23.94772
+          ],
+          "originalCoord": [
+            121.598,
+            23.94772
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298806",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1125,
+          "departureOffsetSec": 1145,
+          "officialArrivalOffsetSec": 1140,
+          "animationAdjustmentSec": -15
+        },
+        {
+          "id": "call_11",
+          "name": "仁安社區",
+          "coord": [
+            121.5998,
+            23.95163
+          ],
+          "originalCoord": [
+            121.5998,
+            23.95163
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298808",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1179,
+          "departureOffsetSec": 1199,
+          "officialArrivalOffsetSec": 1200,
+          "animationAdjustmentSec": -21
+        },
+        {
+          "id": "call_12",
+          "name": "燕聲廣播",
+          "coord": [
+            121.6018,
+            23.9558
+          ],
+          "originalCoord": [
+            121.6018,
+            23.9558
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298810",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1236,
+          "departureOffsetSec": 1256,
+          "officialArrivalOffsetSec": 1260,
+          "animationAdjustmentSec": -24
+        },
+        {
+          "id": "call_13",
+          "name": "武聖宮(榮光社區)",
+          "coord": [
+            121.6046,
+            23.9618
+          ],
+          "originalCoord": [
+            121.6046,
+            23.9618
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298812",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1309,
+          "departureOffsetSec": 1329,
+          "officialArrivalOffsetSec": 1260,
+          "animationAdjustmentSec": 49
+        },
+        {
+          "id": "call_14",
+          "name": "南濱公園",
+          "coord": [
+            121.6084,
+            23.9678
+          ],
+          "originalCoord": [
+            121.6084,
+            23.9678
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298814",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1389,
+          "departureOffsetSec": 1409,
+          "officialArrivalOffsetSec": 1380,
+          "animationAdjustmentSec": 9
+        },
+        {
+          "id": "call_15",
+          "name": "信義國小",
+          "coord": [
+            121.6067,
+            23.9708
+          ],
+          "originalCoord": [
+            121.6067,
+            23.9708
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298816",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1500,
+          "departureOffsetSec": 1520,
+          "officialArrivalOffsetSec": 1500,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_16",
+          "name": "重慶市場(石藝大街)",
+          "coord": [
+            121.6093,
+            23.9726
+          ],
+          "originalCoord": [
+            121.6093,
+            23.9726
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298818",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1560,
+          "departureOffsetSec": 1580,
+          "officialArrivalOffsetSec": 1560,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_17",
+          "name": "東大門夜市",
+          "coord": [
+            121.6112,
+            23.97383
+          ],
+          "originalCoord": [
+            121.6112,
+            23.97383
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298820",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1620,
+          "departureOffsetSec": 1640,
+          "officialArrivalOffsetSec": 1620,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_18",
+          "name": "中華路",
+          "coord": [
+            121.6089,
+            23.97622
+          ],
+          "originalCoord": [
+            121.6089,
+            23.97622
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298822",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1740,
+          "departureOffsetSec": 1760,
+          "officialArrivalOffsetSec": 1740,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_19",
+          "name": "花蓮文創園區",
+          "coord": [
+            121.6045,
+            23.9757
+          ],
+          "originalCoord": [
+            121.6045,
+            23.9757
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298824",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1860,
+          "departureOffsetSec": 1880,
+          "officialArrivalOffsetSec": 1860,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_20",
+          "name": "遠東百貨",
+          "coord": [
+            121.6007,
+            23.9776
+          ],
+          "originalCoord": [
+            121.6007,
+            23.9776
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298826",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 1980,
+          "departureOffsetSec": 2000,
+          "officialArrivalOffsetSec": 1980,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_21",
+          "name": "明義國小",
+          "coord": [
+            121.6028,
+            23.97968
+          ],
+          "originalCoord": [
+            121.6028,
+            23.97968
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298828",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2100,
+          "departureOffsetSec": 2120,
+          "officialArrivalOffsetSec": 2100,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_22",
+          "name": "郵政總局",
+          "coord": [
+            121.6039,
+            23.98408
+          ],
+          "originalCoord": [
+            121.6039,
+            23.98408
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298832",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2280,
+          "departureOffsetSec": 2300,
+          "officialArrivalOffsetSec": 2280,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_23",
+          "name": "花蓮商校",
+          "coord": [
+            121.602,
+            23.98644
+          ],
+          "originalCoord": [
+            121.602,
+            23.98644
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298834",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2400,
+          "departureOffsetSec": 2420,
+          "officialArrivalOffsetSec": 2400,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_24",
+          "name": "商校街",
+          "coord": [
+            121.6047,
+            23.98788
+          ],
+          "originalCoord": [
+            121.6047,
+            23.98788
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298836",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2460,
+          "departureOffsetSec": 2480,
+          "officialArrivalOffsetSec": 2460,
+          "animationAdjustmentSec": 0
+        },
+        {
+          "id": "call_25",
+          "name": "花蓮電影城",
+          "coord": [
+            121.6059,
+            23.98951
+          ],
+          "originalCoord": [
+            121.6059,
+            23.98951
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298838",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2514,
+          "departureOffsetSec": 2534,
+          "officialArrivalOffsetSec": 2520,
+          "animationAdjustmentSec": -6
+        },
+        {
+          "id": "call_26",
+          "name": "花蓮轉運站",
+          "coord": [
+            121.6032,
+            23.99306
+          ],
+          "originalCoord": [
+            121.6032,
+            23.99306
+          ],
+          "confirmed": false,
+          "coordinateSource": "花蓮縣政府交通e點通301站位（名稱及站序已配對，尚未人工確認）",
+          "candidateId": "HUA298840",
+          "locationPrecision": "stop",
+          "dwellSec": 20,
+          "arrivalOffsetSec": 2580,
+          "departureOffsetSec": 2600,
+          "officialArrivalOffsetSec": 2580,
+          "animationAdjustmentSec": 0
+        }
+      ],
+      "segments": [
+        {
+          "from": "call_01",
+          "to": "call_02",
+          "path": [
+            [
+              121.541853,
+              23.897635
+            ],
+            [
+              121.541989,
+              23.897691
+            ],
+            [
+              121.543691,
+              23.898397
+            ],
+            [
+              121.543804,
+              23.898444
+            ],
+            [
+              121.543856,
+              23.898338
+            ],
+            [
+              121.543961,
+              23.898125
+            ]
+          ],
+          "via": [],
+          "durationSec": 63.7,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_02",
+          "to": "call_03",
+          "path": [
+            [
+              121.543961,
+              23.898125
+            ],
+            [
+              121.544338,
+              23.897363
+            ],
+            [
+              121.544534,
+              23.896959
+            ],
+            [
+              121.544586,
+              23.896862
+            ],
+            [
+              121.544604,
+              23.896825
+            ],
+            [
+              121.54462,
+              23.896792
+            ],
+            [
+              121.544664,
+              23.896702
+            ],
+            [
+              121.544674,
+              23.896682
+            ],
+            [
+              121.544913,
+              23.896193
+            ],
+            [
+              121.545651,
+              23.894661
+            ]
+          ],
+          "via": [],
+          "durationSec": 101.1,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_03",
+          "to": "call_04",
+          "path": [
+            [
+              121.545651,
+              23.894661
+            ],
+            [
+              121.545657,
+              23.894648
+            ],
+            [
+              121.546236,
+              23.89344
+            ],
+            [
+              121.546273,
+              23.893366
+            ],
+            [
+              121.546173,
+              23.893323
+            ],
+            [
+              121.545956,
+              23.893238
+            ],
+            [
+              121.545796,
+              23.893184
+            ],
+            [
+              121.545559,
+              23.89313
+            ],
+            [
+              121.545346,
+              23.893098
+            ],
+            [
+              121.545141,
+              23.89309
+            ],
+            [
+              121.545003,
+              23.893074
+            ],
+            [
+              121.544864,
+              23.893049
+            ],
+            [
+              121.544719,
+              23.893009
+            ],
+            [
+              121.544577,
+              23.892963
+            ],
+            [
+              121.544427,
+              23.892902
+            ],
+            [
+              121.544316,
+              23.892856
+            ],
+            [
+              121.544282,
+              23.892931
+            ],
+            [
+              121.543764,
+              23.89399
+            ],
+            [
+              121.543726,
+              23.894066
+            ],
+            [
+              121.543691,
+              23.894103
+            ],
+            [
+              121.543656,
+              23.894149
+            ],
+            [
+              121.543493,
+              23.894084
+            ]
+          ],
+          "via": [],
+          "durationSec": 104.1,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_04",
+          "to": "call_05",
+          "path": [
+            [
+              121.543493,
+              23.894084
+            ],
+            [
+              121.543435,
+              23.89406
+            ],
+            [
+              121.54342,
+              23.894023
+            ],
+            [
+              121.543405,
+              23.893975
+            ],
+            [
+              121.54339,
+              23.893913
+            ],
+            [
+              121.543479,
+              23.893879
+            ],
+            [
+              121.543993,
+              23.892813
+            ],
+            [
+              121.544031,
+              23.892737
+            ],
+            [
+              121.544071,
+              23.892665
+            ],
+            [
+              121.544225,
+              23.892338
+            ],
+            [
+              121.544294,
+              23.892199
+            ],
+            [
+              121.544316,
+              23.892153
+            ],
+            [
+              121.544358,
+              23.892063
+            ],
+            [
+              121.544232,
+              23.892007
+            ],
+            [
+              121.544182,
+              23.891985
+            ],
+            [
+              121.544175,
+              23.891983
+            ],
+            [
+              121.544122,
+              23.891955
+            ],
+            [
+              121.544055,
+              23.891906
+            ],
+            [
+              121.544021,
+              23.891749
+            ],
+            [
+              121.54406,
+              23.891672
+            ],
+            [
+              121.54412,
+              23.891555
+            ],
+            [
+              121.544607,
+              23.89176
+            ],
+            [
+              121.5449,
+              23.89188
+            ]
+          ],
+          "via": [],
+          "durationSec": 102.6,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_05",
+          "to": "call_06",
+          "path": [
+            [
+              121.5449,
+              23.89188
+            ],
+            [
+              121.54524,
+              23.892018
+            ],
+            [
+              121.545363,
+              23.892069
+            ],
+            [
+              121.545427,
+              23.892095
+            ],
+            [
+              121.545568,
+              23.892153
+            ],
+            [
+              121.546249,
+              23.892435
+            ],
+            [
+              121.547867,
+              23.893085
+            ],
+            [
+              121.549441,
+              23.893731
+            ],
+            [
+              121.549496,
+              23.893754
+            ],
+            [
+              121.549551,
+              23.893776
+            ],
+            [
+              121.552422,
+              23.894952
+            ],
+            [
+              121.552623,
+              23.895035
+            ],
+            [
+              121.552787,
+              23.895057
+            ],
+            [
+              121.552955,
+              23.895067
+            ],
+            [
+              121.553009,
+              23.894949
+            ],
+            [
+              121.553113,
+              23.895054
+            ],
+            [
+              121.553165,
+              23.895107
+            ],
+            [
+              121.553432,
+              23.895245
+            ],
+            [
+              121.553579,
+              23.895333
+            ],
+            [
+              121.554335,
+              23.89571
+            ]
+          ],
+          "via": [],
+          "durationSec": 106.1,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_06",
+          "to": "call_07",
+          "path": [
+            [
+              121.554335,
+              23.89571
+            ],
+            [
+              121.55466,
+              23.895872
+            ],
+            [
+              121.555165,
+              23.896121
+            ],
+            [
+              121.555666,
+              23.896353
+            ],
+            [
+              121.556361,
+              23.896677
+            ],
+            [
+              121.557054,
+              23.897008
+            ],
+            [
+              121.557112,
+              23.897036
+            ],
+            [
+              121.55751,
+              23.897221
+            ],
+            [
+              121.558586,
+              23.897721
+            ],
+            [
+              121.560276,
+              23.898514
+            ],
+            [
+              121.560777,
+              23.898751
+            ],
+            [
+              121.562433,
+              23.899506
+            ],
+            [
+              121.564207,
+              23.900346
+            ],
+            [
+              121.566587,
+              23.901526
+            ],
+            [
+              121.567378,
+              23.901943
+            ],
+            [
+              121.567545,
+              23.902041
+            ],
+            [
+              121.568058,
+              23.90245
+            ],
+            [
+              121.568127,
+              23.90252
+            ],
+            [
+              121.568691,
+              23.90302
+            ],
+            [
+              121.569869,
+              23.904151
+            ],
+            [
+              121.570934,
+              23.90531
+            ],
+            [
+              121.573106,
+              23.907527
+            ],
+            [
+              121.573136,
+              23.907558
+            ],
+            [
+              121.577904,
+              23.912403
+            ],
+            [
+              121.580502,
+              23.915086
+            ],
+            [
+              121.583157,
+              23.917776
+            ],
+            [
+              121.586868,
+              23.921527
+            ],
+            [
+              121.587372,
+              23.922022
+            ],
+            [
+              121.587871,
+              23.922503
+            ],
+            [
+              121.588804,
+              23.923279
+            ],
+            [
+              121.589777,
+              23.924093
+            ],
+            [
+              121.590207,
+              23.924522
+            ],
+            [
+              121.590429,
+              23.924781
+            ],
+            [
+              121.590533,
+              23.924938
+            ],
+            [
+              121.591021,
+              23.925756
+            ],
+            [
+              121.591374,
+              23.926352
+            ],
+            [
+              121.59149,
+              23.926542
+            ],
+            [
+              121.591803,
+              23.927084
+            ],
+            [
+              121.592104,
+              23.927526
+            ],
+            [
+              121.59236,
+              23.927922
+            ]
+          ],
+          "via": [],
+          "durationSec": 324.7,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_07",
+          "to": "call_08",
+          "path": [
+            [
+              121.59236,
+              23.927922
+            ],
+            [
+              121.592368,
+              23.927934
+            ],
+            [
+              121.592473,
+              23.928099
+            ],
+            [
+              121.59287,
+              23.928712
+            ],
+            [
+              121.593941,
+              23.930354
+            ],
+            [
+              121.594243,
+              23.930822
+            ],
+            [
+              121.594386,
+              23.931066
+            ],
+            [
+              121.594535,
+              23.931368
+            ],
+            [
+              121.594582,
+              23.931476
+            ],
+            [
+              121.594645,
+              23.931718
+            ],
+            [
+              121.594691,
+              23.931935
+            ],
+            [
+              121.594708,
+              23.932102
+            ],
+            [
+              121.594712,
+              23.932284
+            ],
+            [
+              121.594696,
+              23.932632
+            ],
+            [
+              121.59461,
+              23.933894
+            ],
+            [
+              121.594488,
+              23.936033
+            ],
+            [
+              121.594483,
+              23.936099
+            ]
+          ],
+          "via": [],
+          "durationSec": 65.3,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_08",
+          "to": "call_09",
+          "path": [
+            [
+              121.594483,
+              23.936099
+            ],
+            [
+              121.594453,
+              23.936512
+            ],
+            [
+              121.594288,
+              23.939142
+            ],
+            [
+              121.594286,
+              23.939373
+            ],
+            [
+              121.594308,
+              23.939524
+            ],
+            [
+              121.594361,
+              23.939846
+            ],
+            [
+              121.59442,
+              23.940049
+            ]
+          ],
+          "via": [],
+          "durationSec": 32.9,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_09",
+          "to": "call_10",
+          "path": [
+            [
+              121.59442,
+              23.940049
+            ],
+            [
+              121.59443,
+              23.940082
+            ],
+            [
+              121.594548,
+              23.940347
+            ],
+            [
+              121.595184,
+              23.941656
+            ],
+            [
+              121.595265,
+              23.941853
+            ],
+            [
+              121.595624,
+              23.942639
+            ],
+            [
+              121.596166,
+              23.9438
+            ],
+            [
+              121.596423,
+              23.944423
+            ],
+            [
+              121.597229,
+              23.946078
+            ],
+            [
+              121.597827,
+              23.94735
+            ],
+            [
+              121.597986,
+              23.947725
+            ]
+          ],
+          "via": [],
+          "durationSec": 68.5,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_10",
+          "to": "call_11",
+          "path": [
+            [
+              121.597986,
+              23.947725
+            ],
+            [
+              121.598045,
+              23.947863
+            ],
+            [
+              121.598505,
+              23.948914
+            ],
+            [
+              121.598845,
+              23.949618
+            ],
+            [
+              121.599634,
+              23.951338
+            ],
+            [
+              121.59977,
+              23.951641
+            ]
+          ],
+          "via": [],
+          "durationSec": 36.7,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_11",
+          "to": "call_12",
+          "path": [
+            [
+              121.59977,
+              23.951641
+            ],
+            [
+              121.600389,
+              23.953023
+            ],
+            [
+              121.600426,
+              23.953104
+            ],
+            [
+              121.600466,
+              23.953187
+            ],
+            [
+              121.601232,
+              23.954759
+            ],
+            [
+              121.601737,
+              23.955825
+            ]
+          ],
+          "via": [],
+          "durationSec": 37.1,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_12",
+          "to": "call_13",
+          "path": [
+            [
+              121.601737,
+              23.955825
+            ],
+            [
+              121.601968,
+              23.956314
+            ],
+            [
+              121.602028,
+              23.956474
+            ],
+            [
+              121.602395,
+              23.957307
+            ],
+            [
+              121.602701,
+              23.957982
+            ],
+            [
+              121.60289,
+              23.958398
+            ],
+            [
+              121.603041,
+              23.958729
+            ],
+            [
+              121.603542,
+              23.95976
+            ],
+            [
+              121.603601,
+              23.959881
+            ],
+            [
+              121.604294,
+              23.96139
+            ],
+            [
+              121.604512,
+              23.961836
+            ]
+          ],
+          "via": [],
+          "durationSec": 55.4,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_13",
+          "to": "call_14",
+          "path": [
+            [
+              121.604512,
+              23.961836
+            ],
+            [
+              121.604584,
+              23.961982
+            ],
+            [
+              121.604777,
+              23.962342
+            ],
+            [
+              121.6049,
+              23.962527
+            ],
+            [
+              121.604987,
+              23.962649
+            ],
+            [
+              121.605457,
+              23.963159
+            ],
+            [
+              121.605922,
+              23.963655
+            ],
+            [
+              121.606659,
+              23.964466
+            ],
+            [
+              121.60698,
+              23.964821
+            ],
+            [
+              121.60706,
+              23.964912
+            ],
+            [
+              121.607131,
+              23.964987
+            ],
+            [
+              121.608806,
+              23.96692
+            ],
+            [
+              121.608899,
+              23.967025
+            ],
+            [
+              121.608848,
+              23.96708
+            ],
+            [
+              121.608789,
+              23.96716
+            ],
+            [
+              121.608326,
+              23.967752
+            ]
+          ],
+          "via": [],
+          "durationSec": 69.9,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_14",
+          "to": "call_15",
+          "path": [
+            [
+              121.608326,
+              23.967752
+            ],
+            [
+              121.607489,
+              23.968824
+            ],
+            [
+              121.606359,
+              23.970283
+            ],
+            [
+              121.606123,
+              23.970574
+            ],
+            [
+              121.606614,
+              23.970906
+            ]
+          ],
+          "via": [],
+          "durationSec": 65.2,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_15",
+          "to": "call_16",
+          "path": [
+            [
+              121.606614,
+              23.970906
+            ],
+            [
+              121.606822,
+              23.971047
+            ],
+            [
+              121.606963,
+              23.971146
+            ],
+            [
+              121.607462,
+              23.97147
+            ],
+            [
+              121.60816,
+              23.971934
+            ],
+            [
+              121.608495,
+              23.972155
+            ],
+            [
+              121.60887,
+              23.972401
+            ],
+            [
+              121.609041,
+              23.972522
+            ],
+            [
+              121.609257,
+              23.972657
+            ]
+          ],
+          "via": [],
+          "durationSec": 33.8,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_16",
+          "to": "call_17",
+          "path": [
+            [
+              121.609257,
+              23.972657
+            ],
+            [
+              121.609783,
+              23.972987
+            ],
+            [
+              121.610316,
+              23.973332
+            ],
+            [
+              121.610908,
+              23.973729
+            ],
+            [
+              121.611149,
+              23.973893
+            ]
+          ],
+          "via": [],
+          "durationSec": 23.4,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_17",
+          "to": "call_18",
+          "path": [
+            [
+              121.611149,
+              23.973893
+            ],
+            [
+              121.611345,
+              23.974026
+            ],
+            [
+              121.611541,
+              23.974157
+            ],
+            [
+              121.611419,
+              23.974355
+            ],
+            [
+              121.61127,
+              23.974596
+            ],
+            [
+              121.610595,
+              23.975444
+            ],
+            [
+              121.609876,
+              23.976351
+            ],
+            [
+              121.609682,
+              23.976323
+            ],
+            [
+              121.60909,
+              23.976241
+            ],
+            [
+              121.609005,
+              23.976224
+            ],
+            [
+              121.608902,
+              23.976208
+            ]
+          ],
+          "via": [],
+          "durationSec": 54.5,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_18",
+          "to": "call_19",
+          "path": [
+            [
+              121.608902,
+              23.976208
+            ],
+            [
+              121.608767,
+              23.976186
+            ],
+            [
+              121.608127,
+              23.976118
+            ],
+            [
+              121.607422,
+              23.976042
+            ],
+            [
+              121.606385,
+              23.975913
+            ],
+            [
+              121.606144,
+              23.975878
+            ],
+            [
+              121.605329,
+              23.975779
+            ],
+            [
+              121.605107,
+              23.975751
+            ],
+            [
+              121.604875,
+              23.975728
+            ],
+            [
+              121.604504,
+              23.975676
+            ]
+          ],
+          "via": [],
+          "durationSec": 40.4,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_19",
+          "to": "call_20",
+          "path": [
+            [
+              121.604504,
+              23.975676
+            ],
+            [
+              121.604218,
+              23.975636
+            ],
+            [
+              121.603314,
+              23.975536
+            ],
+            [
+              121.602335,
+              23.975429
+            ],
+            [
+              121.601671,
+              23.976259
+            ],
+            [
+              121.601426,
+              23.976581
+            ],
+            [
+              121.601263,
+              23.976796
+            ],
+            [
+              121.600879,
+              23.977292
+            ],
+            [
+              121.600673,
+              23.977559
+            ],
+            [
+              121.600661,
+              23.977574
+            ]
+          ],
+          "via": [],
+          "durationSec": 64.7,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_20",
+          "to": "call_21",
+          "path": [
+            [
+              121.600661,
+              23.977574
+            ],
+            [
+              121.600424,
+              23.977865
+            ],
+            [
+              121.600305,
+              23.978038
+            ],
+            [
+              121.600729,
+              23.978337
+            ],
+            [
+              121.600974,
+              23.978488
+            ],
+            [
+              121.60115,
+              23.978611
+            ],
+            [
+              121.601442,
+              23.978795
+            ],
+            [
+              121.601649,
+              23.978907
+            ],
+            [
+              121.601904,
+              23.979079
+            ],
+            [
+              121.602328,
+              23.979352
+            ],
+            [
+              121.602744,
+              23.979619
+            ],
+            [
+              121.602812,
+              23.979665
+            ]
+          ],
+          "via": [],
+          "durationSec": 44.8,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_21",
+          "to": "call_22",
+          "path": [
+            [
+              121.602812,
+              23.979665
+            ],
+            [
+              121.603187,
+              23.979915
+            ],
+            [
+              121.603261,
+              23.979972
+            ],
+            [
+              121.603611,
+              23.980224
+            ],
+            [
+              121.603797,
+              23.980357
+            ],
+            [
+              121.603962,
+              23.980462
+            ],
+            [
+              121.604478,
+              23.980792
+            ],
+            [
+              121.605128,
+              23.981221
+            ],
+            [
+              121.605749,
+              23.981625
+            ],
+            [
+              121.605215,
+              23.982317
+            ],
+            [
+              121.604994,
+              23.982583
+            ],
+            [
+              121.604852,
+              23.982771
+            ],
+            [
+              121.604487,
+              23.983253
+            ],
+            [
+              121.604259,
+              23.983574
+            ],
+            [
+              121.603882,
+              23.984028
+            ],
+            [
+              121.603861,
+              23.984056
+            ]
+          ],
+          "via": [],
+          "durationSec": 76.5,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_22",
+          "to": "call_23",
+          "path": [
+            [
+              121.603861,
+              23.984056
+            ],
+            [
+              121.603438,
+              23.984631
+            ],
+            [
+              121.602906,
+              23.985286
+            ],
+            [
+              121.602465,
+              23.985829
+            ],
+            [
+              121.602159,
+              23.986217
+            ],
+            [
+              121.602072,
+              23.986327
+            ],
+            [
+              121.601989,
+              23.986433
+            ]
+          ],
+          "via": [],
+          "durationSec": 31.5,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_23",
+          "to": "call_24",
+          "path": [
+            [
+              121.601989,
+              23.986433
+            ],
+            [
+              121.601714,
+              23.986782
+            ],
+            [
+              121.601448,
+              23.987174
+            ],
+            [
+              121.601742,
+              23.98715
+            ],
+            [
+              121.604259,
+              23.987763
+            ],
+            [
+              121.604551,
+              23.987836
+            ],
+            [
+              121.604704,
+              23.987861
+            ]
+          ],
+          "via": [],
+          "durationSec": 100.9,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_24",
+          "to": "call_25",
+          "path": [
+            [
+              121.604704,
+              23.987861
+            ],
+            [
+              121.605473,
+              23.987989
+            ],
+            [
+              121.605901,
+              23.987988
+            ],
+            [
+              121.606206,
+              23.988044
+            ],
+            [
+              121.605989,
+              23.98894
+            ],
+            [
+              121.605852,
+              23.9895
+            ]
+          ],
+          "via": [],
+          "durationSec": 59.5,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        },
+        {
+          "from": "call_25",
+          "to": "call_26",
+          "path": [
+            [
+              121.605852,
+              23.9895
+            ],
+            [
+              121.605669,
+              23.990244
+            ],
+            [
+              121.60546,
+              23.991111
+            ],
+            [
+              121.605247,
+              23.992039
+            ],
+            [
+              121.605235,
+              23.99211
+            ],
+            [
+              121.604642,
+              23.991992
+            ],
+            [
+              121.604525,
+              23.991992
+            ],
+            [
+              121.604003,
+              23.992212
+            ],
+            [
+              121.603503,
+              23.992427
+            ],
+            [
+              121.60332,
+              23.992454
+            ],
+            [
+              121.602907,
+              23.992627
+            ],
+            [
+              121.602651,
+              23.992734
+            ],
+            [
+              121.602885,
+              23.993194
+            ]
+          ],
+          "via": [],
+          "durationSec": 78.1,
+          "confirmed": false,
+          "locked": false,
+          "source": "OSRM道路候選（尚未人工確認）"
+        }
+      ],
+      "departures": [
+        {
+          "id": "301_inbound_trip_01",
+          "time": "06:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_02",
+          "time": "08:20",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_03",
+          "time": "10:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_04",
+          "time": "11:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_05",
+          "time": "12:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_06",
+          "time": "14:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_07",
+          "time": "15:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_08",
+          "time": "16:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_09",
+          "time": "17:00",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_10",
+          "time": "17:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_11",
+          "time": "18:00",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_12",
+          "time": "18:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_13",
+          "time": "19:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_14",
+          "time": "20:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "301_inbound_trip_15",
+          "time": "21:30",
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "sequenceConfirmed": true,
+      "timeSource": "業者預估逐站分鐘表＋已記錄的動畫平滑；不是路由時間倍數估算。"
+    }
+  ],
+  "updatedAt": "2026-10-24T00:00:00+08:00",
+  "originalRoute": {
+    "routeId": "hualien_301",
+    "shortName": "301",
+    "name": "301 花蓮轉運站－東華大學（圖書館資訊大樓）",
+    "color": "#104a8e",
+    "isDemo": false,
+    "dataStatus": "review_pending",
+    "warnings": [
+      "試製資料：政府站位已按名稱及站序配對；道路為OSRM候選，尚待管理者檢查實際行駛路線。",
+      "逐站時間來自附件的業者「預估到站時刻」，不是實測或即時GPS；原圖未標明生效日期。",
+      "附件「平假日」共用班次，暫對應星期一至日；國定假日、臨時停駛與改道未另外處理。",
+      "相鄰站同分鐘等衝突以動畫時間模型作最小幅度調整；原始分鐘與每站調整秒數均保留。",
+      "動畫時間模型假設中途與終點停站20秒，行駛速度上限50km/h僅作平滑限制，不代表實際道路速限或車速。",
+      "勿按工作台「產生估算」覆蓋本份逐站時間；該按鈕會改用路由倍數估算。"
+    ],
+    "sources": {
+      "official_schedule": {
+        "kind": "official",
+        "description": "使用者提供的太魯閣客運301路線圖、平假日班次及站址表。未標示生效日期。",
+        "url": "https://tarokobus.webnode.tw/l/301/",
+        "retrievedAt": "2026-10-24",
+        "effectiveDate": null
+      },
+      "government_positions": {
+        "kind": "official",
+        "description": "花蓮縣政府交通e點通301站序與經緯度，依名稱及站序配對。保留各方向原始站位，未要求人工確認道路兩側。未使用頁面即時到站數值。",
+        "url": "https://traffic.hl.gov.tw/Bus/BusArrivelTime?from=arrival&input=301",
+        "retrievedAt": "2026-10-24"
+      },
+      "osrm_roads": {
+        "kind": "routing",
+        "description": "OSRM driving按各方向政府站序產生的道路候選；未經人工確認，並非營運單位公布的實際行駛軌跡。",
+        "url": "https://project-osrm.org/",
+        "retrievedAt": "2026-10-24"
+      },
+      "operator_estimated_times": {
+        "kind": "estimated",
+        "description": "附件業者逐站「預估到站時刻」為主要時間依據，原表全程43分鐘。相同分鐘及停站衝突經動畫模型平滑，原始分鐘、調整秒數另存；不再套用1.2或1.5倍數。不是官方秒級時刻、實測或即時GPS。",
+        "authority": "太魯閣客運",
+        "url": "https://tarokobus.webnode.tw/l/301/",
+        "retrievedAt": "2026-10-24"
+      },
+      "animation_assumptions": {
+        "kind": "estimated",
+        "description": "中途與終點停站20秒；在維持起點0秒、終點抵達2580秒下，最小平方調整逐站到達秒數。移動時間至少為路段距離除以50km/h向上取整。50km/h僅為動畫平滑限制，不代表道路速限或實際車速。"
+      }
+    },
+    "stops": {
+      "hualien_301_301_outbound_HUA298840": {
+        "name": "花蓮轉運站",
+        "coord": [
+          121.6032,
+          23.99306
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298840"
+      },
+      "hualien_301_301_outbound_HUA298839": {
+        "name": "花蓮電影城",
+        "coord": [
+          121.6058,
+          23.98966
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298839"
+      },
+      "hualien_301_301_outbound_HUA298837": {
+        "name": "商校街",
+        "coord": [
+          121.6047,
+          23.98801
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298837"
+      },
+      "hualien_301_301_outbound_HUA298835": {
+        "name": "花蓮商校",
+        "coord": [
+          121.6018,
+          23.98658
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298835"
+      },
+      "hualien_301_301_outbound_HUA298833": {
+        "name": "郵政總局",
+        "coord": [
+          121.6039,
+          23.9839
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298833"
+      },
+      "hualien_301_301_outbound_HUA298829": {
+        "name": "明義國小",
+        "coord": [
+          121.6028,
+          23.9797
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298829"
+      },
+      "hualien_301_301_outbound_HUA298827": {
+        "name": "遠東百貨",
+        "coord": [
+          121.6006,
+          23.97764
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298827"
+      },
+      "hualien_301_301_outbound_HUA298825": {
+        "name": "花蓮文創園區",
+        "coord": [
+          121.6045,
+          23.97566
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298825"
+      },
+      "hualien_301_301_outbound_HUA298823": {
+        "name": "中華路",
+        "coord": [
+          121.6089,
+          23.97619
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298823"
+      },
+      "hualien_301_301_outbound_HUA298821": {
+        "name": "東大門夜市",
+        "coord": [
+          121.6111,
+          23.97445
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298821"
+      },
+      "hualien_301_301_outbound_HUA298819": {
+        "name": "重慶市場(石藝大街)",
+        "coord": [
+          121.6092,
+          23.97265
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298819"
+      },
+      "hualien_301_301_outbound_HUA298817": {
+        "name": "信義國小",
+        "coord": [
+          121.6066,
+          23.9709
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298817"
+      },
+      "hualien_301_301_outbound_HUA298815": {
+        "name": "南濱公園",
+        "coord": [
+          121.6083,
+          23.9676
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298815"
+      },
+      "hualien_301_301_outbound_HUA298813": {
+        "name": "武聖宮(榮光社區)",
+        "coord": [
+          121.6042,
+          23.9614
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298813"
+      },
+      "hualien_301_301_outbound_HUA298811": {
+        "name": "燕聲廣播",
+        "coord": [
+          121.6016,
+          23.9558
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298811"
+      },
+      "hualien_301_301_outbound_HUA298809": {
+        "name": "仁安社區",
+        "coord": [
+          121.5997,
+          23.95168
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298809"
+      },
+      "hualien_301_301_outbound_HUA298807": {
+        "name": "阿美麻糬",
+        "coord": [
+          121.5976,
+          23.94741
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298807"
+      },
+      "hualien_301_301_outbound_HUA302885": {
+        "name": "新天堂樂園",
+        "coord": [
+          121.5942,
+          23.93889
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA302885"
+      },
+      "hualien_301_301_outbound_HUA298805": {
+        "name": "光華樂活創意園區",
+        "coord": [
+          121.5942,
+          23.93594
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298805"
+      },
+      "hualien_301_301_outbound_HUA298803": {
+        "name": "中華紙漿",
+        "coord": [
+          121.5921,
+          23.9278
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298803"
+      },
+      "hualien_301_301_outbound_HUA298801": {
+        "name": "大學路口",
+        "coord": [
+          121.5544,
+          23.89584
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298801"
+      },
+      "hualien_301_301_outbound_HUA298799": {
+        "name": "東華大學",
+        "coord": [
+          121.5454,
+          23.8923
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298799"
+      },
+      "hualien_301_301_outbound_HUA300465": {
+        "name": "行政大樓",
+        "coord": [
+          121.5445,
+          23.89295
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA300465"
+      },
+      "hualien_301_301_outbound_HUA302887": {
+        "name": "原住民學院",
+        "coord": [
+          121.5457,
+          23.89485
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA302887"
+      },
+      "hualien_301_301_outbound_HUA300467": {
+        "name": "育成中心",
+        "coord": [
+          121.544,
+          23.89816
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA300467"
+      },
+      "hualien_301_301_outbound_HUA300470": {
+        "name": "圖書館資訊大樓",
+        "coord": [
+          121.5419,
+          23.89754
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA300470"
+      },
+      "hualien_301_301_inbound_HUA300470": {
+        "name": "圖書館資訊大樓",
+        "coord": [
+          121.5419,
+          23.89754
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA300470"
+      },
+      "hualien_301_301_inbound_HUA300469": {
+        "name": "育成中心",
+        "coord": [
+          121.5439,
+          23.8981
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA300469"
+      },
+      "hualien_301_301_inbound_HUA302888": {
+        "name": "原住民學院",
+        "coord": [
+          121.5456,
+          23.89464
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA302888"
+      },
+      "hualien_301_301_inbound_HUA300466": {
+        "name": "行政大樓",
+        "coord": [
+          121.5435,
+          23.89407
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA300466"
+      },
+      "hualien_301_301_inbound_HUA303573": {
+        "name": "東華大學",
+        "coord": [
+          121.5449,
+          23.89188
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA303573"
+      },
+      "hualien_301_301_inbound_HUA298800": {
+        "name": "大學路口",
+        "coord": [
+          121.5544,
+          23.8956
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298800"
+      },
+      "hualien_301_301_inbound_HUA298802": {
+        "name": "中華紙漿",
+        "coord": [
+          121.5924,
+          23.9279
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298802"
+      },
+      "hualien_301_301_inbound_HUA298804": {
+        "name": "光華樂活創意園區",
+        "coord": [
+          121.5945,
+          23.9361
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298804"
+      },
+      "hualien_301_301_inbound_HUA302886": {
+        "name": "新天堂樂園",
+        "coord": [
+          121.5945,
+          23.94003
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA302886"
+      },
+      "hualien_301_301_inbound_HUA298806": {
+        "name": "阿美麻糬",
+        "coord": [
+          121.598,
+          23.94772
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298806"
+      },
+      "hualien_301_301_inbound_HUA298808": {
+        "name": "仁安社區",
+        "coord": [
+          121.5998,
+          23.95163
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298808"
+      },
+      "hualien_301_301_inbound_HUA298810": {
+        "name": "燕聲廣播",
+        "coord": [
+          121.6018,
+          23.9558
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298810"
+      },
+      "hualien_301_301_inbound_HUA298812": {
+        "name": "武聖宮(榮光社區)",
+        "coord": [
+          121.6046,
+          23.9618
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298812"
+      },
+      "hualien_301_301_inbound_HUA298814": {
+        "name": "南濱公園",
+        "coord": [
+          121.6084,
+          23.9678
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298814"
+      },
+      "hualien_301_301_inbound_HUA298816": {
+        "name": "信義國小",
+        "coord": [
+          121.6067,
+          23.9708
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298816"
+      },
+      "hualien_301_301_inbound_HUA298818": {
+        "name": "重慶市場(石藝大街)",
+        "coord": [
+          121.6093,
+          23.9726
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298818"
+      },
+      "hualien_301_301_inbound_HUA298820": {
+        "name": "東大門夜市",
+        "coord": [
+          121.6112,
+          23.97383
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298820"
+      },
+      "hualien_301_301_inbound_HUA298822": {
+        "name": "中華路",
+        "coord": [
+          121.6089,
+          23.97622
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298822"
+      },
+      "hualien_301_301_inbound_HUA298824": {
+        "name": "花蓮文創園區",
+        "coord": [
+          121.6045,
+          23.9757
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298824"
+      },
+      "hualien_301_301_inbound_HUA298826": {
+        "name": "遠東百貨",
+        "coord": [
+          121.6007,
+          23.9776
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298826"
+      },
+      "hualien_301_301_inbound_HUA298828": {
+        "name": "明義國小",
+        "coord": [
+          121.6028,
+          23.97968
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298828"
+      },
+      "hualien_301_301_inbound_HUA298832": {
+        "name": "郵政總局",
+        "coord": [
+          121.6039,
+          23.98408
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298832"
+      },
+      "hualien_301_301_inbound_HUA298834": {
+        "name": "花蓮商校",
+        "coord": [
+          121.602,
+          23.98644
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298834"
+      },
+      "hualien_301_301_inbound_HUA298836": {
+        "name": "商校街",
+        "coord": [
+          121.6047,
+          23.98788
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298836"
+      },
+      "hualien_301_301_inbound_HUA298838": {
+        "name": "花蓮電影城",
+        "coord": [
+          121.6059,
+          23.98951
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298838"
+      },
+      "hualien_301_301_inbound_HUA298840": {
+        "name": "花蓮轉運站",
+        "coord": [
+          121.6032,
+          23.99306
+        ],
+        "sourceId": "government_positions",
+        "verificationStatus": "unverified",
+        "governmentStopUID": "HUA298840"
+      }
+    },
+    "patterns": {
+      "301_outbound": {
+        "direction": "outbound",
+        "headsign": "圖書館資訊大樓",
+        "path": [
+          [
+            121.602885,
+            23.993194
+          ],
+          [
+            121.603092,
+            23.993599
+          ],
+          [
+            121.603347,
+            23.993505
+          ],
+          [
+            121.603731,
+            23.993328
+          ],
+          [
+            121.604369,
+            23.993074
+          ],
+          [
+            121.60492,
+            23.993185
+          ],
+          [
+            121.605235,
+            23.99211
+          ],
+          [
+            121.605247,
+            23.992039
+          ],
+          [
+            121.60546,
+            23.991111
+          ],
+          [
+            121.605669,
+            23.990244
+          ],
+          [
+            121.605812,
+            23.989662
+          ],
+          [
+            121.605989,
+            23.98894
+          ],
+          [
+            121.606206,
+            23.988044
+          ],
+          [
+            121.605462,
+            23.988069
+          ],
+          [
+            121.605354,
+            23.988053
+          ],
+          [
+            121.604719,
+            23.98793
+          ],
+          [
+            121.604333,
+            23.987855
+          ],
+          [
+            121.604223,
+            23.987827
+          ],
+          [
+            121.603102,
+            23.987547
+          ],
+          [
+            121.602137,
+            23.987316
+          ],
+          [
+            121.601448,
+            23.987174
+          ],
+          [
+            121.601714,
+            23.986782
+          ],
+          [
+            121.601848,
+            23.986612
+          ],
+          [
+            121.602072,
+            23.986327
+          ],
+          [
+            121.602159,
+            23.986217
+          ],
+          [
+            121.602465,
+            23.985829
+          ],
+          [
+            121.602906,
+            23.985286
+          ],
+          [
+            121.603438,
+            23.984631
+          ],
+          [
+            121.603882,
+            23.984028
+          ],
+          [
+            121.603956,
+            23.983939
+          ],
+          [
+            121.604259,
+            23.983574
+          ],
+          [
+            121.604487,
+            23.983253
+          ],
+          [
+            121.604852,
+            23.982771
+          ],
+          [
+            121.604994,
+            23.982583
+          ],
+          [
+            121.605215,
+            23.982317
+          ],
+          [
+            121.605749,
+            23.981625
+          ],
+          [
+            121.605128,
+            23.981221
+          ],
+          [
+            121.604478,
+            23.980792
+          ],
+          [
+            121.603962,
+            23.980462
+          ],
+          [
+            121.603797,
+            23.980357
+          ],
+          [
+            121.603611,
+            23.980224
+          ],
+          [
+            121.603261,
+            23.979972
+          ],
+          [
+            121.603187,
+            23.979915
+          ],
+          [
+            121.602823,
+            23.979672
+          ],
+          [
+            121.602744,
+            23.979619
+          ],
+          [
+            121.602328,
+            23.979352
+          ],
+          [
+            121.601904,
+            23.979079
+          ],
+          [
+            121.601649,
+            23.978907
+          ],
+          [
+            121.601442,
+            23.978795
+          ],
+          [
+            121.60115,
+            23.978611
+          ],
+          [
+            121.600974,
+            23.978488
+          ],
+          [
+            121.600729,
+            23.978337
+          ],
+          [
+            121.600305,
+            23.978038
+          ],
+          [
+            121.600424,
+            23.977865
+          ],
+          [
+            121.600605,
+            23.977643
+          ],
+          [
+            121.600673,
+            23.977559
+          ],
+          [
+            121.600879,
+            23.977292
+          ],
+          [
+            121.601263,
+            23.976796
+          ],
+          [
+            121.601426,
+            23.976581
+          ],
+          [
+            121.601671,
+            23.976259
+          ],
+          [
+            121.602335,
+            23.975429
+          ],
+          [
+            121.603314,
+            23.975536
+          ],
+          [
+            121.604218,
+            23.975636
+          ],
+          [
+            121.604497,
+            23.975675
+          ],
+          [
+            121.604875,
+            23.975728
+          ],
+          [
+            121.605107,
+            23.975751
+          ],
+          [
+            121.605329,
+            23.975779
+          ],
+          [
+            121.606144,
+            23.975878
+          ],
+          [
+            121.606385,
+            23.975913
+          ],
+          [
+            121.607422,
+            23.976042
+          ],
+          [
+            121.608127,
+            23.976118
+          ],
+          [
+            121.608767,
+            23.976186
+          ],
+          [
+            121.608897,
+            23.976207
+          ],
+          [
+            121.609005,
+            23.976224
+          ],
+          [
+            121.60909,
+            23.976241
+          ],
+          [
+            121.609682,
+            23.976323
+          ],
+          [
+            121.609876,
+            23.976351
+          ],
+          [
+            121.610595,
+            23.975444
+          ],
+          [
+            121.61127,
+            23.974596
+          ],
+          [
+            121.61108,
+            23.974476
+          ],
+          [
+            121.610877,
+            23.974347
+          ],
+          [
+            121.610735,
+            23.974256
+          ],
+          [
+            121.610574,
+            23.974155
+          ],
+          [
+            121.610908,
+            23.973729
+          ],
+          [
+            121.610316,
+            23.973332
+          ],
+          [
+            121.609783,
+            23.972987
+          ],
+          [
+            121.609214,
+            23.972631
+          ],
+          [
+            121.609041,
+            23.972522
+          ],
+          [
+            121.60887,
+            23.972401
+          ],
+          [
+            121.608495,
+            23.972155
+          ],
+          [
+            121.60816,
+            23.971934
+          ],
+          [
+            121.607462,
+            23.97147
+          ],
+          [
+            121.606963,
+            23.971146
+          ],
+          [
+            121.606822,
+            23.971047
+          ],
+          [
+            121.606602,
+            23.970898
+          ],
+          [
+            121.606123,
+            23.970574
+          ],
+          [
+            121.606359,
+            23.970283
+          ],
+          [
+            121.607489,
+            23.968824
+          ],
+          [
+            121.608396,
+            23.967663
+          ],
+          [
+            121.608789,
+            23.96716
+          ],
+          [
+            121.608848,
+            23.96708
+          ],
+          [
+            121.608745,
+            23.966964
+          ],
+          [
+            121.607051,
+            23.965047
+          ],
+          [
+            121.60698,
+            23.964966
+          ],
+          [
+            121.6069,
+            23.964877
+          ],
+          [
+            121.605803,
+            23.963675
+          ],
+          [
+            121.605342,
+            23.963181
+          ],
+          [
+            121.605228,
+            23.963065
+          ],
+          [
+            121.604919,
+            23.962711
+          ],
+          [
+            121.604747,
+            23.962479
+          ],
+          [
+            121.604532,
+            23.962124
+          ],
+          [
+            121.6042,
+            23.9614
+          ],
+          [
+            121.604181,
+            23.961359
+          ],
+          [
+            121.603727,
+            23.960345
+          ],
+          [
+            121.603529,
+            23.959902
+          ],
+          [
+            121.603471,
+            23.959791
+          ],
+          [
+            121.602962,
+            23.958765
+          ],
+          [
+            121.601949,
+            23.956515
+          ],
+          [
+            121.601865,
+            23.956314
+          ],
+          [
+            121.601622,
+            23.955792
+          ],
+          [
+            121.601156,
+            23.954793
+          ],
+          [
+            121.600374,
+            23.953227
+          ],
+          [
+            121.600333,
+            23.953144
+          ],
+          [
+            121.600296,
+            23.953059
+          ],
+          [
+            121.599703,
+            23.951679
+          ],
+          [
+            121.599567,
+            23.951363
+          ],
+          [
+            121.598764,
+            23.949651
+          ],
+          [
+            121.597926,
+            23.947907
+          ],
+          [
+            121.597788,
+            23.947958
+          ],
+          [
+            121.597652,
+            23.947644
+          ],
+          [
+            121.597553,
+            23.947428
+          ],
+          [
+            121.597461,
+            23.947227
+          ],
+          [
+            121.59759,
+            23.94717
+          ],
+          [
+            121.597171,
+            23.946104
+          ],
+          [
+            121.59673,
+            23.945141
+          ],
+          [
+            121.596355,
+            23.944449
+          ],
+          [
+            121.596098,
+            23.943823
+          ],
+          [
+            121.595564,
+            23.942666
+          ],
+          [
+            121.595194,
+            23.941882
+          ],
+          [
+            121.595117,
+            23.941685
+          ],
+          [
+            121.59451,
+            23.940464
+          ],
+          [
+            121.594381,
+            23.940163
+          ],
+          [
+            121.5943,
+            23.939918
+          ],
+          [
+            121.594228,
+            23.939521
+          ],
+          [
+            121.594216,
+            23.939374
+          ],
+          [
+            121.594216,
+            23.939138
+          ],
+          [
+            121.594231,
+            23.938892
+          ],
+          [
+            121.594376,
+            23.936505
+          ],
+          [
+            121.594083,
+            23.936468
+          ],
+          [
+            121.594116,
+            23.935936
+          ],
+          [
+            121.594246,
+            23.933873
+          ],
+          [
+            121.594545,
+            23.933887
+          ],
+          [
+            121.594622,
+            23.932616
+          ],
+          [
+            121.594642,
+            23.93229
+          ],
+          [
+            121.59463,
+            23.932067
+          ],
+          [
+            121.594605,
+            23.931888
+          ],
+          [
+            121.594555,
+            23.931654
+          ],
+          [
+            121.594483,
+            23.93144
+          ],
+          [
+            121.5944,
+            23.931237
+          ],
+          [
+            121.594182,
+            23.930864
+          ],
+          [
+            121.593867,
+            23.930394
+          ],
+          [
+            121.592127,
+            23.927785
+          ],
+          [
+            121.591688,
+            23.927127
+          ],
+          [
+            121.591245,
+            23.926412
+          ],
+          [
+            121.590799,
+            23.925614
+          ],
+          [
+            121.590446,
+            23.924988
+          ],
+          [
+            121.590324,
+            23.92481
+          ],
+          [
+            121.590097,
+            23.924535
+          ],
+          [
+            121.589835,
+            23.924263
+          ],
+          [
+            121.589295,
+            23.923826
+          ],
+          [
+            121.588647,
+            23.923345
+          ],
+          [
+            121.588235,
+            23.923001
+          ],
+          [
+            121.587764,
+            23.922573
+          ],
+          [
+            121.587104,
+            23.921956
+          ],
+          [
+            121.586519,
+            23.921373
+          ],
+          [
+            121.585713,
+            23.920541
+          ],
+          [
+            121.582902,
+            23.917697
+          ],
+          [
+            121.580341,
+            23.915102
+          ],
+          [
+            121.577817,
+            23.912508
+          ],
+          [
+            121.57628,
+            23.910935
+          ],
+          [
+            121.574714,
+            23.909318
+          ],
+          [
+            121.573776,
+            23.908328
+          ],
+          [
+            121.573766,
+            23.908318
+          ],
+          [
+            121.573061,
+            23.90761
+          ],
+          [
+            121.570844,
+            23.905347
+          ],
+          [
+            121.569743,
+            23.904199
+          ],
+          [
+            121.568254,
+            23.902716
+          ],
+          [
+            121.568055,
+            23.902561
+          ],
+          [
+            121.567981,
+            23.902504
+          ],
+          [
+            121.56772,
+            23.902282
+          ],
+          [
+            121.567318,
+            23.902011
+          ],
+          [
+            121.566671,
+            23.901684
+          ],
+          [
+            121.566625,
+            23.901662
+          ],
+          [
+            121.56634,
+            23.90153
+          ],
+          [
+            121.565134,
+            23.900954
+          ],
+          [
+            121.565106,
+            23.90094
+          ],
+          [
+            121.564153,
+            23.900432
+          ],
+          [
+            121.562375,
+            23.899604
+          ],
+          [
+            121.560583,
+            23.89876
+          ],
+          [
+            121.558534,
+            23.897802
+          ],
+          [
+            121.557456,
+            23.897293
+          ],
+          [
+            121.554627,
+            23.895958
+          ],
+          [
+            121.554396,
+            23.895847
+          ],
+          [
+            121.553809,
+            23.895565
+          ],
+          [
+            121.553733,
+            23.895532
+          ],
+          [
+            121.553647,
+            23.895494
+          ],
+          [
+            121.553137,
+            23.895369
+          ],
+          [
+            121.552938,
+            23.895295
+          ],
+          [
+            121.552856,
+            23.895265
+          ],
+          [
+            121.55276,
+            23.895224
+          ],
+          [
+            121.550787,
+            23.89438
+          ],
+          [
+            121.549512,
+            23.893869
+          ],
+          [
+            121.549453,
+            23.893846
+          ],
+          [
+            121.549397,
+            23.893822
+          ],
+          [
+            121.547311,
+            23.892959
+          ],
+          [
+            121.546064,
+            23.892504
+          ],
+          [
+            121.545677,
+            23.892435
+          ],
+          [
+            121.545391,
+            23.892318
+          ],
+          [
+            121.545271,
+            23.892269
+          ],
+          [
+            121.545142,
+            23.892217
+          ],
+          [
+            121.545004,
+            23.892269
+          ],
+          [
+            121.544924,
+            23.892279
+          ],
+          [
+            121.544823,
+            23.892243
+          ],
+          [
+            121.544648,
+            23.892176
+          ],
+          [
+            121.54461,
+            23.892162
+          ],
+          [
+            121.544568,
+            23.892252
+          ],
+          [
+            121.544549,
+            23.892292
+          ],
+          [
+            121.54452,
+            23.892363
+          ],
+          [
+            121.544482,
+            23.8925
+          ],
+          [
+            121.544351,
+            23.892781
+          ],
+          [
+            121.544316,
+            23.892856
+          ],
+          [
+            121.544427,
+            23.892902
+          ],
+          [
+            121.544507,
+            23.892935
+          ],
+          [
+            121.544577,
+            23.892963
+          ],
+          [
+            121.544719,
+            23.893009
+          ],
+          [
+            121.544864,
+            23.893049
+          ],
+          [
+            121.545003,
+            23.893074
+          ],
+          [
+            121.545141,
+            23.89309
+          ],
+          [
+            121.545346,
+            23.893098
+          ],
+          [
+            121.545559,
+            23.89313
+          ],
+          [
+            121.545796,
+            23.893184
+          ],
+          [
+            121.545956,
+            23.893238
+          ],
+          [
+            121.546173,
+            23.893323
+          ],
+          [
+            121.546273,
+            23.893366
+          ],
+          [
+            121.546343,
+            23.893394
+          ],
+          [
+            121.546308,
+            23.893467
+          ],
+          [
+            121.545719,
+            23.894673
+          ],
+          [
+            121.545643,
+            23.894827
+          ],
+          [
+            121.544963,
+            23.896211
+          ],
+          [
+            121.544719,
+            23.896707
+          ],
+          [
+            121.544712,
+            23.896721
+          ],
+          [
+            121.544654,
+            23.896842
+          ],
+          [
+            121.544587,
+            23.896979
+          ],
+          [
+            121.54439,
+            23.897385
+          ],
+          [
+            121.544011,
+            23.898165
+          ],
+          [
+            121.543915,
+            23.898363
+          ],
+          [
+            121.543865,
+            23.898467
+          ],
+          [
+            121.543834,
+            23.898531
+          ],
+          [
+            121.543774,
+            23.898508
+          ],
+          [
+            121.543659,
+            23.898462
+          ],
+          [
+            121.541955,
+            23.897751
+          ],
+          [
+            121.541636,
+            23.89762
+          ],
+          [
+            121.541668,
+            23.897558
+          ],
+          [
+            121.541853,
+            23.897635
+          ]
+        ],
+        "stopCalls": [
+          {
+            "stopId": "hualien_301_301_outbound_HUA298840",
+            "distanceAlongPathM": 0
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298839",
+            "distanceAlongPathM": 651.55
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298837",
+            "distanceAlongPathM": 988.56
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298835",
+            "distanceAlongPathM": 1406.0
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298833",
+            "distanceAlongPathM": 1772.4
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298829",
+            "distanceAlongPathM": 2455.99
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298827",
+            "distanceAlongPathM": 2823.43
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298825",
+            "distanceAlongPathM": 3347.31
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298823",
+            "distanceAlongPathM": 3798.3
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298821",
+            "distanceAlongPathM": 4163.66
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298819",
+            "distanceAlongPathM": 4495.56
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298817",
+            "distanceAlongPathM": 4823.56
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298815",
+            "distanceAlongPathM": 5281.75
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298813",
+            "distanceAlongPathM": 6153.62
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298811",
+            "distanceAlongPathM": 6830.08
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298809",
+            "distanceAlongPathM": 7327.4
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298807",
+            "distanceAlongPathM": 7862.79
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA302885",
+            "distanceAlongPathM": 8889.96
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298805",
+            "distanceAlongPathM": 9245.11
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298803",
+            "distanceAlongPathM": 10251.63
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298801",
+            "distanceAlongPathM": 15564.35
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA298799",
+            "distanceAlongPathM": 16562.31
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA300465",
+            "distanceAlongPathM": 16752.08
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA302887",
+            "distanceAlongPathM": 17121.6
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA300467",
+            "distanceAlongPathM": 17528.16
+          },
+          {
+            "stopId": "hualien_301_301_outbound_HUA300470",
+            "distanceAlongPathM": 17846.29
+          }
+        ],
+        "sourceId": "osrm_roads",
+        "verificationStatus": "unverified"
+      },
+      "301_inbound": {
+        "direction": "inbound",
+        "headsign": "花蓮轉運站",
+        "path": [
+          [
+            121.541853,
+            23.897635
+          ],
+          [
+            121.541989,
+            23.897691
+          ],
+          [
+            121.543691,
+            23.898397
+          ],
+          [
+            121.543804,
+            23.898444
+          ],
+          [
+            121.543856,
+            23.898338
+          ],
+          [
+            121.543961,
+            23.898125
+          ],
+          [
+            121.544338,
+            23.897363
+          ],
+          [
+            121.544534,
+            23.896959
+          ],
+          [
+            121.544586,
+            23.896862
+          ],
+          [
+            121.544604,
+            23.896825
+          ],
+          [
+            121.54462,
+            23.896792
+          ],
+          [
+            121.544664,
+            23.896702
+          ],
+          [
+            121.544674,
+            23.896682
+          ],
+          [
+            121.544913,
+            23.896193
+          ],
+          [
+            121.545651,
+            23.894661
+          ],
+          [
+            121.545657,
+            23.894648
+          ],
+          [
+            121.546236,
+            23.89344
+          ],
+          [
+            121.546273,
+            23.893366
+          ],
+          [
+            121.546173,
+            23.893323
+          ],
+          [
+            121.545956,
+            23.893238
+          ],
+          [
+            121.545796,
+            23.893184
+          ],
+          [
+            121.545559,
+            23.89313
+          ],
+          [
+            121.545346,
+            23.893098
+          ],
+          [
+            121.545141,
+            23.89309
+          ],
+          [
+            121.545003,
+            23.893074
+          ],
+          [
+            121.544864,
+            23.893049
+          ],
+          [
+            121.544719,
+            23.893009
+          ],
+          [
+            121.544577,
+            23.892963
+          ],
+          [
+            121.544427,
+            23.892902
+          ],
+          [
+            121.544316,
+            23.892856
+          ],
+          [
+            121.544282,
+            23.892931
+          ],
+          [
+            121.543764,
+            23.89399
+          ],
+          [
+            121.543726,
+            23.894066
+          ],
+          [
+            121.543691,
+            23.894103
+          ],
+          [
+            121.543656,
+            23.894149
+          ],
+          [
+            121.543493,
+            23.894084
+          ],
+          [
+            121.543435,
+            23.89406
+          ],
+          [
+            121.54342,
+            23.894023
+          ],
+          [
+            121.543405,
+            23.893975
+          ],
+          [
+            121.54339,
+            23.893913
+          ],
+          [
+            121.543479,
+            23.893879
+          ],
+          [
+            121.543993,
+            23.892813
+          ],
+          [
+            121.544031,
+            23.892737
+          ],
+          [
+            121.544071,
+            23.892665
+          ],
+          [
+            121.544225,
+            23.892338
+          ],
+          [
+            121.544294,
+            23.892199
+          ],
+          [
+            121.544316,
+            23.892153
+          ],
+          [
+            121.544358,
+            23.892063
+          ],
+          [
+            121.544232,
+            23.892007
+          ],
+          [
+            121.544182,
+            23.891985
+          ],
+          [
+            121.544175,
+            23.891983
+          ],
+          [
+            121.544122,
+            23.891955
+          ],
+          [
+            121.544055,
+            23.891906
+          ],
+          [
+            121.544021,
+            23.891749
+          ],
+          [
+            121.54406,
+            23.891672
+          ],
+          [
+            121.54412,
+            23.891555
+          ],
+          [
+            121.544607,
+            23.89176
+          ],
+          [
+            121.5449,
+            23.89188
+          ],
+          [
+            121.54524,
+            23.892018
+          ],
+          [
+            121.545363,
+            23.892069
+          ],
+          [
+            121.545427,
+            23.892095
+          ],
+          [
+            121.545568,
+            23.892153
+          ],
+          [
+            121.546249,
+            23.892435
+          ],
+          [
+            121.547867,
+            23.893085
+          ],
+          [
+            121.549441,
+            23.893731
+          ],
+          [
+            121.549496,
+            23.893754
+          ],
+          [
+            121.549551,
+            23.893776
+          ],
+          [
+            121.552422,
+            23.894952
+          ],
+          [
+            121.552623,
+            23.895035
+          ],
+          [
+            121.552787,
+            23.895057
+          ],
+          [
+            121.552955,
+            23.895067
+          ],
+          [
+            121.553009,
+            23.894949
+          ],
+          [
+            121.553113,
+            23.895054
+          ],
+          [
+            121.553165,
+            23.895107
+          ],
+          [
+            121.553432,
+            23.895245
+          ],
+          [
+            121.553579,
+            23.895333
+          ],
+          [
+            121.554335,
+            23.89571
+          ],
+          [
+            121.55466,
+            23.895872
+          ],
+          [
+            121.555165,
+            23.896121
+          ],
+          [
+            121.555666,
+            23.896353
+          ],
+          [
+            121.556361,
+            23.896677
+          ],
+          [
+            121.557054,
+            23.897008
+          ],
+          [
+            121.557112,
+            23.897036
+          ],
+          [
+            121.55751,
+            23.897221
+          ],
+          [
+            121.558586,
+            23.897721
+          ],
+          [
+            121.560276,
+            23.898514
+          ],
+          [
+            121.560777,
+            23.898751
+          ],
+          [
+            121.562433,
+            23.899506
+          ],
+          [
+            121.564207,
+            23.900346
+          ],
+          [
+            121.566587,
+            23.901526
+          ],
+          [
+            121.567378,
+            23.901943
+          ],
+          [
+            121.567545,
+            23.902041
+          ],
+          [
+            121.568058,
+            23.90245
+          ],
+          [
+            121.568127,
+            23.90252
+          ],
+          [
+            121.568691,
+            23.90302
+          ],
+          [
+            121.569869,
+            23.904151
+          ],
+          [
+            121.570934,
+            23.90531
+          ],
+          [
+            121.573106,
+            23.907527
+          ],
+          [
+            121.573136,
+            23.907558
+          ],
+          [
+            121.577904,
+            23.912403
+          ],
+          [
+            121.580502,
+            23.915086
+          ],
+          [
+            121.583157,
+            23.917776
+          ],
+          [
+            121.586868,
+            23.921527
+          ],
+          [
+            121.587372,
+            23.922022
+          ],
+          [
+            121.587871,
+            23.922503
+          ],
+          [
+            121.588804,
+            23.923279
+          ],
+          [
+            121.589777,
+            23.924093
+          ],
+          [
+            121.590207,
+            23.924522
+          ],
+          [
+            121.590429,
+            23.924781
+          ],
+          [
+            121.590533,
+            23.924938
+          ],
+          [
+            121.591021,
+            23.925756
+          ],
+          [
+            121.591374,
+            23.926352
+          ],
+          [
+            121.59149,
+            23.926542
+          ],
+          [
+            121.591803,
+            23.927084
+          ],
+          [
+            121.592104,
+            23.927526
+          ],
+          [
+            121.59236,
+            23.927922
+          ],
+          [
+            121.592368,
+            23.927934
+          ],
+          [
+            121.592473,
+            23.928099
+          ],
+          [
+            121.59287,
+            23.928712
+          ],
+          [
+            121.593941,
+            23.930354
+          ],
+          [
+            121.594243,
+            23.930822
+          ],
+          [
+            121.594386,
+            23.931066
+          ],
+          [
+            121.594535,
+            23.931368
+          ],
+          [
+            121.594582,
+            23.931476
+          ],
+          [
+            121.594645,
+            23.931718
+          ],
+          [
+            121.594691,
+            23.931935
+          ],
+          [
+            121.594708,
+            23.932102
+          ],
+          [
+            121.594712,
+            23.932284
+          ],
+          [
+            121.594696,
+            23.932632
+          ],
+          [
+            121.59461,
+            23.933894
+          ],
+          [
+            121.594488,
+            23.936033
+          ],
+          [
+            121.594483,
+            23.936099
+          ],
+          [
+            121.594453,
+            23.936512
+          ],
+          [
+            121.594288,
+            23.939142
+          ],
+          [
+            121.594286,
+            23.939373
+          ],
+          [
+            121.594308,
+            23.939524
+          ],
+          [
+            121.594361,
+            23.939846
+          ],
+          [
+            121.59442,
+            23.940049
+          ],
+          [
+            121.59443,
+            23.940082
+          ],
+          [
+            121.594548,
+            23.940347
+          ],
+          [
+            121.595184,
+            23.941656
+          ],
+          [
+            121.595265,
+            23.941853
+          ],
+          [
+            121.595624,
+            23.942639
+          ],
+          [
+            121.596166,
+            23.9438
+          ],
+          [
+            121.596423,
+            23.944423
+          ],
+          [
+            121.597229,
+            23.946078
+          ],
+          [
+            121.597827,
+            23.94735
+          ],
+          [
+            121.597986,
+            23.947725
+          ],
+          [
+            121.598045,
+            23.947863
+          ],
+          [
+            121.598505,
+            23.948914
+          ],
+          [
+            121.598845,
+            23.949618
+          ],
+          [
+            121.599634,
+            23.951338
+          ],
+          [
+            121.59977,
+            23.951641
+          ],
+          [
+            121.600389,
+            23.953023
+          ],
+          [
+            121.600426,
+            23.953104
+          ],
+          [
+            121.600466,
+            23.953187
+          ],
+          [
+            121.601232,
+            23.954759
+          ],
+          [
+            121.601737,
+            23.955825
+          ],
+          [
+            121.601968,
+            23.956314
+          ],
+          [
+            121.602028,
+            23.956474
+          ],
+          [
+            121.602395,
+            23.957307
+          ],
+          [
+            121.602701,
+            23.957982
+          ],
+          [
+            121.60289,
+            23.958398
+          ],
+          [
+            121.603041,
+            23.958729
+          ],
+          [
+            121.603542,
+            23.95976
+          ],
+          [
+            121.603601,
+            23.959881
+          ],
+          [
+            121.604294,
+            23.96139
+          ],
+          [
+            121.604512,
+            23.961836
+          ],
+          [
+            121.604584,
+            23.961982
+          ],
+          [
+            121.604777,
+            23.962342
+          ],
+          [
+            121.6049,
+            23.962527
+          ],
+          [
+            121.604987,
+            23.962649
+          ],
+          [
+            121.605457,
+            23.963159
+          ],
+          [
+            121.605922,
+            23.963655
+          ],
+          [
+            121.606659,
+            23.964466
+          ],
+          [
+            121.60698,
+            23.964821
+          ],
+          [
+            121.60706,
+            23.964912
+          ],
+          [
+            121.607131,
+            23.964987
+          ],
+          [
+            121.608806,
+            23.96692
+          ],
+          [
+            121.608899,
+            23.967025
+          ],
+          [
+            121.608848,
+            23.96708
+          ],
+          [
+            121.608789,
+            23.96716
+          ],
+          [
+            121.608326,
+            23.967752
+          ],
+          [
+            121.607489,
+            23.968824
+          ],
+          [
+            121.606359,
+            23.970283
+          ],
+          [
+            121.606123,
+            23.970574
+          ],
+          [
+            121.606614,
+            23.970906
+          ],
+          [
+            121.606822,
+            23.971047
+          ],
+          [
+            121.606963,
+            23.971146
+          ],
+          [
+            121.607462,
+            23.97147
+          ],
+          [
+            121.60816,
+            23.971934
+          ],
+          [
+            121.608495,
+            23.972155
+          ],
+          [
+            121.60887,
+            23.972401
+          ],
+          [
+            121.609041,
+            23.972522
+          ],
+          [
+            121.609257,
+            23.972657
+          ],
+          [
+            121.609783,
+            23.972987
+          ],
+          [
+            121.610316,
+            23.973332
+          ],
+          [
+            121.610908,
+            23.973729
+          ],
+          [
+            121.611149,
+            23.973893
+          ],
+          [
+            121.611345,
+            23.974026
+          ],
+          [
+            121.611541,
+            23.974157
+          ],
+          [
+            121.611419,
+            23.974355
+          ],
+          [
+            121.61127,
+            23.974596
+          ],
+          [
+            121.610595,
+            23.975444
+          ],
+          [
+            121.609876,
+            23.976351
+          ],
+          [
+            121.609682,
+            23.976323
+          ],
+          [
+            121.60909,
+            23.976241
+          ],
+          [
+            121.609005,
+            23.976224
+          ],
+          [
+            121.608902,
+            23.976208
+          ],
+          [
+            121.608767,
+            23.976186
+          ],
+          [
+            121.608127,
+            23.976118
+          ],
+          [
+            121.607422,
+            23.976042
+          ],
+          [
+            121.606385,
+            23.975913
+          ],
+          [
+            121.606144,
+            23.975878
+          ],
+          [
+            121.605329,
+            23.975779
+          ],
+          [
+            121.605107,
+            23.975751
+          ],
+          [
+            121.604875,
+            23.975728
+          ],
+          [
+            121.604504,
+            23.975676
+          ],
+          [
+            121.604218,
+            23.975636
+          ],
+          [
+            121.603314,
+            23.975536
+          ],
+          [
+            121.602335,
+            23.975429
+          ],
+          [
+            121.601671,
+            23.976259
+          ],
+          [
+            121.601426,
+            23.976581
+          ],
+          [
+            121.601263,
+            23.976796
+          ],
+          [
+            121.600879,
+            23.977292
+          ],
+          [
+            121.600673,
+            23.977559
+          ],
+          [
+            121.600661,
+            23.977574
+          ],
+          [
+            121.600424,
+            23.977865
+          ],
+          [
+            121.600305,
+            23.978038
+          ],
+          [
+            121.600729,
+            23.978337
+          ],
+          [
+            121.600974,
+            23.978488
+          ],
+          [
+            121.60115,
+            23.978611
+          ],
+          [
+            121.601442,
+            23.978795
+          ],
+          [
+            121.601649,
+            23.978907
+          ],
+          [
+            121.601904,
+            23.979079
+          ],
+          [
+            121.602328,
+            23.979352
+          ],
+          [
+            121.602744,
+            23.979619
+          ],
+          [
+            121.602812,
+            23.979665
+          ],
+          [
+            121.603187,
+            23.979915
+          ],
+          [
+            121.603261,
+            23.979972
+          ],
+          [
+            121.603611,
+            23.980224
+          ],
+          [
+            121.603797,
+            23.980357
+          ],
+          [
+            121.603962,
+            23.980462
+          ],
+          [
+            121.604478,
+            23.980792
+          ],
+          [
+            121.605128,
+            23.981221
+          ],
+          [
+            121.605749,
+            23.981625
+          ],
+          [
+            121.605215,
+            23.982317
+          ],
+          [
+            121.604994,
+            23.982583
+          ],
+          [
+            121.604852,
+            23.982771
+          ],
+          [
+            121.604487,
+            23.983253
+          ],
+          [
+            121.604259,
+            23.983574
+          ],
+          [
+            121.603882,
+            23.984028
+          ],
+          [
+            121.603861,
+            23.984056
+          ],
+          [
+            121.603438,
+            23.984631
+          ],
+          [
+            121.602906,
+            23.985286
+          ],
+          [
+            121.602465,
+            23.985829
+          ],
+          [
+            121.602159,
+            23.986217
+          ],
+          [
+            121.602072,
+            23.986327
+          ],
+          [
+            121.601989,
+            23.986433
+          ],
+          [
+            121.601714,
+            23.986782
+          ],
+          [
+            121.601448,
+            23.987174
+          ],
+          [
+            121.601742,
+            23.98715
+          ],
+          [
+            121.604259,
+            23.987763
+          ],
+          [
+            121.604551,
+            23.987836
+          ],
+          [
+            121.604704,
+            23.987861
+          ],
+          [
+            121.605473,
+            23.987989
+          ],
+          [
+            121.605901,
+            23.987988
+          ],
+          [
+            121.606206,
+            23.988044
+          ],
+          [
+            121.605989,
+            23.98894
+          ],
+          [
+            121.605852,
+            23.9895
+          ],
+          [
+            121.605669,
+            23.990244
+          ],
+          [
+            121.60546,
+            23.991111
+          ],
+          [
+            121.605247,
+            23.992039
+          ],
+          [
+            121.605235,
+            23.99211
+          ],
+          [
+            121.604642,
+            23.991992
+          ],
+          [
+            121.604525,
+            23.991992
+          ],
+          [
+            121.604003,
+            23.992212
+          ],
+          [
+            121.603503,
+            23.992427
+          ],
+          [
+            121.60332,
+            23.992454
+          ],
+          [
+            121.602907,
+            23.992627
+          ],
+          [
+            121.602651,
+            23.992734
+          ],
+          [
+            121.602885,
+            23.993194
+          ]
+        ],
+        "stopCalls": [
+          {
+            "stopId": "hualien_301_301_inbound_HUA300470",
+            "distanceAlongPathM": 0
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA300469",
+            "distanceAlongPathM": 256.69
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA302888",
+            "distanceAlongPathM": 678.46
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA300466",
+            "distanceAlongPathM": 1221.34
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA303573",
+            "distanceAlongPathM": 1639.78
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298800",
+            "distanceAlongPathM": 2708.22
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298802",
+            "distanceAlongPathM": 8063.35
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298804",
+            "distanceAlongPathM": 9034.86
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA302886",
+            "distanceAlongPathM": 9476.0
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298806",
+            "distanceAlongPathM": 10403.48
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298808",
+            "distanceAlongPathM": 10875.18
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298810",
+            "distanceAlongPathM": 11381.59
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298812",
+            "distanceAlongPathM": 12107.13
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298814",
+            "distanceAlongPathM": 12937.8
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298816",
+            "distanceAlongPathM": 13385.32
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298818",
+            "distanceAlongPathM": 13717.05
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298820",
+            "distanceAlongPathM": 13953.38
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298822",
+            "distanceAlongPathM": 14400.27
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298824",
+            "distanceAlongPathM": 14851.07
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298826",
+            "distanceAlongPathM": 15366.11
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298828",
+            "distanceAlongPathM": 15741.75
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298832",
+            "distanceAlongPathM": 16442.9
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298834",
+            "distanceAlongPathM": 16768.58
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298836",
+            "distanceAlongPathM": 17208.85
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298838",
+            "distanceAlongPathM": 17529.19
+          },
+          {
+            "stopId": "hualien_301_301_inbound_HUA298840",
+            "distanceAlongPathM": 18164.19
+          }
+        ],
+        "sourceId": "osrm_roads",
+        "verificationStatus": "unverified"
+      }
+    },
+    "timingProfiles": {
+      "301_outbound_timing": {
+        "patternId": "301_outbound",
+        "sourceId": "operator_estimated_times",
+        "stopTimes": [
+          {
+            "arrivalOffsetSec": 0,
+            "departureOffsetSec": 0
+          },
+          {
+            "arrivalOffsetSec": 60,
+            "departureOffsetSec": 80
+          },
+          {
+            "arrivalOffsetSec": 120,
+            "departureOffsetSec": 140
+          },
+          {
+            "arrivalOffsetSec": 240,
+            "departureOffsetSec": 260
+          },
+          {
+            "arrivalOffsetSec": 360,
+            "departureOffsetSec": 380
+          },
+          {
+            "arrivalOffsetSec": 540,
+            "departureOffsetSec": 560
+          },
+          {
+            "arrivalOffsetSec": 660,
+            "departureOffsetSec": 680
+          },
+          {
+            "arrivalOffsetSec": 780,
+            "departureOffsetSec": 800
+          },
+          {
+            "arrivalOffsetSec": 900,
+            "departureOffsetSec": 920
+          },
+          {
+            "arrivalOffsetSec": 1020,
+            "departureOffsetSec": 1040
+          },
+          {
+            "arrivalOffsetSec": 1080,
+            "departureOffsetSec": 1100
+          },
+          {
+            "arrivalOffsetSec": 1140,
+            "departureOffsetSec": 1160
+          },
+          {
+            "arrivalOffsetSec": 1262,
+            "departureOffsetSec": 1282
+          },
+          {
+            "arrivalOffsetSec": 1345,
+            "departureOffsetSec": 1365
+          },
+          {
+            "arrivalOffsetSec": 1414,
+            "departureOffsetSec": 1434
+          },
+          {
+            "arrivalOffsetSec": 1470,
+            "departureOffsetSec": 1490
+          },
+          {
+            "arrivalOffsetSec": 1529,
+            "departureOffsetSec": 1549
+          },
+          {
+            "arrivalOffsetSec": 1623,
+            "departureOffsetSec": 1643
+          },
+          {
+            "arrivalOffsetSec": 1740,
+            "departureOffsetSec": 1760
+          },
+          {
+            "arrivalOffsetSec": 1860,
+            "departureOffsetSec": 1880
+          },
+          {
+            "arrivalOffsetSec": 2280,
+            "departureOffsetSec": 2300
+          },
+          {
+            "arrivalOffsetSec": 2382,
+            "departureOffsetSec": 2402
+          },
+          {
+            "arrivalOffsetSec": 2416,
+            "departureOffsetSec": 2436
+          },
+          {
+            "arrivalOffsetSec": 2463,
+            "departureOffsetSec": 2483
+          },
+          {
+            "arrivalOffsetSec": 2520,
+            "departureOffsetSec": 2540
+          },
+          {
+            "arrivalOffsetSec": 2580,
+            "departureOffsetSec": 2600
+          }
+        ],
+        "estimationMetadata": {
+          "method": "operator_minute_estimates_with_constrained_animation_smoothing",
+          "routingTimeMultiplier": null,
+          "usesRoutingTimeMultiplier": false,
+          "officialArrivalOffsetSec": [
+            0,
+            60,
+            120,
+            240,
+            360,
+            540,
+            660,
+            780,
+            900,
+            1020,
+            1080,
+            1140,
+            1320,
+            1320,
+            1380,
+            1500,
+            1500,
+            1620,
+            1740,
+            1860,
+            2280,
+            2400,
+            2400,
+            2460,
+            2520,
+            2580
+          ],
+          "animationAdjustmentSec": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -58,
+            25,
+            34,
+            -30,
+            29,
+            3,
+            0,
+            0,
+            0,
+            -18,
+            16,
+            3,
+            0,
+            0
+          ],
+          "dwellAssumptionSec": 20,
+          "animationSpeedCapKmh": 50,
+          "sourceResolutionSec": 60,
+          "isRealTime": false,
+          "effectiveDate": null,
+          "maxAbsoluteAdjustmentSec": 58
+        }
+      },
+      "301_inbound_timing": {
+        "patternId": "301_inbound",
+        "sourceId": "operator_estimated_times",
+        "stopTimes": [
+          {
+            "arrivalOffsetSec": 0,
+            "departureOffsetSec": 0
+          },
+          {
+            "arrivalOffsetSec": 19,
+            "departureOffsetSec": 39
+          },
+          {
+            "arrivalOffsetSec": 70,
+            "departureOffsetSec": 90
+          },
+          {
+            "arrivalOffsetSec": 130,
+            "departureOffsetSec": 150
+          },
+          {
+            "arrivalOffsetSec": 240,
+            "departureOffsetSec": 260
+          },
+          {
+            "arrivalOffsetSec": 397,
+            "departureOffsetSec": 417
+          },
+          {
+            "arrivalOffsetSec": 803,
+            "departureOffsetSec": 823
+          },
+          {
+            "arrivalOffsetSec": 900,
+            "departureOffsetSec": 920
+          },
+          {
+            "arrivalOffsetSec": 1020,
+            "departureOffsetSec": 1040
+          },
+          {
+            "arrivalOffsetSec": 1125,
+            "departureOffsetSec": 1145
+          },
+          {
+            "arrivalOffsetSec": 1179,
+            "departureOffsetSec": 1199
+          },
+          {
+            "arrivalOffsetSec": 1236,
+            "departureOffsetSec": 1256
+          },
+          {
+            "arrivalOffsetSec": 1309,
+            "departureOffsetSec": 1329
+          },
+          {
+            "arrivalOffsetSec": 1389,
+            "departureOffsetSec": 1409
+          },
+          {
+            "arrivalOffsetSec": 1500,
+            "departureOffsetSec": 1520
+          },
+          {
+            "arrivalOffsetSec": 1560,
+            "departureOffsetSec": 1580
+          },
+          {
+            "arrivalOffsetSec": 1620,
+            "departureOffsetSec": 1640
+          },
+          {
+            "arrivalOffsetSec": 1740,
+            "departureOffsetSec": 1760
+          },
+          {
+            "arrivalOffsetSec": 1860,
+            "departureOffsetSec": 1880
+          },
+          {
+            "arrivalOffsetSec": 1980,
+            "departureOffsetSec": 2000
+          },
+          {
+            "arrivalOffsetSec": 2100,
+            "departureOffsetSec": 2120
+          },
+          {
+            "arrivalOffsetSec": 2280,
+            "departureOffsetSec": 2300
+          },
+          {
+            "arrivalOffsetSec": 2400,
+            "departureOffsetSec": 2420
+          },
+          {
+            "arrivalOffsetSec": 2460,
+            "departureOffsetSec": 2480
+          },
+          {
+            "arrivalOffsetSec": 2514,
+            "departureOffsetSec": 2534
+          },
+          {
+            "arrivalOffsetSec": 2580,
+            "departureOffsetSec": 2600
+          }
+        ],
+        "estimationMetadata": {
+          "method": "operator_minute_estimates_with_constrained_animation_smoothing",
+          "routingTimeMultiplier": null,
+          "usesRoutingTimeMultiplier": false,
+          "officialArrivalOffsetSec": [
+            0,
+            0,
+            60,
+            120,
+            240,
+            420,
+            780,
+            900,
+            1020,
+            1140,
+            1200,
+            1260,
+            1260,
+            1380,
+            1500,
+            1560,
+            1620,
+            1740,
+            1860,
+            1980,
+            2100,
+            2280,
+            2400,
+            2460,
+            2520,
+            2580
+          ],
+          "animationAdjustmentSec": [
+            0,
+            19,
+            10,
+            10,
+            0,
+            -23,
+            23,
+            0,
+            0,
+            -15,
+            -21,
+            -24,
+            49,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -6,
+            0
+          ],
+          "dwellAssumptionSec": 20,
+          "animationSpeedCapKmh": 50,
+          "sourceResolutionSec": 60,
+          "isRealTime": false,
+          "effectiveDate": null,
+          "maxAbsoluteAdjustmentSec": 49
+        }
+      }
+    },
+    "trips": [
+      {
+        "tripId": "301_outbound_trip_01",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 26400,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_02",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 33600,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_03",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 41400,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_04",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 45000,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_05",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 48600,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_06",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 55800,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_07",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 59400,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_08",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 63000,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_09",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 64800,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_10",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 66600,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_11",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 68400,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_12",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 70200,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_13",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 73800,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_14",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 77400,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_outbound_trip_15",
+        "patternId": "301_outbound",
+        "timingProfileId": "301_outbound_timing",
+        "startSec": 81600,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_01",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 23400,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_02",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 30000,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_03",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 37800,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_04",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 41400,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_05",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 45000,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_06",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 52200,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_07",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 55800,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_08",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 59400,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_09",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 61200,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_10",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 63000,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_11",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 64800,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_12",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 66600,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_13",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 70200,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_14",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 73800,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      },
+      {
+        "tripId": "301_inbound_trip_15",
+        "patternId": "301_inbound",
+        "timingProfileId": "301_inbound_timing",
+        "startSec": 77400,
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sourceId": "official_schedule"
+      }
+    ]
+  }
+}

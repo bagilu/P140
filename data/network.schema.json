@@ -1,0 +1,410 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:p140:bus-network:1.0.0",
+  "title": "P140 Bus Network 1.0.0",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "dataVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timezone": {
+      "const": "Asia/Taipei"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "isDemo": {
+      "type": "boolean"
+    },
+    "displaySettings": {
+      "type": "object",
+      "properties": {
+        "stopLabelBeforeArrivalSec": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 86400
+        },
+        "stopLabelAfterDepartureSec": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 86400
+        }
+      },
+      "required": [
+        "stopLabelBeforeArrivalSec",
+        "stopLabelAfterDepartureSec"
+      ],
+      "additionalProperties": false
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/route"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "dataVersion",
+    "timezone",
+    "generatedAt",
+    "isDemo",
+    "displaySettings",
+    "routes"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "coord": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "official",
+            "routing",
+            "estimated",
+            "manual",
+            "synthetic"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "retrievedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "effectiveDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "authority": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "stop": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coord": {
+          "$ref": "#/$defs/coord"
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verificationStatus": {
+          "enum": [
+            "illustrative",
+            "unverified",
+            "verified"
+          ]
+        },
+        "governmentStopUID": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "name",
+        "coord",
+        "sourceId",
+        "verificationStatus"
+      ],
+      "additionalProperties": false
+    },
+    "call": {
+      "type": "object",
+      "properties": {
+        "stopId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "distanceAlongPathM": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "stopId",
+        "distanceAlongPathM"
+      ],
+      "additionalProperties": false
+    },
+    "pattern": {
+      "type": "object",
+      "properties": {
+        "direction": {
+          "enum": [
+            "outbound",
+            "inbound",
+            "loop",
+            "other"
+          ]
+        },
+        "headsign": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coord"
+          },
+          "minItems": 2
+        },
+        "stopCalls": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/call"
+          },
+          "minItems": 2
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verificationStatus": {
+          "enum": [
+            "illustrative",
+            "unverified",
+            "verified"
+          ]
+        }
+      },
+      "required": [
+        "direction",
+        "headsign",
+        "path",
+        "stopCalls",
+        "sourceId",
+        "verificationStatus"
+      ],
+      "additionalProperties": false
+    },
+    "stopTime": {
+      "type": "object",
+      "properties": {
+        "arrivalOffsetSec": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 86400
+        },
+        "departureOffsetSec": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 86400
+        }
+      },
+      "required": [
+        "arrivalOffsetSec",
+        "departureOffsetSec"
+      ],
+      "additionalProperties": false
+    },
+    "timingProfile": {
+      "type": "object",
+      "properties": {
+        "patternId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stopTimes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/stopTime"
+          },
+          "minItems": 2
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "estimationMetadata": {
+          "type": "object",
+          "description": "時間來源與估算方法紀錄；不影響播放所用的stopTimes。"
+        }
+      },
+      "required": [
+        "patternId",
+        "sourceId",
+        "stopTimes"
+      ],
+      "additionalProperties": false
+    },
+    "trip": {
+      "type": "object",
+      "properties": {
+        "tripId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "patternId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timingProfileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "startSec": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 86399
+        },
+        "days": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7
+          },
+          "uniqueItems": true,
+          "minItems": 1,
+          "maxItems": 7
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "tripId",
+        "patternId",
+        "timingProfileId",
+        "startSec",
+        "days",
+        "sourceId"
+      ],
+      "additionalProperties": false
+    },
+    "route": {
+      "type": "object",
+      "properties": {
+        "routeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shortName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "color": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "isDemo": {
+          "type": "boolean"
+        },
+        "sources": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/source"
+          },
+          "minProperties": 1
+        },
+        "stops": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/stop"
+          },
+          "minProperties": 1
+        },
+        "patterns": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/pattern"
+          },
+          "minProperties": 1
+        },
+        "timingProfiles": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/timingProfile"
+          },
+          "minProperties": 1
+        },
+        "trips": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trip"
+          },
+          "minItems": 1
+        },
+        "dataStatus": {
+          "type": "string",
+          "minLength": 1
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "routeId",
+        "shortName",
+        "name",
+        "color",
+        "isDemo",
+        "sources",
+        "stops",
+        "patterns",
+        "timingProfiles",
+        "trips"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
