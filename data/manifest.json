@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "dataVersion": "P140-V0.006-301-310",
-  "generatedAt": "2026-10-24",
+  "dataVersion": "P140-V0.010-24-routes",
+  "generatedAt": "2026-10-25",
   "routes": [
     {
       "routeId": "hualien_301",
@@ -10,10 +10,145 @@
       "generatedAt": "2026-10-24"
     },
     {
+      "routeId": "hualien_302",
+      "file": "routes/hualien_302.json",
+      "dataVersion": "hualien_302-2026-10-24",
+      "generatedAt": "2026-10-24"
+    },
+    {
+      "routeId": "hualien_303",
+      "file": "routes/hualien_303.json",
+      "dataVersion": "hualien_303-2026-10-24",
+      "generatedAt": "2026-10-24"
+    },
+    {
+      "routeId": "hualien_308",
+      "file": "routes/hualien_308.json",
+      "dataVersion": "hualien_308-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_308A",
+      "file": "routes/hualien_308A.json",
+      "dataVersion": "hualien_308A-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
       "routeId": "hualien_310",
       "file": "routes/hualien_310.json",
       "dataVersion": "hualien_310-2026-10-24",
       "generatedAt": "2026-10-24"
+    },
+    {
+      "routeId": "hualien_311",
+      "file": "routes/hualien_311.json",
+      "dataVersion": "hualien_311-2026-10-25",
+      "generatedAt": "2026-10-25",
+      "normalizations": [
+        "restore_loop_direction_from_originalPatternDirection"
+      ]
+    },
+    {
+      "routeId": "hualien_1121",
+      "file": "routes/hualien_1121.json",
+      "dataVersion": "hualien_1121-2026-10-24",
+      "generatedAt": "2026-10-24"
+    },
+    {
+      "routeId": "hualien_1122",
+      "file": "routes/hualien_1122.json",
+      "dataVersion": "hualien_1122-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1125",
+      "file": "routes/hualien_1125.json",
+      "dataVersion": "hualien_1125-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1128",
+      "file": "routes/hualien_1128.json",
+      "dataVersion": "hualien_1128-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1129",
+      "file": "routes/hualien_1129.json",
+      "dataVersion": "hualien_1129-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1130",
+      "file": "routes/hualien_1130.json",
+      "dataVersion": "hualien_1130-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1132",
+      "file": "routes/hualien_1132.json",
+      "dataVersion": "hualien_1132-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1132A",
+      "file": "routes/hualien_1132A.json",
+      "dataVersion": "hualien_1132A-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1133",
+      "file": "routes/hualien_1133.json",
+      "dataVersion": "hualien_1133-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1136",
+      "file": "routes/hualien_1136.json",
+      "dataVersion": "hualien_1136-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1139",
+      "file": "routes/hualien_1139.json",
+      "dataVersion": "hualien_1139-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1139B",
+      "file": "routes/hualien_1139B.json",
+      "dataVersion": "hualien_1139B-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1139C",
+      "file": "routes/hualien_1139C.json",
+      "dataVersion": "hualien_1139C-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1140",
+      "file": "routes/hualien_1140.json",
+      "dataVersion": "hualien_1140-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1141",
+      "file": "routes/hualien_1141.json",
+      "dataVersion": "hualien_1141-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1141A",
+      "file": "routes/hualien_1141A.json",
+      "dataVersion": "hualien_1141A-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_1145",
+      "file": "routes/hualien_1145.json",
+      "dataVersion": "hualien_1145-2026-10-25",
+      "generatedAt": "2026-10-25"
     }
   ]
 }

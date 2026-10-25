@@ -15,7 +15,9 @@ export function buildStopIndex(compiled){
  }
  for(const trip of compiled.trips){
   const profile=trip.route.timingProfiles[trip.timingProfileId],raw=profile.estimationMetadata?.officialArrivalOffsetSec;
-  const source=trip.route.sources[profile.sourceId],kind=Array.isArray(raw)?'業者預估＋平滑':source?.kind==='official'?'官方時刻':'模型估算';
+  const source=trip.route.sources[profile.sourceId],adjustments=profile.estimationMetadata?.animationAdjustmentSec;
+  const smoothed=Array.isArray(adjustments)&&adjustments.some(sec=>Number.isFinite(sec)&&sec!==0);
+  const kind=Array.isArray(raw)?(smoothed?'業者預估＋平滑':'業者逐站預估'):source?.kind==='official'?'官方時刻':'模型估算';
   trip.pattern.stopCalls.forEach((call,i)=>{
    const group=byStop.get(stopKey(trip.route.routeId,call.stopId));
    group.events.push({key:JSON.stringify([trip.route.routeId,trip.tripId,i]),tripId:trip.tripId,routeId:trip.route.routeId,routeName:trip.route.shortName,color:trip.route.color,

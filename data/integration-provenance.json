@@ -1,0 +1,353 @@
+{
+  "version": "V0.010",
+  "generatedAt": "2026-10-25",
+  "sourceRoutes": [
+    {
+      "routeCode": "301",
+      "source": "previous_V0.009_route_file",
+      "file": "routes/hualien_301.json",
+      "sha256": "74a2a010b12382b20cf0c7980a2fac5e71a1ab84daed2e792028a095e7adddec",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "302",
+      "source": "previous_V0.009_route_file",
+      "file": "routes/hualien_302.json",
+      "sha256": "8926ade762bf7a3a96786643267a4aea5aa0b0125e229a26b1fe72c00c857709",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "303",
+      "source": "previous_V0.009_route_file",
+      "file": "routes/hualien_303.json",
+      "sha256": "52888fb756bd92e8086b95ebbe6cde9bd079fefcddcf43d958a84b49a3a5d4a5",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "308",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_308.json",
+      "sha256": "2789486e1dd169a8614628939b74f0f4ef954575b16630b575376f620f4375aa",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "308A",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_308A.json",
+      "sha256": "a5abab1c2033ee5867bd35a7f6caa14a25dacf0edf25f1d0ed2d7149825479cc",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "310",
+      "source": "previous_V0.009_route_file",
+      "file": "routes/hualien_310.json",
+      "sha256": "4959b03483e75ab1f496eebd8d561e15b8d44777ea31539d1b08b5c596e8e5ed",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "311",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_311.json",
+      "sha256": "a06dc2af80a958cb96851a956dfeedb01a2227aca04c97a067b93f71fa5b93a0",
+      "bytePreserved": true,
+      "mergedNormalization": [
+        "restore_loop_direction_from_originalPatternDirection"
+      ]
+    },
+    {
+      "routeCode": "1121",
+      "source": "previous_V0.009_route_file",
+      "file": "routes/hualien_1121.json",
+      "sha256": "5a6862db2a18fbf18b3e27122024ab3f9bc7a80f07f9e6e90febc51d8ecc5a8d",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1122",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1122.json",
+      "sha256": "d0842838efe721c2d5a077a9c9d919f1e3a720da571858b6e608a156ce7fb9fa",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1125",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1125.json",
+      "sha256": "85cfb1080b0828e1d918f58ecff06e9d36f43cf2155d1962a1ec54d96dd0a36a",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1128",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1128.json",
+      "sha256": "6f7dd8b4e3cc4bfb6b77c94b1cd7869f0a94b387777726bd67b11e515d204085",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1129",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1129.json",
+      "sha256": "e17353e88bf799ea657538c3066d720a2325c878f6cca9a60d7c714ff7f9f44e",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1130",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1130.json",
+      "sha256": "2c65907aedcefcc2030e8d3e3704f36f59afd074cde57c0a3b1fad4b56c9e2d0",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1132",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1132.json",
+      "sha256": "0908e6b87ecd9c5f30450e2d035106ffaa009b110f8bfd438587785759347512",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1132A",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1132A.json",
+      "sha256": "71e5b5c41a3b00dc81d5596fa58da7ff19166d31348ef08687fc041590b3878c",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1133",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1133.json",
+      "sha256": "a090f9baf44c74b79f78b959632afbc9bda10a533b0f8ddcaf5edde6c0225cd6",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1136",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1136.json",
+      "sha256": "05c700f596fad0a668a8ac191c6eef6d566a4858669e1c3074eca21a3ec7f6ba",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1139",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1139.json",
+      "sha256": "9905025c788269cc5389f37fc3a2da5b6f8a81b1b369182736f6a860b307590b",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1139B",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1139B.json",
+      "sha256": "e1f2eb95690033a6ffd37ebdfd1059a277505c60fbb0964bd238d630539c4d65",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1139C",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1139C.json",
+      "sha256": "39706e1f2076e42f0ae2b6b5817dca6ad44b728d68d5f0248e4b269de28e1c10",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1140",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1140.json",
+      "sha256": "c4cb4afdd1c117d6143383f6e89ba0077db0c67c8c17128a3bb4eb1879254ca0",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1141",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1141.json",
+      "sha256": "a32f7ba8e291a2307a507e0d11d30a57544e5ff7be8b801fcd5be3fea11acc43",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1141A",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1141A.json",
+      "sha256": "55b537afe902bb0a43bf0f5db73dea94f20729de0bc2026cc7672be81a219f06",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "1145",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_1145.json",
+      "sha256": "dc2e0e82023541336942272b67ce22253de30d347cc77553fb21221e0b796ac1",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    }
+  ],
+  "originalTrialBackups": [
+    {
+      "routeCode": "1121",
+      "file": "reference/original_trials/hualien_1121.json",
+      "sha256": "cf02370db966dd6c21bb3889a9d3cc3e1a57822bbb7af1a9bbe21036e0a90c7d",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1122",
+      "file": "reference/original_trials/hualien_1122.json",
+      "sha256": "f0b020b142f7489ceec59c5a6fadae3fcf0ef8440d58f1fd85f6ee7c1e7ee86b",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1125",
+      "file": "reference/original_trials/hualien_1125.json",
+      "sha256": "fb253aae3f20ef5063c9ecfb6bf1da449e9a2d743ee21707d937974f421f58ce",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1128",
+      "file": "reference/original_trials/hualien_1128.json",
+      "sha256": "4232a0e8748f147cbe4b018e4502ccdd8335fdb1068875c17deda7df7520c335",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1129",
+      "file": "reference/original_trials/hualien_1129.json",
+      "sha256": "6203b30b44f678887638b165ed4784b855655d23c94ad9b64ae1c3ceb6bf27e3",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1130",
+      "file": "reference/original_trials/hualien_1130.json",
+      "sha256": "d1d448267264efcb79bdcc26e3adf90ea633c400b58835aa815e506f8d3a1be8",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1132",
+      "file": "reference/original_trials/hualien_1132.json",
+      "sha256": "18fbb349efb664b01e4f42e808afa1abaf69ba07aac112bbec5973afed3a3fe8",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1132A",
+      "file": "reference/original_trials/hualien_1132A.json",
+      "sha256": "6c47867b8e0ffb9e0deb71818095993636228e06632f7ca6fe36d2cf92dc5c34",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1133",
+      "file": "reference/original_trials/hualien_1133.json",
+      "sha256": "dfcb16cdd6f7a0356e062e7e26b867b6bb3f8b3fccd347e32010a76c3841f6dc",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1136",
+      "file": "reference/original_trials/hualien_1136.json",
+      "sha256": "2d1750224c3a80f6707c8e913b14cec7483e9bbd803fb8819160b91fe7559929",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1139",
+      "file": "reference/original_trials/hualien_1139.json",
+      "sha256": "0884d7334f0e386e2d8d7351f311055715c48beaa104ca0a286856d5ad6e2c89",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1139B",
+      "file": "reference/original_trials/hualien_1139B.json",
+      "sha256": "4fbe7b507fe51430470b58b58dbe451c0f4213b388fd10d600b651654e004f3f",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1139C",
+      "file": "reference/original_trials/hualien_1139C.json",
+      "sha256": "2705a01d218f2086efeae3df6c75d126edf252a4f3a0133f402bfc44ff80517f",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1140",
+      "file": "reference/original_trials/hualien_1140.json",
+      "sha256": "73775b4cec0f30048c1c0189a836f28591dd614e3b17e6e1c48c6cfbd27c9471",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1141",
+      "file": "reference/original_trials/hualien_1141.json",
+      "sha256": "5f06db005ffada48bc4ae5c1dcf846f1b3eab08989510c4636a9e7aab4fe5e69",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1141A",
+      "file": "reference/original_trials/hualien_1141A.json",
+      "sha256": "92a18ec35501ba5cdfb7392d8a082d68c4e92a255525b4817d0f71988eedf8c5",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "1145",
+      "file": "reference/original_trials/hualien_1145.json",
+      "sha256": "e4bf7883c9320833b96c7a754a80654f95e08a32ad85f9f0939e60a82a1ddf81",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "302",
+      "file": "reference/original_trials/hualien_302.json",
+      "sha256": "73940d44ee70bb72e00ff8db9eb250b8ec126a48571685eaa6b6371e2cbb7d6f",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "303",
+      "file": "reference/original_trials/hualien_303.json",
+      "sha256": "c37ce394ff87026ac8961ae0f8333ed98d1d1720d385adff20afa92c6cd05d70",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "305",
+      "file": "reference/original_trials/hualien_305.json",
+      "sha256": "f5811d49faebb9359c99b32b01143cabdd9690c9067c0639e3e835764dd3bdef",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "305A",
+      "file": "reference/original_trials/hualien_305A.json",
+      "sha256": "24fbf25470471dc47305fb8146e26f2b2782c86d383922fc376ba1aa4c0900c8",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "308",
+      "file": "reference/original_trials/hualien_308.json",
+      "sha256": "43ce12302c11f3ff32a28d3baf33e8e8a65b3af1491e103c6fe414699e129a5f",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "308A",
+      "file": "reference/original_trials/hualien_308A.json",
+      "sha256": "9b60495bc25a996773a44998eb51d9a714dc540e0d6950d3a72e965ee2b78e32",
+      "status": "historical_trial_backup_not_loaded"
+    },
+    {
+      "routeCode": "311",
+      "file": "reference/original_trials/hualien_311.json",
+      "sha256": "e30de6a916a1baa4db3e3e1ea39b8fdafee7d8030f58d265a98dc529bb204be8",
+      "status": "historical_trial_backup_not_loaded"
+    }
+  ],
+  "notes": [
+    "All original and uploaded route JSON files preserved byte-for-byte.",
+    "Merged 311 pattern direction is restored to loop using retained metadata; paths, stops, times and trips unchanged.",
+    "Uploaded files with rerouted roads or revised times are authoritative; no re-estimation performed.",
+    "Reference trial backups are not loaded into the frontend.",
+    "1141 original timetable simulation remains included as supplied; it is not a current operation claim."
+  ]
+}

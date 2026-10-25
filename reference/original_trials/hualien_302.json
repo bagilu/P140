@@ -1,0 +1,1513 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "hualien_302-2026-10-24-trial1",
+  "timezone": "Asia/Taipei",
+  "generatedAt": "2026-10-24",
+  "isDemo": false,
+  "displaySettings": {
+    "stopLabelBeforeArrivalSec": 30,
+    "stopLabelAfterDepartureSec": 15
+  },
+  "routes": [
+    {
+      "routeId": "hualien_302",
+      "shortName": "302",
+      "name": "302 新城火車站－太魯閣遊客中心（縮駛）",
+      "color": "#e8635c",
+      "isDemo": false,
+      "dataStatus": "review_pending",
+      "warnings": [
+        "依使用者附件及業者縮駛公告製作：本檔僅包含新城火車站至太魯閣遊客中心，不模擬前往天祥。",
+        "官方圖未標示時刻表生效日期；業者網頁標示2024-07-11為文章日期，不逕作班表生效日。資料查詢日期為2026-10-24。",
+        "官方附件只提供起站發車時刻，沒有逐站時刻；途中時間採OSRM行駛秒數×1.2，另加每站20秒停靠、起站0秒。倍數尚未以本線實測校準。",
+        "道路為依政府方向別座標產生的OSRM候選，未經人工確認為實際公車走法。",
+        "政府完整路線仍列天祥等站，本檔依業者縮駛公告只取7站；原完整14站快照及原始站名保留在來源包。",
+        "政府站名「太魯閣國家公園」在本檔統一顯示為「太魯閣遊客中心」，以對應附件目前終點；原站名與政府站牌識別碼仍保留在來源包。",
+        "平日及例假日共用附件班次，設定星期一至日；未處理臨時停駛、個別日期管制與車輛調度。去回班次不配對成同一輛車。",
+        "本檔為排程模擬，沒有使用即時到站估計或GPS。"
+      ],
+      "sources": {
+        "official_schedule": {
+          "kind": "official",
+          "authority": "太魯閣客運",
+          "description": "使用者提供的302路線與時刻圖：平日及例假日往返各12班；只公布新城車站及太魯閣遊客中心起站時刻。未標明班表生效日期。",
+          "url": "https://tarokobus.webnode.tw/l/302/",
+          "retrievedAt": "2026-10-24",
+          "effectiveDate": null
+        },
+        "official_service_scope": {
+          "kind": "official",
+          "authority": "太魯閣客運",
+          "description": "附件紅字及業者302網頁均註明因路段管制，現階段僅行駛至太魯閣遊客中心。原線名為新城火車站－天祥；本檔只模擬縮駛區間。網頁文章日期2024-07-11不逕作班表生效日。",
+          "url": "https://tarokobus.webnode.tw/l/302/",
+          "retrievedAt": "2026-10-24"
+        },
+        "official_addresses": {
+          "kind": "official",
+          "authority": "太魯閣客運",
+          "description": "使用者提供302雙向站址表。太魯閣國家公園為富世村富世291號；停駛區間的砂卡噹去程單邊、長春祠回程單邊等資訊僅保留來源，不納入本檔行駛站點。",
+          "url": "https://tarokobus.webnode.tw/l/302/",
+          "retrievedAt": "2026-10-24"
+        },
+        "government_positions": {
+          "kind": "official",
+          "authority": "花蓮縣政府",
+          "description": "交通e點通302各方向完整14站快照，依業者縮駛公告選取各7站。保留各方向政府座標與站牌UID；沒有使用EstimateArrival即時欄位。政府太魯閣國家公園站顯示為太魯閣遊客中心。",
+          "url": "https://110traffic.hl.gov.tw/Bus/BusArrivelTime?from=arrival&input=302",
+          "retrievedAt": "2026-10-24"
+        },
+        "osrm_roads": {
+          "kind": "routing",
+          "description": "OSRM driving依7站方向別座標產生的道路候選，尚未確認實際公車走法。",
+          "url": "https://project-osrm.org/",
+          "retrievedAt": "2026-10-24"
+        },
+        "estimated_times": {
+          "kind": "estimated",
+          "description": "各站間路由時間×1.2，四捨五入至少1秒；另加每站停20秒、起站0秒。沒有官方逐站時間，1.2未經實測校準；不是即時GPS或官方到站時刻。",
+          "retrievedAt": "2026-10-24"
+        }
+      },
+      "stops": {
+        "hualien_302_outbound_HUA298866": {
+          "name": "新城火車站",
+          "coord": [
+            121.6413,
+            24.12768
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA298866"
+        },
+        "hualien_302_outbound_HUA300899": {
+          "name": "立閣文旅",
+          "coord": [
+            121.6436,
+            24.13183
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA300899"
+        },
+        "hualien_302_outbound_HUA300901": {
+          "name": "亞洲水泥廠",
+          "coord": [
+            121.64,
+            24.13384
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA300901"
+        },
+        "hualien_302_outbound_HUA300903": {
+          "name": "可樂",
+          "coord": [
+            121.6319,
+            24.1439
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA300903"
+        },
+        "hualien_302_outbound_HUA300905": {
+          "name": "富世國小",
+          "coord": [
+            121.6286,
+            24.14778
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA300905"
+        },
+        "hualien_302_outbound_HUA298869": {
+          "name": "太魯閣",
+          "coord": [
+            121.6236,
+            24.15355
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA298869"
+        },
+        "hualien_302_outbound_HUA298871": {
+          "name": "太魯閣遊客中心",
+          "coord": [
+            121.6217,
+            24.15866
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA298871"
+        },
+        "hualien_302_inbound_HUA298871": {
+          "name": "太魯閣遊客中心",
+          "coord": [
+            121.6217,
+            24.15866
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA298871"
+        },
+        "hualien_302_inbound_HUA298870": {
+          "name": "太魯閣",
+          "coord": [
+            121.6234,
+            24.15352
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA298870"
+        },
+        "hualien_302_inbound_HUA300906": {
+          "name": "富世國小",
+          "coord": [
+            121.6285,
+            24.14768
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA300906"
+        },
+        "hualien_302_inbound_HUA300904": {
+          "name": "可樂",
+          "coord": [
+            121.6318,
+            24.14383
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA300904"
+        },
+        "hualien_302_inbound_HUA300902": {
+          "name": "亞洲水泥廠",
+          "coord": [
+            121.6403,
+            24.13352
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA300902"
+        },
+        "hualien_302_inbound_HUA300900": {
+          "name": "立閣文旅",
+          "coord": [
+            121.6436,
+            24.13169
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA300900"
+        },
+        "hualien_302_inbound_HUA298866": {
+          "name": "新城火車站",
+          "coord": [
+            121.6413,
+            24.12768
+          ],
+          "sourceId": "government_positions",
+          "verificationStatus": "unverified",
+          "governmentStopUID": "HUA298866"
+        }
+      },
+      "patterns": {
+        "302_outbound": {
+          "direction": "outbound",
+          "headsign": "太魯閣遊客中心",
+          "path": [
+            [
+              121.641275,
+              24.12763
+            ],
+            [
+              121.641108,
+              24.127699
+            ],
+            [
+              121.641141,
+              24.127777
+            ],
+            [
+              121.641235,
+              24.128004
+            ],
+            [
+              121.641437,
+              24.128424
+            ],
+            [
+              121.641578,
+              24.128718
+            ],
+            [
+              121.641608,
+              24.12878
+            ],
+            [
+              121.641653,
+              24.128874
+            ],
+            [
+              121.6424,
+              24.128543
+            ],
+            [
+              121.643173,
+              24.129925
+            ],
+            [
+              121.643501,
+              24.130512
+            ],
+            [
+              121.643697,
+              24.130863
+            ],
+            [
+              121.643795,
+              24.131045
+            ],
+            [
+              121.644022,
+              24.13145
+            ],
+            [
+              121.644091,
+              24.131581
+            ],
+            [
+              121.643614,
+              24.131851
+            ],
+            [
+              121.643084,
+              24.132152
+            ],
+            [
+              121.642762,
+              24.132336
+            ],
+            [
+              121.642261,
+              24.132581
+            ],
+            [
+              121.64202,
+              24.132721
+            ],
+            [
+              121.641953,
+              24.132756
+            ],
+            [
+              121.641678,
+              24.132932
+            ],
+            [
+              121.641123,
+              24.133266
+            ],
+            [
+              121.640946,
+              24.133265
+            ],
+            [
+              121.640432,
+              24.133558
+            ],
+            [
+              121.640217,
+              24.133674
+            ],
+            [
+              121.64011,
+              24.133741
+            ],
+            [
+              121.639984,
+              24.133819
+            ],
+            [
+              121.639501,
+              24.134121
+            ],
+            [
+              121.639455,
+              24.134146
+            ],
+            [
+              121.639319,
+              24.134227
+            ],
+            [
+              121.637987,
+              24.134985
+            ],
+            [
+              121.637686,
+              24.135192
+            ],
+            [
+              121.637556,
+              24.13529
+            ],
+            [
+              121.637403,
+              24.135458
+            ],
+            [
+              121.636438,
+              24.136731
+            ],
+            [
+              121.636341,
+              24.136841
+            ],
+            [
+              121.635332,
+              24.138154
+            ],
+            [
+              121.634297,
+              24.139499
+            ],
+            [
+              121.633756,
+              24.140214
+            ],
+            [
+              121.63323,
+              24.140931
+            ],
+            [
+              121.633035,
+              24.141215
+            ],
+            [
+              121.632834,
+              24.141582
+            ],
+            [
+              121.632688,
+              24.141896
+            ],
+            [
+              121.632544,
+              24.142207
+            ],
+            [
+              121.632522,
+              24.14229
+            ],
+            [
+              121.63218,
+              24.143339
+            ],
+            [
+              121.632112,
+              24.143559
+            ],
+            [
+              121.631931,
+              24.143884
+            ],
+            [
+              121.631913,
+              24.143908
+            ],
+            [
+              121.631766,
+              24.144099
+            ],
+            [
+              121.631116,
+              24.144856
+            ],
+            [
+              121.630834,
+              24.145168
+            ],
+            [
+              121.630739,
+              24.145314
+            ],
+            [
+              121.630539,
+              24.14553
+            ],
+            [
+              121.630386,
+              24.1457
+            ],
+            [
+              121.630369,
+              24.145739
+            ],
+            [
+              121.630224,
+              24.145893
+            ],
+            [
+              121.629071,
+              24.147264
+            ],
+            [
+              121.628606,
+              24.147785
+            ],
+            [
+              121.628567,
+              24.147829
+            ],
+            [
+              121.628345,
+              24.148109
+            ],
+            [
+              121.627381,
+              24.149206
+            ],
+            [
+              121.627321,
+              24.14928
+            ],
+            [
+              121.626932,
+              24.149707
+            ],
+            [
+              121.62554,
+              24.151325
+            ],
+            [
+              121.625021,
+              24.151905
+            ],
+            [
+              121.624738,
+              24.152222
+            ],
+            [
+              121.624349,
+              24.152665
+            ],
+            [
+              121.62395,
+              24.15312
+            ],
+            [
+              121.62357,
+              24.153527
+            ],
+            [
+              121.623297,
+              24.15382
+            ],
+            [
+              121.622976,
+              24.154157
+            ],
+            [
+              121.621544,
+              24.155636
+            ],
+            [
+              121.621702,
+              24.15598
+            ],
+            [
+              121.621814,
+              24.156244
+            ],
+            [
+              121.621958,
+              24.156578
+            ],
+            [
+              121.622041,
+              24.156777
+            ],
+            [
+              121.62211,
+              24.156958
+            ],
+            [
+              121.622046,
+              24.157068
+            ],
+            [
+              121.621917,
+              24.157228
+            ],
+            [
+              121.621767,
+              24.157437
+            ],
+            [
+              121.621365,
+              24.157766
+            ],
+            [
+              121.621183,
+              24.157907
+            ],
+            [
+              121.621047,
+              24.15809
+            ],
+            [
+              121.620902,
+              24.158287
+            ],
+            [
+              121.620918,
+              24.158448
+            ],
+            [
+              121.620974,
+              24.158549
+            ],
+            [
+              121.621051,
+              24.158646
+            ],
+            [
+              121.621027,
+              24.158725
+            ],
+            [
+              121.621068,
+              24.15879
+            ],
+            [
+              121.621175,
+              24.158845
+            ],
+            [
+              121.621697,
+              24.158652
+            ]
+          ],
+          "stopCalls": [
+            {
+              "stopId": "hualien_302_outbound_HUA298866",
+              "distanceAlongPathM": 0
+            },
+            {
+              "stopId": "hualien_302_outbound_HUA300899",
+              "distanceAlongPathM": 680.65
+            },
+            {
+              "stopId": "hualien_302_outbound_HUA300901",
+              "distanceAlongPathM": 1112.02
+            },
+            {
+              "stopId": "hualien_302_outbound_HUA300903",
+              "distanceAlongPathM": 2532.47
+            },
+            {
+              "stopId": "hualien_302_outbound_HUA300905",
+              "distanceAlongPathM": 3079.23
+            },
+            {
+              "stopId": "hualien_302_outbound_HUA298869",
+              "distanceAlongPathM": 3897.11
+            },
+            {
+              "stopId": "hualien_302_outbound_HUA298871",
+              "distanceAlongPathM": 4691.44
+            }
+          ],
+          "sourceId": "osrm_roads",
+          "verificationStatus": "unverified"
+        },
+        "302_inbound": {
+          "direction": "inbound",
+          "headsign": "新城火車站",
+          "path": [
+            [
+              121.621697,
+              24.158652
+            ],
+            [
+              121.621175,
+              24.158845
+            ],
+            [
+              121.621068,
+              24.15879
+            ],
+            [
+              121.621027,
+              24.158725
+            ],
+            [
+              121.621051,
+              24.158646
+            ],
+            [
+              121.620974,
+              24.158549
+            ],
+            [
+              121.620918,
+              24.158448
+            ],
+            [
+              121.620902,
+              24.158287
+            ],
+            [
+              121.621047,
+              24.15809
+            ],
+            [
+              121.621183,
+              24.157907
+            ],
+            [
+              121.621365,
+              24.157766
+            ],
+            [
+              121.621767,
+              24.157437
+            ],
+            [
+              121.621917,
+              24.157228
+            ],
+            [
+              121.622046,
+              24.157068
+            ],
+            [
+              121.62211,
+              24.156958
+            ],
+            [
+              121.622041,
+              24.156777
+            ],
+            [
+              121.621958,
+              24.156578
+            ],
+            [
+              121.621814,
+              24.156244
+            ],
+            [
+              121.621702,
+              24.15598
+            ],
+            [
+              121.621544,
+              24.155636
+            ],
+            [
+              121.621575,
+              24.155551
+            ],
+            [
+              121.622924,
+              24.154118
+            ],
+            [
+              121.623279,
+              24.153706
+            ],
+            [
+              121.62343,
+              24.153543
+            ],
+            [
+              121.623868,
+              24.153067
+            ],
+            [
+              121.624663,
+              24.152175
+            ],
+            [
+              121.625459,
+              24.15128
+            ],
+            [
+              121.626838,
+              24.149695
+            ],
+            [
+              121.627243,
+              24.149222
+            ],
+            [
+              121.627305,
+              24.149155
+            ],
+            [
+              121.628261,
+              24.148034
+            ],
+            [
+              121.628484,
+              24.14777
+            ],
+            [
+              121.628538,
+              24.147707
+            ],
+            [
+              121.629001,
+              24.147164
+            ],
+            [
+              121.629395,
+              24.146714
+            ],
+            [
+              121.630168,
+              24.145872
+            ],
+            [
+              121.630344,
+              24.145667
+            ],
+            [
+              121.630483,
+              24.145493
+            ],
+            [
+              121.630596,
+              24.145368
+            ],
+            [
+              121.630678,
+              24.145279
+            ],
+            [
+              121.630834,
+              24.145168
+            ],
+            [
+              121.631116,
+              24.144856
+            ],
+            [
+              121.631766,
+              24.144099
+            ],
+            [
+              121.631916,
+              24.143904
+            ],
+            [
+              121.631931,
+              24.143884
+            ],
+            [
+              121.632112,
+              24.143559
+            ],
+            [
+              121.63218,
+              24.143339
+            ],
+            [
+              121.632522,
+              24.14229
+            ],
+            [
+              121.632544,
+              24.142207
+            ],
+            [
+              121.632688,
+              24.141896
+            ],
+            [
+              121.632834,
+              24.141582
+            ],
+            [
+              121.633035,
+              24.141215
+            ],
+            [
+              121.63323,
+              24.140931
+            ],
+            [
+              121.633756,
+              24.140214
+            ],
+            [
+              121.634297,
+              24.139499
+            ],
+            [
+              121.635332,
+              24.138154
+            ],
+            [
+              121.636341,
+              24.136841
+            ],
+            [
+              121.636438,
+              24.136731
+            ],
+            [
+              121.637403,
+              24.135458
+            ],
+            [
+              121.637556,
+              24.13529
+            ],
+            [
+              121.637686,
+              24.135192
+            ],
+            [
+              121.637987,
+              24.134985
+            ],
+            [
+              121.639319,
+              24.134227
+            ],
+            [
+              121.639455,
+              24.134146
+            ],
+            [
+              121.639501,
+              24.134121
+            ],
+            [
+              121.64011,
+              24.133741
+            ],
+            [
+              121.640217,
+              24.133674
+            ],
+            [
+              121.640352,
+              24.133601
+            ],
+            [
+              121.640432,
+              24.133558
+            ],
+            [
+              121.640946,
+              24.133265
+            ],
+            [
+              121.641015,
+              24.133143
+            ],
+            [
+              121.641891,
+              24.132664
+            ],
+            [
+              121.641951,
+              24.132625
+            ],
+            [
+              121.642413,
+              24.132343
+            ],
+            [
+              121.642687,
+              24.132198
+            ],
+            [
+              121.643018,
+              24.132016
+            ],
+            [
+              121.643283,
+              24.131865
+            ],
+            [
+              121.643599,
+              24.131688
+            ],
+            [
+              121.644022,
+              24.13145
+            ],
+            [
+              121.643795,
+              24.131045
+            ],
+            [
+              121.643697,
+              24.130863
+            ],
+            [
+              121.643501,
+              24.130512
+            ],
+            [
+              121.643173,
+              24.129925
+            ],
+            [
+              121.6424,
+              24.128543
+            ],
+            [
+              121.642318,
+              24.128405
+            ],
+            [
+              121.642132,
+              24.128088
+            ],
+            [
+              121.641768,
+              24.127427
+            ],
+            [
+              121.641275,
+              24.12763
+            ]
+          ],
+          "stopCalls": [
+            {
+              "stopId": "hualien_302_inbound_HUA298871",
+              "distanceAlongPathM": 0
+            },
+            {
+              "stopId": "hualien_302_inbound_HUA298870",
+              "distanceAlongPathM": 784.51
+            },
+            {
+              "stopId": "hualien_302_inbound_HUA300906",
+              "distanceAlongPathM": 1615.06
+            },
+            {
+              "stopId": "hualien_302_inbound_HUA300904",
+              "distanceAlongPathM": 2160.06
+            },
+            {
+              "stopId": "hualien_302_inbound_HUA300902",
+              "distanceAlongPathM": 3624.51
+            },
+            {
+              "stopId": "hualien_302_inbound_HUA300900",
+              "distanceAlongPathM": 4018.89
+            },
+            {
+              "stopId": "hualien_302_inbound_HUA298866",
+              "distanceAlongPathM": 4626.64
+            }
+          ],
+          "sourceId": "osrm_roads",
+          "verificationStatus": "unverified"
+        }
+      },
+      "timingProfiles": {
+        "302_outbound_timing": {
+          "patternId": "302_outbound",
+          "sourceId": "estimated_times",
+          "description": "各站間路由時間×1.2，四捨五入至少1秒；另加每站停20秒、起站0秒。沒有官方逐站時間，1.2未經實測校準；不是即時GPS或官方到站時刻。",
+          "estimationMetadata": {
+            "method": "routing_multiplier",
+            "routingTimeMultiplier": 1.2,
+            "usesRoutingTimeMultiplier": true,
+            "dwellAssumptionSec": 20,
+            "isRealTime": false,
+            "hasOfficialStopTimes": false,
+            "effectiveDate": null,
+            "routingBaseDurationSecBySegment": [
+              104.1,
+              28.1,
+              106.3,
+              43.8,
+              73.4,
+              101.1
+            ],
+            "serviceScope": "short_turn_xincheng_to_taroko_visitor_center",
+            "includesSuspendedGorgeSection": false
+          },
+          "stopTimes": [
+            {
+              "arrivalOffsetSec": 0,
+              "departureOffsetSec": 0
+            },
+            {
+              "arrivalOffsetSec": 125,
+              "departureOffsetSec": 145
+            },
+            {
+              "arrivalOffsetSec": 179,
+              "departureOffsetSec": 199
+            },
+            {
+              "arrivalOffsetSec": 327,
+              "departureOffsetSec": 347
+            },
+            {
+              "arrivalOffsetSec": 400,
+              "departureOffsetSec": 420
+            },
+            {
+              "arrivalOffsetSec": 508,
+              "departureOffsetSec": 528
+            },
+            {
+              "arrivalOffsetSec": 649,
+              "departureOffsetSec": 669
+            }
+          ]
+        },
+        "302_inbound_timing": {
+          "patternId": "302_inbound",
+          "sourceId": "estimated_times",
+          "description": "各站間路由時間×1.2，四捨五入至少1秒；另加每站停20秒、起站0秒。沒有官方逐站時間，1.2未經實測校準；不是即時GPS或官方到站時刻。",
+          "estimationMetadata": {
+            "method": "routing_multiplier",
+            "routingTimeMultiplier": 1.2,
+            "usesRoutingTimeMultiplier": true,
+            "dwellAssumptionSec": 20,
+            "isRealTime": false,
+            "hasOfficialStopTimes": false,
+            "effectiveDate": null,
+            "routingBaseDurationSecBySegment": [
+              99.8,
+              74.6,
+              43.7,
+              109.5,
+              25.2,
+              86.4
+            ],
+            "serviceScope": "short_turn_xincheng_to_taroko_visitor_center",
+            "includesSuspendedGorgeSection": false
+          },
+          "stopTimes": [
+            {
+              "arrivalOffsetSec": 0,
+              "departureOffsetSec": 0
+            },
+            {
+              "arrivalOffsetSec": 120,
+              "departureOffsetSec": 140
+            },
+            {
+              "arrivalOffsetSec": 230,
+              "departureOffsetSec": 250
+            },
+            {
+              "arrivalOffsetSec": 302,
+              "departureOffsetSec": 322
+            },
+            {
+              "arrivalOffsetSec": 453,
+              "departureOffsetSec": 473
+            },
+            {
+              "arrivalOffsetSec": 503,
+              "departureOffsetSec": 523
+            },
+            {
+              "arrivalOffsetSec": 627,
+              "departureOffsetSec": 647
+            }
+          ]
+        }
+      },
+      "trips": [
+        {
+          "tripId": "302_outbound_trip_01",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 30600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_02",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 31800,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_03",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 32400,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_04",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 33000,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_05",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 34800,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_06",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 36000,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_07",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 37200,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_08",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 38400,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_09",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 39600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_10",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 42600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_11",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 47400,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_outbound_trip_12",
+          "patternId": "302_outbound",
+          "timingProfileId": "302_outbound_timing",
+          "startSec": 49800,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_01",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 31200,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_02",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 32400,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_03",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 33000,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_04",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 33600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_05",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 35400,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_06",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 36600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_07",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 37800,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_08",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 39000,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_09",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 40200,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_10",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 43200,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_11",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 48000,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        },
+        {
+          "tripId": "302_inbound_trip_12",
+          "patternId": "302_inbound",
+          "timingProfileId": "302_inbound_timing",
+          "startSec": 50400,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "official_schedule"
+        }
+      ]
+    }
+  ]
+}

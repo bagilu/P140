@@ -1,4 +1,4 @@
-export const VERSION='V0.008';
+export const VERSION='V0.010';
 export const wrapDay=d=>((d-1)%7+7)%7+1;
 export function formatTime(s){s=Math.max(0,Math.min(86400,Math.floor(s)));return [Math.floor(s/3600),Math.floor(s%3600/60),s%60].map(x=>String(x).padStart(2,'0')).join(':');}
 export function meters(a,b){const r=Math.PI/180;return Math.hypot((b[0]-a[0])*r*Math.cos((a[1]+b[1])*r/2),(b[1]-a[1])*r)*6371000;}

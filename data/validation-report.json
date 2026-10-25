@@ -1,0 +1,25 @@
+{
+  "version": "V0.010",
+  "routeCount": 24,
+  "sourceFilesBytePreserved": 24,
+  "uploadedNewRouteFiles": 19,
+  "oldRouteFilesUnchanged": 5,
+  "tripDefinitions": 216,
+  "dailyTrips": [
+    212,
+    212,
+    212,
+    212,
+    212,
+    212,
+    212
+  ],
+  "weeklyTrips": 1484,
+  "loop311RestoredWithoutGeometryOrTimingChange": true,
+  "weekdayBranchCalendarsPreserved": true,
+  "allRouteObjectsMatchSourcesExceptDocumented311Direction": true,
+  "framesChecked": 20167,
+  "positionsChecked": 269523,
+  "maxActiveBuses": 28,
+  "busesAtMonday0930": 26
+}

@@ -1,0 +1,4018 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "hualien_308-2026-10-25",
+  "timezone": "Asia/Taipei",
+  "generatedAt": "2026-10-25",
+  "isDemo": false,
+  "displaySettings": {
+    "stopLabelBeforeArrivalSec": 30,
+    "stopLabelAfterDepartureSec": 15
+  },
+  "routes": [
+    {
+      "routeId": "hualien_308",
+      "shortName": "308",
+      "name": "308 花蓮轉運站－七星潭",
+      "color": "#00a651",
+      "isDemo": false,
+      "sources": {
+        "official_schedule": {
+          "kind": "official",
+          "authority": "統聯客運",
+          "url": "https://www.ubus.com.tw/UrbanBus/HualienBus/308/",
+          "retrievedAt": "2026-10-25",
+          "effectiveDate": null,
+          "description": "使用者提供及統聯網站308/308A合併路線圖、發車表；每天行駛，無官方逐站時間。"
+        },
+        "government_timetable": {
+          "kind": "official",
+          "authority": "交通部公路局",
+          "url": "https://www.taiwanbus.tw/eBUSPage/json/TimeTableAPIByWeek.aspx?RouteBranch=0&RouteId=0308&SearchDate=2026/10/25&inputType=R01",
+          "retrievedAt": "2026-10-25",
+          "description": "公路客運時刻表API 2026/10/25查詢快照，發車時間及每日行駛與附件一致。"
+        },
+        "government_positions": {
+          "kind": "official",
+          "authority": "花蓮縣政府",
+          "url": "https://110traffic.hl.gov.tw/Bus/BusArrivelTime?from=arrival&input=308",
+          "retrievedAt": "2026-10-25",
+          "description": "交通e點通方向別站序、座標及UID完整保留，排除即時EstimateArrival；未回傳翰品酒店。"
+        },
+        "manual_hanpin": {
+          "kind": "manual",
+          "url": "https://www.ubus.com.tw/UrbanBus/HualienBus/308/",
+          "retrievedAt": "2026-10-25",
+          "description": "圖上翰品酒店保留為待查核站；以去程麗軒國際飯店至中美中興路口OSRM中美路段幾何中點作共用概略候選。不是飯店或站牌定位，無政府UID；現行是否停靠仍待確認。相鄰路段按原道路切段，原時間按幾何距離比例分攤。"
+        },
+        "osrm_roads": {
+          "kind": "routing",
+          "url": "https://project-osrm.org/",
+          "retrievedAt": "2026-10-25",
+          "description": "OSRM driving依政府方向別站序產生候選；翰品酒店在既有道路段插入概略候選。"
+        },
+        "estimated_times": {
+          "kind": "estimated",
+          "retrievedAt": "2026-10-25",
+          "description": "路由秒數×1.2估算；各站停靠20秒，起站0秒。不是官方逐站時間或即時GPS。"
+        },
+        "editor_official": {
+          "kind": "official",
+          "description": "已匯入的P140路線JSON；站位、道路與時間來源請依原始資料查證。原路線完整保存於 originalRoute。",
+          "retrievedAt": "2026-10-25"
+        },
+        "editor_positions": {
+          "kind": "manual",
+          "description": "道路層級概略站位；同名近距離去回程可共用座標，不代表精準候車位置。政府原始位置與來源保留於工作草稿。"
+        },
+        "editor_roads": {
+          "kind": "routing",
+          "description": "道路候選經管理者確認；不是營運單位即時路徑。",
+          "url": "https://project-osrm.org/"
+        },
+        "editor_times": {
+          "kind": "estimated",
+          "description": "逐站時間來源見各方向時間設定；可能來自業者預估、路由估算或管理者校正，均非即時GPS。"
+        }
+      },
+      "stops": {
+        "hualien_308_308_outbound_call_220b06a73e7e": {
+          "name": "花蓮轉運站",
+          "coord": [
+            121.6032,
+            23.99306
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_45e9b1cb9415": {
+          "name": "花蓮電影城",
+          "coord": [
+            121.6054,
+            23.99101
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_fb2438c52735": {
+          "name": "商校街",
+          "coord": [
+            121.6047,
+            23.98799
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_eeb040111cfc": {
+          "name": "花蓮商校",
+          "coord": [
+            121.6018,
+            23.9866
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_01f27db11add": {
+          "name": "郵政總局",
+          "coord": [
+            121.6039,
+            23.98394
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_ed23bbc3a4e6": {
+          "name": "大同市場",
+          "coord": [
+            121.6061,
+            23.9811
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_8e12ef8d9625": {
+          "name": "台灣企銀",
+          "coord": [
+            121.6081,
+            23.97845
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_3b7e952fbc0e": {
+          "name": "東大門夜市",
+          "coord": [
+            121.611,
+            23.97451
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_dc98b20cd120": {
+          "name": "海濱街",
+          "coord": [
+            121.6145,
+            23.97278
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_64c3e32dc17f": {
+          "name": "北濱公園",
+          "coord": [
+            121.6164,
+            23.97561
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_78bad65ad7b0": {
+          "name": "花蓮女中",
+          "coord": [
+            121.6169,
+            23.97839
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_da6463c03b62": {
+          "name": "黎明教養院",
+          "coord": [
+            121.621,
+            23.98218
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_3b96a3dadc62": {
+          "name": "璽賓行旅",
+          "coord": [
+            121.6215,
+            23.98271
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_079c5f98d9a5": {
+          "name": "亞士都飯店",
+          "coord": [
+            121.6229,
+            23.98442
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_cae563c9a082": {
+          "name": "煙波大飯店",
+          "coord": [
+            121.6223,
+            23.98704
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_ee33d6a6891d": {
+          "name": "中美路民權八街口",
+          "coord": [
+            121.6238,
+            23.98878
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_52f76f083a2f": {
+          "name": "門諾醫院",
+          "coord": [
+            121.6261,
+            23.98817
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_79d5ff047330": {
+          "name": "麗軒國際飯店",
+          "coord": [
+            121.6256,
+            23.99093
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_f9ebeade4986": {
+          "name": "翰品酒店",
+          "coord": [
+            121.62669335211301,
+            23.99237425078538
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_82d5a95a3bd9": {
+          "name": "中美中興路口",
+          "coord": [
+            121.6279,
+            23.99374
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_f300366d0223": {
+          "name": "家扶中心",
+          "coord": [
+            121.6295,
+            23.9931
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_57ef3bc82086": {
+          "name": "市老人會",
+          "coord": [
+            121.632,
+            23.99239
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_0371ecdb2264": {
+          "name": "海岸中興路口",
+          "coord": [
+            121.6338,
+            23.99302
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_c9c066611eb3": {
+          "name": "福容大飯店",
+          "coord": [
+            121.6333,
+            23.99577
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_9bb24dabec48": {
+          "name": "美崙浸信會",
+          "coord": [
+            121.6311,
+            23.99553
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_01efdc49b7cc": {
+          "name": "美侖大飯店",
+          "coord": [
+            121.6279,
+            23.99982
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_a0a0bff62374": {
+          "name": "中油辦公大樓",
+          "coord": [
+            121.6323,
+            24.00064
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_dc4b8702df60": {
+          "name": "民意社區",
+          "coord": [
+            121.63,
+            24.00261
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_3a9d1dae5cf2": {
+          "name": "台泥花蓮廠",
+          "coord": [
+            121.6353,
+            24.01216
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_28460d4b98e2": {
+          "name": "花蓮酒廠",
+          "coord": [
+            121.6356,
+            24.01949
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_4546f55c14ac": {
+          "name": "花蓮曼波園區(海岸路)",
+          "coord": [
+            121.63,
+            24.02393
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_outbound_call_6bfcb423abff": {
+          "name": "七星潭",
+          "coord": [
+            121.6263,
+            24.03066
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_82b80feb7457": {
+          "name": "七星潭",
+          "coord": [
+            121.6263,
+            24.03066
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_f6b01567b022": {
+          "name": "花蓮曼波園區(海岸路)",
+          "coord": [
+            121.63,
+            24.02393
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_afd832e13985": {
+          "name": "花蓮酒廠",
+          "coord": [
+            121.6356,
+            24.01949
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_de6f797d1376": {
+          "name": "台泥花蓮廠",
+          "coord": [
+            121.6353,
+            24.01216
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_204ca588adfb": {
+          "name": "民意社區",
+          "coord": [
+            121.63,
+            24.00261
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_23930ba5ee41": {
+          "name": "中油辦公大樓",
+          "coord": [
+            121.6323,
+            24.00064
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_b2a05f6ba201": {
+          "name": "美侖大飯店",
+          "coord": [
+            121.6279,
+            23.99982
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_3604894fe24b": {
+          "name": "美崙浸信會",
+          "coord": [
+            121.6311,
+            23.99553
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_7530a3b7ddef": {
+          "name": "福容大飯店",
+          "coord": [
+            121.6333,
+            23.99577
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_85e6d503f55e": {
+          "name": "海岸中興路口",
+          "coord": [
+            121.6338,
+            23.99302
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_659be5821883": {
+          "name": "市老人會",
+          "coord": [
+            121.632,
+            23.99239
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_d4a73b5dcc7b": {
+          "name": "家扶中心",
+          "coord": [
+            121.6295,
+            23.9931
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_58490e9fa6d7": {
+          "name": "中美中興路口",
+          "coord": [
+            121.6279,
+            23.99374
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_cd131b2d6f34": {
+          "name": "翰品酒店",
+          "coord": [
+            121.62669335211301,
+            23.99237425078538
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_92185035ea24": {
+          "name": "麗軒國際飯店",
+          "coord": [
+            121.6256,
+            23.99093
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_24b37f3b0000": {
+          "name": "門諾醫院",
+          "coord": [
+            121.6261,
+            23.98817
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_226f8f0b3ef8": {
+          "name": "煙波大飯店",
+          "coord": [
+            121.6223,
+            23.98704
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_363a837bb159": {
+          "name": "亞士都飯店",
+          "coord": [
+            121.6229,
+            23.98442
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_66f6c8c3c2b1": {
+          "name": "璽賓行旅",
+          "coord": [
+            121.6215,
+            23.98271
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_9c60e5a9f042": {
+          "name": "黎明教養院",
+          "coord": [
+            121.621,
+            23.98218
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_f27bcf6710c0": {
+          "name": "花蓮女中",
+          "coord": [
+            121.6169,
+            23.97839
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_e7a948a6d848": {
+          "name": "北濱公園",
+          "coord": [
+            121.6164,
+            23.97561
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_fc28f4cc87f3": {
+          "name": "北濱街",
+          "coord": [
+            121.6133,
+            23.97294
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_bae8d7f33a5c": {
+          "name": "東大門夜市",
+          "coord": [
+            121.611,
+            23.97451
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_7555b76beddb": {
+          "name": "台灣企銀",
+          "coord": [
+            121.6081,
+            23.97845
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_9d37256515d2": {
+          "name": "大同市場",
+          "coord": [
+            121.6061,
+            23.9811
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_80cf085f7200": {
+          "name": "郵政總局",
+          "coord": [
+            121.6039,
+            23.98394
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_249a639c928e": {
+          "name": "花蓮商校",
+          "coord": [
+            121.6018,
+            23.9866
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_2a89a53a6b23": {
+          "name": "商校街",
+          "coord": [
+            121.6047,
+            23.98799
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_539db10ddb06": {
+          "name": "花蓮電影城",
+          "coord": [
+            121.6059,
+            23.98933
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        },
+        "hualien_308_308_inbound_call_33b40ce3ad16": {
+          "name": "花蓮轉運站",
+          "coord": [
+            121.6032,
+            23.99306
+          ],
+          "sourceId": "editor_positions",
+          "verificationStatus": "verified"
+        }
+      },
+      "patterns": {
+        "308_outbound": {
+          "direction": "outbound",
+          "headsign": "七星潭",
+          "path": [
+            [
+              121.602885,
+              23.993194
+            ],
+            [
+              121.603092,
+              23.993599
+            ],
+            [
+              121.603347,
+              23.993505
+            ],
+            [
+              121.603731,
+              23.993328
+            ],
+            [
+              121.604369,
+              23.993074
+            ],
+            [
+              121.60492,
+              23.993185
+            ],
+            [
+              121.605235,
+              23.99211
+            ],
+            [
+              121.605247,
+              23.992039
+            ],
+            [
+              121.60546,
+              23.991111
+            ],
+            [
+              121.60548,
+              23.991026
+            ],
+            [
+              121.605669,
+              23.990244
+            ],
+            [
+              121.605989,
+              23.98894
+            ],
+            [
+              121.606206,
+              23.988044
+            ],
+            [
+              121.605462,
+              23.988069
+            ],
+            [
+              121.605354,
+              23.988053
+            ],
+            [
+              121.604714,
+              23.987929
+            ],
+            [
+              121.604333,
+              23.987855
+            ],
+            [
+              121.604223,
+              23.987827
+            ],
+            [
+              121.603102,
+              23.987547
+            ],
+            [
+              121.602137,
+              23.987316
+            ],
+            [
+              121.601448,
+              23.987174
+            ],
+            [
+              121.601714,
+              23.986782
+            ],
+            [
+              121.601838,
+              23.986625
+            ],
+            [
+              121.602072,
+              23.986327
+            ],
+            [
+              121.602159,
+              23.986217
+            ],
+            [
+              121.602465,
+              23.985829
+            ],
+            [
+              121.602906,
+              23.985286
+            ],
+            [
+              121.603438,
+              23.984631
+            ],
+            [
+              121.603882,
+              23.984028
+            ],
+            [
+              121.603935,
+              23.983964
+            ],
+            [
+              121.604259,
+              23.983574
+            ],
+            [
+              121.604487,
+              23.983253
+            ],
+            [
+              121.604852,
+              23.982771
+            ],
+            [
+              121.604994,
+              23.982583
+            ],
+            [
+              121.605215,
+              23.982317
+            ],
+            [
+              121.605749,
+              23.981625
+            ],
+            [
+              121.606114,
+              23.981199
+            ],
+            [
+              121.60616,
+              23.981138
+            ],
+            [
+              121.606455,
+              23.980747
+            ],
+            [
+              121.607157,
+              23.979857
+            ],
+            [
+              121.60749,
+              23.979419
+            ],
+            [
+              121.607627,
+              23.979239
+            ],
+            [
+              121.607851,
+              23.978945
+            ],
+            [
+              121.608053,
+              23.978713
+            ],
+            [
+              121.608061,
+              23.978704
+            ],
+            [
+              121.608212,
+              23.978532
+            ],
+            [
+              121.608615,
+              23.978071
+            ],
+            [
+              121.609168,
+              23.97725
+            ],
+            [
+              121.609876,
+              23.976351
+            ],
+            [
+              121.610595,
+              23.975444
+            ],
+            [
+              121.61127,
+              23.974596
+            ],
+            [
+              121.611044,
+              23.974453
+            ],
+            [
+              121.610877,
+              23.974347
+            ],
+            [
+              121.610735,
+              23.974256
+            ],
+            [
+              121.610574,
+              23.974155
+            ],
+            [
+              121.610908,
+              23.973729
+            ],
+            [
+              121.611345,
+              23.974026
+            ],
+            [
+              121.611541,
+              23.974157
+            ],
+            [
+              121.611682,
+              23.973984
+            ],
+            [
+              121.61178,
+              23.973851
+            ],
+            [
+              121.612363,
+              23.973121
+            ],
+            [
+              121.612515,
+              23.972923
+            ],
+            [
+              121.612559,
+              23.972868
+            ],
+            [
+              121.612699,
+              23.972694
+            ],
+            [
+              121.612739,
+              23.972644
+            ],
+            [
+              121.612782,
+              23.972589
+            ],
+            [
+              121.612896,
+              23.972423
+            ],
+            [
+              121.613132,
+              23.972113
+            ],
+            [
+              121.613545,
+              23.971589
+            ],
+            [
+              121.613597,
+              23.971654
+            ],
+            [
+              121.614234,
+              23.97244
+            ],
+            [
+              121.614472,
+              23.972741
+            ],
+            [
+              121.6145,
+              23.97278
+            ],
+            [
+              121.614775,
+              23.973161
+            ],
+            [
+              121.614851,
+              23.973235
+            ],
+            [
+              121.614874,
+              23.973259
+            ],
+            [
+              121.614908,
+              23.973304
+            ],
+            [
+              121.61524,
+              23.973741
+            ],
+            [
+              121.615303,
+              23.973831
+            ],
+            [
+              121.615471,
+              23.974071
+            ],
+            [
+              121.615677,
+              23.974378
+            ],
+            [
+              121.615729,
+              23.974447
+            ],
+            [
+              121.615906,
+              23.974682
+            ],
+            [
+              121.616101,
+              23.975035
+            ],
+            [
+              121.616185,
+              23.975191
+            ],
+            [
+              121.616298,
+              23.975386
+            ],
+            [
+              121.616372,
+              23.975521
+            ],
+            [
+              121.616416,
+              23.975603
+            ],
+            [
+              121.61647,
+              23.975706
+            ],
+            [
+              121.61658,
+              23.976175
+            ],
+            [
+              121.616622,
+              23.976552
+            ],
+            [
+              121.616622,
+              23.976834
+            ],
+            [
+              121.616581,
+              23.976973
+            ],
+            [
+              121.616637,
+              23.977302
+            ],
+            [
+              121.616695,
+              23.977654
+            ],
+            [
+              121.616785,
+              23.978001
+            ],
+            [
+              121.616921,
+              23.978347
+            ],
+            [
+              121.616936,
+              23.978373
+            ],
+            [
+              121.617165,
+              23.978784
+            ],
+            [
+              121.617342,
+              23.979063
+            ],
+            [
+              121.617441,
+              23.979174
+            ],
+            [
+              121.617539,
+              23.979285
+            ],
+            [
+              121.617754,
+              23.979499
+            ],
+            [
+              121.618523,
+              23.980098
+            ],
+            [
+              121.618584,
+              23.980143
+            ],
+            [
+              121.619567,
+              23.980879
+            ],
+            [
+              121.619909,
+              23.981145
+            ],
+            [
+              121.620036,
+              23.981243
+            ],
+            [
+              121.620304,
+              23.981454
+            ],
+            [
+              121.620558,
+              23.981755
+            ],
+            [
+              121.620809,
+              23.982044
+            ],
+            [
+              121.620952,
+              23.982214
+            ],
+            [
+              121.621187,
+              23.982492
+            ],
+            [
+              121.621423,
+              23.982765
+            ],
+            [
+              121.621614,
+              23.982986
+            ],
+            [
+              121.622088,
+              23.983539
+            ],
+            [
+              121.622171,
+              23.983629
+            ],
+            [
+              121.622261,
+              23.98374
+            ],
+            [
+              121.62269,
+              23.984203
+            ],
+            [
+              121.622857,
+              23.984335
+            ],
+            [
+              121.622919,
+              23.984407
+            ],
+            [
+              121.62379,
+              23.98542
+            ],
+            [
+              121.623672,
+              23.985504
+            ],
+            [
+              121.623408,
+              23.985682
+            ],
+            [
+              121.623106,
+              23.985885
+            ],
+            [
+              121.622818,
+              23.986091
+            ],
+            [
+              121.62252,
+              23.98631
+            ],
+            [
+              121.622238,
+              23.986495
+            ],
+            [
+              121.622189,
+              23.986529
+            ],
+            [
+              121.621899,
+              23.986736
+            ],
+            [
+              121.622216,
+              23.987101
+            ],
+            [
+              121.622442,
+              23.987362
+            ],
+            [
+              121.622932,
+              23.987926
+            ],
+            [
+              121.623596,
+              23.988717
+            ],
+            [
+              121.623707,
+              23.988847
+            ],
+            [
+              121.623938,
+              23.989115
+            ],
+            [
+              121.624604,
+              23.98865
+            ],
+            [
+              121.624834,
+              23.988466
+            ],
+            [
+              121.625136,
+              23.988261
+            ],
+            [
+              121.625404,
+              23.988081
+            ],
+            [
+              121.625678,
+              23.987859
+            ],
+            [
+              121.625789,
+              23.987773
+            ],
+            [
+              121.625871,
+              23.987864
+            ],
+            [
+              121.625979,
+              23.987993
+            ],
+            [
+              121.626119,
+              23.988156
+            ],
+            [
+              121.626841,
+              23.988998
+            ],
+            [
+              121.626731,
+              23.989074
+            ],
+            [
+              121.626152,
+              23.989468
+            ],
+            [
+              121.625577,
+              23.989881
+            ],
+            [
+              121.624974,
+              23.990338
+            ],
+            [
+              121.625512,
+              23.99099
+            ],
+            [
+              121.626002,
+              23.991584
+            ],
+            [
+              121.626208,
+              23.991822
+            ],
+            [
+              121.626693,
+              23.992374
+            ],
+            [
+              121.627289,
+              23.993052
+            ],
+            [
+              121.627884,
+              23.993752
+            ],
+            [
+              121.628201,
+              23.994125
+            ],
+            [
+              121.628833,
+              23.993664
+            ],
+            [
+              121.629394,
+              23.99326
+            ],
+            [
+              121.629543,
+              23.993148
+            ],
+            [
+              121.629947,
+              23.992846
+            ],
+            [
+              121.630049,
+              23.99277
+            ],
+            [
+              121.63043,
+              23.992495
+            ],
+            [
+              121.630793,
+              23.992231
+            ],
+            [
+              121.631318,
+              23.992295
+            ],
+            [
+              121.631728,
+              23.992349
+            ],
+            [
+              121.632001,
+              23.992379
+            ],
+            [
+              121.632396,
+              23.992422
+            ],
+            [
+              121.633088,
+              23.992521
+            ],
+            [
+              121.633833,
+              23.992611
+            ],
+            [
+              121.63377,
+              23.993016
+            ],
+            [
+              121.633624,
+              23.993958
+            ],
+            [
+              121.633535,
+              23.994639
+            ],
+            [
+              121.633523,
+              23.994728
+            ],
+            [
+              121.63348,
+              23.995036
+            ],
+            [
+              121.633459,
+              23.995172
+            ],
+            [
+              121.633411,
+              23.995516
+            ],
+            [
+              121.633374,
+              23.995779
+            ],
+            [
+              121.633308,
+              23.996249
+            ],
+            [
+              121.632561,
+              23.996156
+            ],
+            [
+              121.631878,
+              23.996073
+            ],
+            [
+              121.631202,
+              23.995992
+            ],
+            [
+              121.631256,
+              23.995591
+            ],
+            [
+              121.63122,
+              23.995387
+            ],
+            [
+              121.631071,
+              23.995497
+            ],
+            [
+              121.630664,
+              23.995795
+            ],
+            [
+              121.630578,
+              23.995686
+            ],
+            [
+              121.630285,
+              23.995345
+            ],
+            [
+              121.630075,
+              23.995101
+            ],
+            [
+              121.629881,
+              23.994875
+            ],
+            [
+              121.629258,
+              23.995336
+            ],
+            [
+              121.628631,
+              23.995781
+            ],
+            [
+              121.628021,
+              23.996223
+            ],
+            [
+              121.627228,
+              23.996791
+            ],
+            [
+              121.626579,
+              23.997268
+            ],
+            [
+              121.627275,
+              23.998011
+            ],
+            [
+              121.627475,
+              23.998217
+            ],
+            [
+              121.627927,
+              23.998635
+            ],
+            [
+              121.628001,
+              23.998878
+            ],
+            [
+              121.628275,
+              23.999204
+            ],
+            [
+              121.628367,
+              23.999323
+            ],
+            [
+              121.628345,
+              23.999414
+            ],
+            [
+              121.628224,
+              23.999529
+            ],
+            [
+              121.628134,
+              23.999601
+            ],
+            [
+              121.627848,
+              23.999576
+            ],
+            [
+              121.627801,
+              24.000015
+            ],
+            [
+              121.627823,
+              23.999813
+            ],
+            [
+              121.627848,
+              23.999576
+            ],
+            [
+              121.628134,
+              23.999601
+            ],
+            [
+              121.628224,
+              23.999529
+            ],
+            [
+              121.628345,
+              23.999414
+            ],
+            [
+              121.628367,
+              23.999323
+            ],
+            [
+              121.628275,
+              23.999204
+            ],
+            [
+              121.628001,
+              23.998878
+            ],
+            [
+              121.627927,
+              23.998635
+            ],
+            [
+              121.628183,
+              23.998728
+            ],
+            [
+              121.629655,
+              23.998932
+            ],
+            [
+              121.630379,
+              23.999026
+            ],
+            [
+              121.631554,
+              23.999205
+            ],
+            [
+              121.631785,
+              23.9995
+            ],
+            [
+              121.631975,
+              23.999733
+            ],
+            [
+              121.631989,
+              23.999926
+            ],
+            [
+              121.631928,
+              24.000553
+            ],
+            [
+              121.632283,
+              24.000567
+            ],
+            [
+              121.632271,
+              24.000636
+            ],
+            [
+              121.632248,
+              24.000775
+            ],
+            [
+              121.632283,
+              24.000567
+            ],
+            [
+              121.631928,
+              24.000553
+            ],
+            [
+              121.631445,
+              24.0005
+            ],
+            [
+              121.630964,
+              24.000441
+            ],
+            [
+              121.63014,
+              24.000358
+            ],
+            [
+              121.630047,
+              24.000852
+            ],
+            [
+              121.630006,
+              24.001197
+            ],
+            [
+              121.62998,
+              24.001567
+            ],
+            [
+              121.629984,
+              24.001777
+            ],
+            [
+              121.630022,
+              24.002508
+            ],
+            [
+              121.630033,
+              24.002607
+            ],
+            [
+              121.630107,
+              24.003261
+            ],
+            [
+              121.630234,
+              24.003931
+            ],
+            [
+              121.630413,
+              24.004603
+            ],
+            [
+              121.630625,
+              24.005116
+            ],
+            [
+              121.630709,
+              24.005304
+            ],
+            [
+              121.630983,
+              24.005973
+            ],
+            [
+              121.631738,
+              24.006059
+            ],
+            [
+              121.63153,
+              24.006759
+            ],
+            [
+              121.631293,
+              24.007553
+            ],
+            [
+              121.631799,
+              24.008233
+            ],
+            [
+              121.632114,
+              24.008622
+            ],
+            [
+              121.633038,
+              24.009701
+            ],
+            [
+              121.633554,
+              24.010303
+            ],
+            [
+              121.633934,
+              24.010747
+            ],
+            [
+              121.635246,
+              24.012302
+            ],
+            [
+              121.635422,
+              24.01218
+            ],
+            [
+              121.635556,
+              24.012087
+            ],
+            [
+              121.635579,
+              24.012071
+            ],
+            [
+              121.635873,
+              24.011867
+            ],
+            [
+              121.636127,
+              24.011691
+            ],
+            [
+              121.635985,
+              24.01152
+            ],
+            [
+              121.635731,
+              24.011697
+            ],
+            [
+              121.635873,
+              24.011867
+            ],
+            [
+              121.635579,
+              24.012071
+            ],
+            [
+              121.635556,
+              24.012087
+            ],
+            [
+              121.635422,
+              24.01218
+            ],
+            [
+              121.635355,
+              24.012226
+            ],
+            [
+              121.635246,
+              24.012302
+            ],
+            [
+              121.635839,
+              24.013005
+            ],
+            [
+              121.637533,
+              24.015083
+            ],
+            [
+              121.637598,
+              24.015199
+            ],
+            [
+              121.637606,
+              24.015353
+            ],
+            [
+              121.637542,
+              24.015739
+            ],
+            [
+              121.637559,
+              24.015864
+            ],
+            [
+              121.637654,
+              24.01603
+            ],
+            [
+              121.637855,
+              24.01625
+            ],
+            [
+              121.638434,
+              24.01695
+            ],
+            [
+              121.638491,
+              24.017096
+            ],
+            [
+              121.638495,
+              24.017118
+            ],
+            [
+              121.638482,
+              24.017229
+            ],
+            [
+              121.638445,
+              24.017299
+            ],
+            [
+              121.635572,
+              24.019459
+            ],
+            [
+              121.635481,
+              24.019527
+            ],
+            [
+              121.633374,
+              24.021114
+            ],
+            [
+              121.633091,
+              24.021265
+            ],
+            [
+              121.632489,
+              24.02178
+            ],
+            [
+              121.630979,
+              24.022938
+            ],
+            [
+              121.63022,
+              24.023499
+            ],
+            [
+              121.629906,
+              24.023769
+            ],
+            [
+              121.62986,
+              24.023816
+            ],
+            [
+              121.629803,
+              24.023874
+            ],
+            [
+              121.629685,
+              24.024069
+            ],
+            [
+              121.629638,
+              24.024678
+            ],
+            [
+              121.629632,
+              24.024913
+            ],
+            [
+              121.629663,
+              24.025119
+            ],
+            [
+              121.629704,
+              24.025424
+            ],
+            [
+              121.629717,
+              24.02553
+            ],
+            [
+              121.629699,
+              24.0257
+            ],
+            [
+              121.629675,
+              24.025815
+            ],
+            [
+              121.629666,
+              24.02586
+            ],
+            [
+              121.629588,
+              24.026007
+            ],
+            [
+              121.629414,
+              24.026336
+            ],
+            [
+              121.629247,
+              24.026596
+            ],
+            [
+              121.629204,
+              24.02665
+            ],
+            [
+              121.628767,
+              24.027223
+            ],
+            [
+              121.628704,
+              24.02731
+            ],
+            [
+              121.62847,
+              24.027617
+            ],
+            [
+              121.628324,
+              24.027807
+            ],
+            [
+              121.628219,
+              24.027933
+            ],
+            [
+              121.627475,
+              24.028907
+            ],
+            [
+              121.627424,
+              24.028982
+            ],
+            [
+              121.627331,
+              24.029166
+            ],
+            [
+              121.627147,
+              24.029464
+            ],
+            [
+              121.626841,
+              24.029908
+            ],
+            [
+              121.626414,
+              24.03044
+            ],
+            [
+              121.626323,
+              24.03056
+            ],
+            [
+              121.626279,
+              24.030651
+            ]
+          ],
+          "stopCalls": [
+            {
+              "stopId": "hualien_308_308_outbound_call_220b06a73e7e",
+              "distanceAlongPathM": 0
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_45e9b1cb9415",
+              "distanceAlongPathM": 496.18
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_fb2438c52735",
+              "distanceAlongPathM": 989.08
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_eeb040111cfc",
+              "distanceAlongPathM": 1404.23
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_01f27db11add",
+              "distanceAlongPathM": 1768.9
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_ed23bbc3a4e6",
+              "distanceAlongPathM": 2156.14
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_8e12ef8d9625",
+              "distanceAlongPathM": 2513.22
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_3b7e952fbc0e",
+              "distanceAlongPathM": 3078.23
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_dc98b20cd120",
+              "distanceAlongPathM": 3789.59
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_64c3e32dc17f",
+              "distanceAlongPathM": 4159.82
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_78bad65ad7b0",
+              "distanceAlongPathM": 4475.76
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_da6463c03b62",
+              "distanceAlongPathM": 5072.33
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_3b96a3dadc62",
+              "distanceAlongPathM": 5150.07
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_079c5f98d9a5",
+              "distanceAlongPathM": 5388
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_cae563c9a082",
+              "distanceAlongPathM": 5824.6
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_ee33d6a6891d",
+              "distanceAlongPathM": 6070.85
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_52f76f083a2f",
+              "distanceAlongPathM": 6403.2
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_79d5ff047330",
+              "distanceAlongPathM": 6854.18
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_f9ebeade4986",
+              "distanceAlongPathM": 7049.33
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_82d5a95a3bd9",
+              "distanceAlongPathM": 7244.58
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_f300366d0223",
+              "distanceAlongPathM": 7471.41
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_57ef3bc82086",
+              "distanceAlongPathM": 7758.09
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_0371ecdb2264",
+              "distanceAlongPathM": 7991.48
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_c9c066611eb3",
+              "distanceAlongPathM": 8301.35
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_9bb24dabec48",
+              "distanceAlongPathM": 8657.24
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_01efdc49b7cc",
+              "distanceAlongPathM": 9703.69
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_a0a0bff62374",
+              "distanceAlongPathM": 10472.07
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_dc4b8702df60",
+              "distanceAlongPathM": 10981.47
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_3a9d1dae5cf2",
+              "distanceAlongPathM": 12541.56
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_28460d4b98e2",
+              "distanceAlongPathM": 13600.26
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_4546f55c14ac",
+              "distanceAlongPathM": 14356.86
+            },
+            {
+              "stopId": "hualien_308_308_outbound_call_6bfcb423abff",
+              "distanceAlongPathM": 15225.99
+            }
+          ],
+          "sourceId": "editor_roads",
+          "verificationStatus": "verified"
+        },
+        "308_inbound": {
+          "direction": "inbound",
+          "headsign": "花蓮轉運站",
+          "path": [
+            [
+              121.626279,
+              24.030651
+            ],
+            [
+              121.626323,
+              24.03056
+            ],
+            [
+              121.626414,
+              24.03044
+            ],
+            [
+              121.626841,
+              24.029908
+            ],
+            [
+              121.627147,
+              24.029464
+            ],
+            [
+              121.627331,
+              24.029166
+            ],
+            [
+              121.627424,
+              24.028982
+            ],
+            [
+              121.627475,
+              24.028907
+            ],
+            [
+              121.628219,
+              24.027933
+            ],
+            [
+              121.628324,
+              24.027807
+            ],
+            [
+              121.62847,
+              24.027617
+            ],
+            [
+              121.628704,
+              24.02731
+            ],
+            [
+              121.628767,
+              24.027223
+            ],
+            [
+              121.629204,
+              24.02665
+            ],
+            [
+              121.629247,
+              24.026596
+            ],
+            [
+              121.629414,
+              24.026336
+            ],
+            [
+              121.629588,
+              24.026007
+            ],
+            [
+              121.629666,
+              24.02586
+            ],
+            [
+              121.629675,
+              24.025815
+            ],
+            [
+              121.629699,
+              24.0257
+            ],
+            [
+              121.629717,
+              24.02553
+            ],
+            [
+              121.629704,
+              24.025424
+            ],
+            [
+              121.629663,
+              24.025119
+            ],
+            [
+              121.629632,
+              24.024913
+            ],
+            [
+              121.629638,
+              24.024678
+            ],
+            [
+              121.629685,
+              24.024069
+            ],
+            [
+              121.629803,
+              24.023874
+            ],
+            [
+              121.62986,
+              24.023816
+            ],
+            [
+              121.629906,
+              24.023769
+            ],
+            [
+              121.63022,
+              24.023499
+            ],
+            [
+              121.630979,
+              24.022938
+            ],
+            [
+              121.632489,
+              24.02178
+            ],
+            [
+              121.633091,
+              24.021265
+            ],
+            [
+              121.633374,
+              24.021114
+            ],
+            [
+              121.635481,
+              24.019527
+            ],
+            [
+              121.635572,
+              24.019459
+            ],
+            [
+              121.638445,
+              24.017299
+            ],
+            [
+              121.638482,
+              24.017229
+            ],
+            [
+              121.638495,
+              24.017118
+            ],
+            [
+              121.638491,
+              24.017096
+            ],
+            [
+              121.638434,
+              24.01695
+            ],
+            [
+              121.637855,
+              24.01625
+            ],
+            [
+              121.637654,
+              24.01603
+            ],
+            [
+              121.637559,
+              24.015864
+            ],
+            [
+              121.637542,
+              24.015739
+            ],
+            [
+              121.637606,
+              24.015353
+            ],
+            [
+              121.637598,
+              24.015199
+            ],
+            [
+              121.637533,
+              24.015083
+            ],
+            [
+              121.635839,
+              24.013005
+            ],
+            [
+              121.635246,
+              24.012302
+            ],
+            [
+              121.635355,
+              24.012226
+            ],
+            [
+              121.635422,
+              24.01218
+            ],
+            [
+              121.635556,
+              24.012087
+            ],
+            [
+              121.635579,
+              24.012071
+            ],
+            [
+              121.635873,
+              24.011867
+            ],
+            [
+              121.636127,
+              24.011691
+            ],
+            [
+              121.635985,
+              24.01152
+            ],
+            [
+              121.635731,
+              24.011697
+            ],
+            [
+              121.635873,
+              24.011867
+            ],
+            [
+              121.635579,
+              24.012071
+            ],
+            [
+              121.635556,
+              24.012087
+            ],
+            [
+              121.635422,
+              24.01218
+            ],
+            [
+              121.635246,
+              24.012302
+            ],
+            [
+              121.633934,
+              24.010747
+            ],
+            [
+              121.633554,
+              24.010303
+            ],
+            [
+              121.633038,
+              24.009701
+            ],
+            [
+              121.632114,
+              24.008622
+            ],
+            [
+              121.631799,
+              24.008233
+            ],
+            [
+              121.631293,
+              24.007553
+            ],
+            [
+              121.63153,
+              24.006759
+            ],
+            [
+              121.631738,
+              24.006059
+            ],
+            [
+              121.630983,
+              24.005973
+            ],
+            [
+              121.630709,
+              24.005304
+            ],
+            [
+              121.630625,
+              24.005116
+            ],
+            [
+              121.630413,
+              24.004603
+            ],
+            [
+              121.630234,
+              24.003931
+            ],
+            [
+              121.630107,
+              24.003261
+            ],
+            [
+              121.630033,
+              24.002607
+            ],
+            [
+              121.630022,
+              24.002508
+            ],
+            [
+              121.629984,
+              24.001777
+            ],
+            [
+              121.62998,
+              24.001567
+            ],
+            [
+              121.630006,
+              24.001197
+            ],
+            [
+              121.630047,
+              24.000852
+            ],
+            [
+              121.63014,
+              24.000358
+            ],
+            [
+              121.630964,
+              24.000441
+            ],
+            [
+              121.631445,
+              24.0005
+            ],
+            [
+              121.631928,
+              24.000553
+            ],
+            [
+              121.632283,
+              24.000567
+            ],
+            [
+              121.632271,
+              24.000636
+            ],
+            [
+              121.632248,
+              24.000775
+            ],
+            [
+              121.632283,
+              24.000567
+            ],
+            [
+              121.631928,
+              24.000553
+            ],
+            [
+              121.631989,
+              23.999926
+            ],
+            [
+              121.631975,
+              23.999733
+            ],
+            [
+              121.631785,
+              23.9995
+            ],
+            [
+              121.631554,
+              23.999205
+            ],
+            [
+              121.630379,
+              23.999026
+            ],
+            [
+              121.629655,
+              23.998932
+            ],
+            [
+              121.628183,
+              23.998728
+            ],
+            [
+              121.627927,
+              23.998635
+            ],
+            [
+              121.628001,
+              23.998878
+            ],
+            [
+              121.628275,
+              23.999204
+            ],
+            [
+              121.628367,
+              23.999323
+            ],
+            [
+              121.628345,
+              23.999414
+            ],
+            [
+              121.628224,
+              23.999529
+            ],
+            [
+              121.628134,
+              23.999601
+            ],
+            [
+              121.627848,
+              23.999576
+            ],
+            [
+              121.627801,
+              24.000015
+            ],
+            [
+              121.627823,
+              23.999813
+            ],
+            [
+              121.627848,
+              23.999576
+            ],
+            [
+              121.628134,
+              23.999601
+            ],
+            [
+              121.628224,
+              23.999529
+            ],
+            [
+              121.628345,
+              23.999414
+            ],
+            [
+              121.628367,
+              23.999323
+            ],
+            [
+              121.628275,
+              23.999204
+            ],
+            [
+              121.628001,
+              23.998878
+            ],
+            [
+              121.627927,
+              23.998635
+            ],
+            [
+              121.627475,
+              23.998217
+            ],
+            [
+              121.627275,
+              23.998011
+            ],
+            [
+              121.626579,
+              23.997268
+            ],
+            [
+              121.627228,
+              23.996791
+            ],
+            [
+              121.628021,
+              23.996223
+            ],
+            [
+              121.628631,
+              23.995781
+            ],
+            [
+              121.629258,
+              23.995336
+            ],
+            [
+              121.629881,
+              23.994875
+            ],
+            [
+              121.630445,
+              23.994475
+            ],
+            [
+              121.631135,
+              23.995276
+            ],
+            [
+              121.63122,
+              23.995387
+            ],
+            [
+              121.631071,
+              23.995497
+            ],
+            [
+              121.630664,
+              23.995795
+            ],
+            [
+              121.631139,
+              23.9964
+            ],
+            [
+              121.63182,
+              23.996498
+            ],
+            [
+              121.631878,
+              23.996073
+            ],
+            [
+              121.632561,
+              23.996156
+            ],
+            [
+              121.633308,
+              23.996249
+            ],
+            [
+              121.633374,
+              23.995779
+            ],
+            [
+              121.633411,
+              23.995516
+            ],
+            [
+              121.633459,
+              23.995172
+            ],
+            [
+              121.63348,
+              23.995036
+            ],
+            [
+              121.633523,
+              23.994728
+            ],
+            [
+              121.633535,
+              23.994639
+            ],
+            [
+              121.633624,
+              23.993958
+            ],
+            [
+              121.63377,
+              23.993016
+            ],
+            [
+              121.633833,
+              23.992611
+            ],
+            [
+              121.633088,
+              23.992521
+            ],
+            [
+              121.632396,
+              23.992422
+            ],
+            [
+              121.632001,
+              23.992379
+            ],
+            [
+              121.631728,
+              23.992349
+            ],
+            [
+              121.631318,
+              23.992295
+            ],
+            [
+              121.630793,
+              23.992231
+            ],
+            [
+              121.63043,
+              23.992495
+            ],
+            [
+              121.630049,
+              23.99277
+            ],
+            [
+              121.629947,
+              23.992846
+            ],
+            [
+              121.629543,
+              23.993148
+            ],
+            [
+              121.629394,
+              23.99326
+            ],
+            [
+              121.628833,
+              23.993664
+            ],
+            [
+              121.628201,
+              23.994125
+            ],
+            [
+              121.627884,
+              23.993752
+            ],
+            [
+              121.627289,
+              23.993052
+            ],
+            [
+              121.626693,
+              23.992374
+            ],
+            [
+              121.626208,
+              23.991822
+            ],
+            [
+              121.626002,
+              23.991584
+            ],
+            [
+              121.625512,
+              23.99099
+            ],
+            [
+              121.624974,
+              23.990338
+            ],
+            [
+              121.624703,
+              23.990004
+            ],
+            [
+              121.624464,
+              23.989718
+            ],
+            [
+              121.623938,
+              23.989115
+            ],
+            [
+              121.624604,
+              23.98865
+            ],
+            [
+              121.624834,
+              23.988466
+            ],
+            [
+              121.625136,
+              23.988261
+            ],
+            [
+              121.625404,
+              23.988081
+            ],
+            [
+              121.625678,
+              23.987859
+            ],
+            [
+              121.625789,
+              23.987773
+            ],
+            [
+              121.625871,
+              23.987864
+            ],
+            [
+              121.625979,
+              23.987993
+            ],
+            [
+              121.626119,
+              23.988156
+            ],
+            [
+              121.626841,
+              23.988998
+            ],
+            [
+              121.626731,
+              23.989074
+            ],
+            [
+              121.626152,
+              23.989468
+            ],
+            [
+              121.625577,
+              23.989881
+            ],
+            [
+              121.624974,
+              23.990338
+            ],
+            [
+              121.624703,
+              23.990004
+            ],
+            [
+              121.624464,
+              23.989718
+            ],
+            [
+              121.623938,
+              23.989115
+            ],
+            [
+              121.623596,
+              23.988717
+            ],
+            [
+              121.622932,
+              23.987926
+            ],
+            [
+              121.622442,
+              23.987362
+            ],
+            [
+              121.622216,
+              23.987101
+            ],
+            [
+              121.621899,
+              23.986736
+            ],
+            [
+              121.621405,
+              23.986142
+            ],
+            [
+              121.62085,
+              23.985526
+            ],
+            [
+              121.621491,
+              23.985065
+            ],
+            [
+              121.622051,
+              23.984654
+            ],
+            [
+              121.622366,
+              23.984447
+            ],
+            [
+              121.62269,
+              23.984203
+            ],
+            [
+              121.622857,
+              23.984335
+            ],
+            [
+              121.622919,
+              23.984407
+            ],
+            [
+              121.62379,
+              23.98542
+            ],
+            [
+              121.623672,
+              23.985504
+            ],
+            [
+              121.623167,
+              23.984914
+            ],
+            [
+              121.622756,
+              23.984398
+            ],
+            [
+              121.62269,
+              23.984203
+            ],
+            [
+              121.622261,
+              23.98374
+            ],
+            [
+              121.622171,
+              23.983629
+            ],
+            [
+              121.622088,
+              23.983539
+            ],
+            [
+              121.621614,
+              23.982986
+            ],
+            [
+              121.621423,
+              23.982765
+            ],
+            [
+              121.621187,
+              23.982492
+            ],
+            [
+              121.620952,
+              23.982214
+            ],
+            [
+              121.620809,
+              23.982044
+            ],
+            [
+              121.620558,
+              23.981755
+            ],
+            [
+              121.620304,
+              23.981454
+            ],
+            [
+              121.620036,
+              23.981243
+            ],
+            [
+              121.619909,
+              23.981145
+            ],
+            [
+              121.619567,
+              23.980879
+            ],
+            [
+              121.618584,
+              23.980143
+            ],
+            [
+              121.618523,
+              23.980098
+            ],
+            [
+              121.617754,
+              23.979499
+            ],
+            [
+              121.617539,
+              23.979285
+            ],
+            [
+              121.617441,
+              23.979174
+            ],
+            [
+              121.617342,
+              23.979063
+            ],
+            [
+              121.617165,
+              23.978784
+            ],
+            [
+              121.616936,
+              23.978373
+            ],
+            [
+              121.616921,
+              23.978347
+            ],
+            [
+              121.616785,
+              23.978001
+            ],
+            [
+              121.616695,
+              23.977654
+            ],
+            [
+              121.616637,
+              23.977302
+            ],
+            [
+              121.616581,
+              23.976973
+            ],
+            [
+              121.616433,
+              23.976851
+            ],
+            [
+              121.61627,
+              23.97665
+            ],
+            [
+              121.616008,
+              23.976322
+            ],
+            [
+              121.615883,
+              23.976165
+            ],
+            [
+              121.615828,
+              23.976096
+            ],
+            [
+              121.615645,
+              23.975867
+            ],
+            [
+              121.615868,
+              23.975665
+            ],
+            [
+              121.616298,
+              23.975386
+            ],
+            [
+              121.616372,
+              23.975521
+            ],
+            [
+              121.616416,
+              23.975603
+            ],
+            [
+              121.61647,
+              23.975706
+            ],
+            [
+              121.616095,
+              23.975929
+            ],
+            [
+              121.615828,
+              23.976096
+            ],
+            [
+              121.615645,
+              23.975867
+            ],
+            [
+              121.615413,
+              23.975579
+            ],
+            [
+              121.615372,
+              23.975528
+            ],
+            [
+              121.615136,
+              23.975215
+            ],
+            [
+              121.614918,
+              23.974974
+            ],
+            [
+              121.614886,
+              23.974939
+            ],
+            [
+              121.614667,
+              23.974655
+            ],
+            [
+              121.614415,
+              23.974344
+            ],
+            [
+              121.614223,
+              23.97404
+            ],
+            [
+              121.613981,
+              23.973723
+            ],
+            [
+              121.61362,
+              23.973285
+            ],
+            [
+              121.613598,
+              23.973288
+            ],
+            [
+              121.613398,
+              23.973008
+            ],
+            [
+              121.61332,
+              23.972924
+            ],
+            [
+              121.612965,
+              23.972545
+            ],
+            [
+              121.612896,
+              23.972423
+            ],
+            [
+              121.612782,
+              23.972589
+            ],
+            [
+              121.612739,
+              23.972644
+            ],
+            [
+              121.612699,
+              23.972694
+            ],
+            [
+              121.612559,
+              23.972868
+            ],
+            [
+              121.612515,
+              23.972923
+            ],
+            [
+              121.612363,
+              23.973121
+            ],
+            [
+              121.61178,
+              23.973851
+            ],
+            [
+              121.611682,
+              23.973984
+            ],
+            [
+              121.611541,
+              23.974157
+            ],
+            [
+              121.611345,
+              23.974026
+            ],
+            [
+              121.610908,
+              23.973729
+            ],
+            [
+              121.610574,
+              23.974155
+            ],
+            [
+              121.610735,
+              23.974256
+            ],
+            [
+              121.610877,
+              23.974347
+            ],
+            [
+              121.611044,
+              23.974453
+            ],
+            [
+              121.61127,
+              23.974596
+            ],
+            [
+              121.610595,
+              23.975444
+            ],
+            [
+              121.609876,
+              23.976351
+            ],
+            [
+              121.609168,
+              23.97725
+            ],
+            [
+              121.608615,
+              23.978071
+            ],
+            [
+              121.608212,
+              23.978532
+            ],
+            [
+              121.608061,
+              23.978704
+            ],
+            [
+              121.608053,
+              23.978713
+            ],
+            [
+              121.607851,
+              23.978945
+            ],
+            [
+              121.607627,
+              23.979239
+            ],
+            [
+              121.60749,
+              23.979419
+            ],
+            [
+              121.607157,
+              23.979857
+            ],
+            [
+              121.606455,
+              23.980747
+            ],
+            [
+              121.60616,
+              23.981138
+            ],
+            [
+              121.606114,
+              23.981199
+            ],
+            [
+              121.605749,
+              23.981625
+            ],
+            [
+              121.605215,
+              23.982317
+            ],
+            [
+              121.604994,
+              23.982583
+            ],
+            [
+              121.604852,
+              23.982771
+            ],
+            [
+              121.604487,
+              23.983253
+            ],
+            [
+              121.604259,
+              23.983574
+            ],
+            [
+              121.603935,
+              23.983964
+            ],
+            [
+              121.603882,
+              23.984028
+            ],
+            [
+              121.603438,
+              23.984631
+            ],
+            [
+              121.602906,
+              23.985286
+            ],
+            [
+              121.602465,
+              23.985829
+            ],
+            [
+              121.602159,
+              23.986217
+            ],
+            [
+              121.602072,
+              23.986327
+            ],
+            [
+              121.601838,
+              23.986625
+            ],
+            [
+              121.601714,
+              23.986782
+            ],
+            [
+              121.601448,
+              23.987174
+            ],
+            [
+              121.602137,
+              23.987316
+            ],
+            [
+              121.603102,
+              23.987547
+            ],
+            [
+              121.604223,
+              23.987827
+            ],
+            [
+              121.604333,
+              23.987855
+            ],
+            [
+              121.604714,
+              23.987929
+            ],
+            [
+              121.605354,
+              23.988053
+            ],
+            [
+              121.605462,
+              23.988069
+            ],
+            [
+              121.606206,
+              23.988044
+            ],
+            [
+              121.605989,
+              23.98894
+            ],
+            [
+              121.605894,
+              23.989329
+            ],
+            [
+              121.605669,
+              23.990244
+            ],
+            [
+              121.60546,
+              23.991111
+            ],
+            [
+              121.605247,
+              23.992039
+            ],
+            [
+              121.605235,
+              23.99211
+            ],
+            [
+              121.604642,
+              23.991992
+            ],
+            [
+              121.604525,
+              23.991992
+            ],
+            [
+              121.604003,
+              23.992212
+            ],
+            [
+              121.603503,
+              23.992427
+            ],
+            [
+              121.60332,
+              23.992454
+            ],
+            [
+              121.602907,
+              23.992627
+            ],
+            [
+              121.602651,
+              23.992734
+            ],
+            [
+              121.602885,
+              23.993194
+            ]
+          ],
+          "stopCalls": [
+            {
+              "stopId": "hualien_308_308_inbound_call_82b80feb7457",
+              "distanceAlongPathM": 0
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_f6b01567b022",
+              "distanceAlongPathM": 869.13
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_afd832e13985",
+              "distanceAlongPathM": 1625.73
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_de6f797d1376",
+              "distanceAlongPathM": 2684.44
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_204ca588adfb",
+              "distanceAlongPathM": 4244.52
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_23930ba5ee41",
+              "distanceAlongPathM": 4722.65
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_b2a05f6ba201",
+              "distanceAlongPathM": 5567.45
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_3604894fe24b",
+              "distanceAlongPathM": 6606.57
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_7530a3b7ddef",
+              "distanceAlongPathM": 7059.26
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_85e6d503f55e",
+              "distanceAlongPathM": 7369.13
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_659be5821883",
+              "distanceAlongPathM": 7602.52
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_d4a73b5dcc7b",
+              "distanceAlongPathM": 7889.21
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_58490e9fa6d7",
+              "distanceAlongPathM": 8116.04
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_cd131b2d6f34",
+              "distanceAlongPathM": 8311.28
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_92185035ea24",
+              "distanceAlongPathM": 8506.44
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_24b37f3b0000",
+              "distanceAlongPathM": 9063.63
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_226f8f0b3ef8",
+              "distanceAlongPathM": 9879.98
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_363a837bb159",
+              "distanceAlongPathM": 10374.01
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_66f6c8c3c2b1",
+              "distanceAlongPathM": 10914.71
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_9c60e5a9f042",
+              "distanceAlongPathM": 10992.45
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_f27bcf6710c0",
+              "distanceAlongPathM": 11589.01
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_e7a948a6d848",
+              "distanceAlongPathM": 12017.68
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_fc28f4cc87f3",
+              "distanceAlongPathM": 12545.47
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_bae8d7f33a5c",
+              "distanceAlongPathM": 13049.59
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_7555b76beddb",
+              "distanceAlongPathM": 13614.6
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_9d37256515d2",
+              "distanceAlongPathM": 13971.68
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_80cf085f7200",
+              "distanceAlongPathM": 14358.92
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_249a639c928e",
+              "distanceAlongPathM": 14723.59
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_2a89a53a6b23",
+              "distanceAlongPathM": 15138.74
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_539db10ddb06",
+              "distanceAlongPathM": 15438.31
+            },
+            {
+              "stopId": "hualien_308_308_inbound_call_33b40ce3ad16",
+              "distanceAlongPathM": 16092.8
+            }
+          ],
+          "sourceId": "editor_roads",
+          "verificationStatus": "verified"
+        }
+      },
+      "timingProfiles": {
+        "308_outbound_timing": {
+          "patternId": "308_outbound",
+          "sourceId": "editor_times",
+          "description": "依各路段旅行時間乘1.2，另加停站時間；非官方到站時刻。",
+          "estimationMetadata": {
+            "method": "routing_multiplier",
+            "routingTimeMultiplier": 1.2,
+            "usesRoutingTimeMultiplier": true,
+            "dwellAssumptionSec": 20,
+            "isRealTime": false
+          },
+          "stopTimes": [
+            {
+              "arrivalOffsetSec": 0,
+              "departureOffsetSec": 0
+            },
+            {
+              "arrivalOffsetSec": 79,
+              "departureOffsetSec": 99
+            },
+            {
+              "arrivalOffsetSec": 171,
+              "departureOffsetSec": 191
+            },
+            {
+              "arrivalOffsetSec": 271,
+              "departureOffsetSec": 291
+            },
+            {
+              "arrivalOffsetSec": 333,
+              "departureOffsetSec": 353
+            },
+            {
+              "arrivalOffsetSec": 400,
+              "departureOffsetSec": 420
+            },
+            {
+              "arrivalOffsetSec": 466,
+              "departureOffsetSec": 486
+            },
+            {
+              "arrivalOffsetSec": 563,
+              "departureOffsetSec": 583
+            },
+            {
+              "arrivalOffsetSec": 692,
+              "departureOffsetSec": 712
+            },
+            {
+              "arrivalOffsetSec": 741,
+              "departureOffsetSec": 761
+            },
+            {
+              "arrivalOffsetSec": 786,
+              "departureOffsetSec": 806
+            },
+            {
+              "arrivalOffsetSec": 863,
+              "departureOffsetSec": 883
+            },
+            {
+              "arrivalOffsetSec": 891,
+              "departureOffsetSec": 911
+            },
+            {
+              "arrivalOffsetSec": 944,
+              "departureOffsetSec": 964
+            },
+            {
+              "arrivalOffsetSec": 1045,
+              "departureOffsetSec": 1065
+            },
+            {
+              "arrivalOffsetSec": 1092,
+              "departureOffsetSec": 1112
+            },
+            {
+              "arrivalOffsetSec": 1178,
+              "departureOffsetSec": 1198
+            },
+            {
+              "arrivalOffsetSec": 1281,
+              "departureOffsetSec": 1301
+            },
+            {
+              "arrivalOffsetSec": 1327,
+              "departureOffsetSec": 1347
+            },
+            {
+              "arrivalOffsetSec": 1371,
+              "departureOffsetSec": 1391
+            },
+            {
+              "arrivalOffsetSec": 1434,
+              "departureOffsetSec": 1454
+            },
+            {
+              "arrivalOffsetSec": 1509,
+              "departureOffsetSec": 1529
+            },
+            {
+              "arrivalOffsetSec": 1574,
+              "departureOffsetSec": 1594
+            },
+            {
+              "arrivalOffsetSec": 1618,
+              "departureOffsetSec": 1638
+            },
+            {
+              "arrivalOffsetSec": 1714,
+              "departureOffsetSec": 1734
+            },
+            {
+              "arrivalOffsetSec": 1937,
+              "departureOffsetSec": 1957
+            },
+            {
+              "arrivalOffsetSec": 2110,
+              "departureOffsetSec": 2130
+            },
+            {
+              "arrivalOffsetSec": 2260,
+              "departureOffsetSec": 2280
+            },
+            {
+              "arrivalOffsetSec": 2525,
+              "departureOffsetSec": 2545
+            },
+            {
+              "arrivalOffsetSec": 2632,
+              "departureOffsetSec": 2652
+            },
+            {
+              "arrivalOffsetSec": 2711,
+              "departureOffsetSec": 2731
+            },
+            {
+              "arrivalOffsetSec": 2802,
+              "departureOffsetSec": 2822
+            }
+          ]
+        },
+        "308_inbound_timing": {
+          "patternId": "308_inbound",
+          "sourceId": "editor_times",
+          "description": "依各路段旅行時間乘1.2，另加停站時間；非官方到站時刻。",
+          "estimationMetadata": {
+            "method": "routing_multiplier",
+            "routingTimeMultiplier": 1.2,
+            "usesRoutingTimeMultiplier": true,
+            "dwellAssumptionSec": 20,
+            "isRealTime": false
+          },
+          "stopTimes": [
+            {
+              "arrivalOffsetSec": 0,
+              "departureOffsetSec": 0
+            },
+            {
+              "arrivalOffsetSec": 71,
+              "departureOffsetSec": 91
+            },
+            {
+              "arrivalOffsetSec": 150,
+              "departureOffsetSec": 170
+            },
+            {
+              "arrivalOffsetSec": 261,
+              "departureOffsetSec": 281
+            },
+            {
+              "arrivalOffsetSec": 528,
+              "departureOffsetSec": 548
+            },
+            {
+              "arrivalOffsetSec": 644,
+              "departureOffsetSec": 664
+            },
+            {
+              "arrivalOffsetSec": 898,
+              "departureOffsetSec": 918
+            },
+            {
+              "arrivalOffsetSec": 1089,
+              "departureOffsetSec": 1109
+            },
+            {
+              "arrivalOffsetSec": 1196,
+              "departureOffsetSec": 1216
+            },
+            {
+              "arrivalOffsetSec": 1240,
+              "departureOffsetSec": 1260
+            },
+            {
+              "arrivalOffsetSec": 1301,
+              "departureOffsetSec": 1321
+            },
+            {
+              "arrivalOffsetSec": 1375,
+              "departureOffsetSec": 1395
+            },
+            {
+              "arrivalOffsetSec": 1442,
+              "departureOffsetSec": 1462
+            },
+            {
+              "arrivalOffsetSec": 1486,
+              "departureOffsetSec": 1506
+            },
+            {
+              "arrivalOffsetSec": 1532,
+              "departureOffsetSec": 1552
+            },
+            {
+              "arrivalOffsetSec": 1649,
+              "departureOffsetSec": 1669
+            },
+            {
+              "arrivalOffsetSec": 1799,
+              "departureOffsetSec": 1819
+            },
+            {
+              "arrivalOffsetSec": 1908,
+              "departureOffsetSec": 1928
+            },
+            {
+              "arrivalOffsetSec": 2026,
+              "departureOffsetSec": 2046
+            },
+            {
+              "arrivalOffsetSec": 2054,
+              "departureOffsetSec": 2074
+            },
+            {
+              "arrivalOffsetSec": 2131,
+              "departureOffsetSec": 2151
+            },
+            {
+              "arrivalOffsetSec": 2214,
+              "departureOffsetSec": 2234
+            },
+            {
+              "arrivalOffsetSec": 2324,
+              "departureOffsetSec": 2344
+            },
+            {
+              "arrivalOffsetSec": 2433,
+              "departureOffsetSec": 2453
+            },
+            {
+              "arrivalOffsetSec": 2534,
+              "departureOffsetSec": 2554
+            },
+            {
+              "arrivalOffsetSec": 2600,
+              "departureOffsetSec": 2620
+            },
+            {
+              "arrivalOffsetSec": 2667,
+              "departureOffsetSec": 2687
+            },
+            {
+              "arrivalOffsetSec": 2729,
+              "departureOffsetSec": 2749
+            },
+            {
+              "arrivalOffsetSec": 2826,
+              "departureOffsetSec": 2846
+            },
+            {
+              "arrivalOffsetSec": 2898,
+              "departureOffsetSec": 2918
+            },
+            {
+              "arrivalOffsetSec": 3014,
+              "departureOffsetSec": 3034
+            }
+          ]
+        }
+      },
+      "trips": [
+        {
+          "tripId": "trip_98d8b5aec2d9",
+          "patternId": "308_outbound",
+          "timingProfileId": "308_outbound_timing",
+          "startSec": 27000,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_0045c3e3a9ff",
+          "patternId": "308_outbound",
+          "timingProfileId": "308_outbound_timing",
+          "startSec": 33600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_4644004d3cfb",
+          "patternId": "308_outbound",
+          "timingProfileId": "308_outbound_timing",
+          "startSec": 37200,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_6c050b75b802",
+          "patternId": "308_outbound",
+          "timingProfileId": "308_outbound_timing",
+          "startSec": 41400,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_cb5ddf636839",
+          "patternId": "308_outbound",
+          "timingProfileId": "308_outbound_timing",
+          "startSec": 48600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_54d0bfd36083",
+          "patternId": "308_outbound",
+          "timingProfileId": "308_outbound_timing",
+          "startSec": 54000,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_44b0d7677139",
+          "patternId": "308_outbound",
+          "timingProfileId": "308_outbound_timing",
+          "startSec": 57600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_073e4b8dc13d",
+          "patternId": "308_outbound",
+          "timingProfileId": "308_outbound_timing",
+          "startSec": 61200,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_b36b95262c8e",
+          "patternId": "308_inbound",
+          "timingProfileId": "308_inbound_timing",
+          "startSec": 30600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_8c243c372dea",
+          "patternId": "308_inbound",
+          "timingProfileId": "308_inbound_timing",
+          "startSec": 37200,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_943e5726022d",
+          "patternId": "308_inbound",
+          "timingProfileId": "308_inbound_timing",
+          "startSec": 40800,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_04518910c073",
+          "patternId": "308_inbound",
+          "timingProfileId": "308_inbound_timing",
+          "startSec": 45000,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_365a15da4aa2",
+          "patternId": "308_inbound",
+          "timingProfileId": "308_inbound_timing",
+          "startSec": 52200,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_820472dd4bb0",
+          "patternId": "308_inbound",
+          "timingProfileId": "308_inbound_timing",
+          "startSec": 57600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_fc9de3ea9482",
+          "patternId": "308_inbound",
+          "timingProfileId": "308_inbound_timing",
+          "startSec": 61200,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        },
+        {
+          "tripId": "trip_b52157c6460c",
+          "patternId": "308_inbound",
+          "timingProfileId": "308_inbound_timing",
+          "startSec": 66600,
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sourceId": "editor_official"
+        }
+      ]
+    }
+  ]
+}

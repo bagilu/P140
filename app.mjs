@@ -1,5 +1,5 @@
-import {compileNetwork,frameAt,formatTime,VERSION,meters} from './core.mjs?v=0.008';
-import {buildStopIndex,stationTimetable,stationTime,STOP_ZOOM,STOP_NAME_ZOOM} from './stop-timetable.mjs?v=0.008';
+import {compileNetwork,frameAt,formatTime,VERSION,meters} from './core.mjs?v=0.010';
+import {buildStopIndex,stationTimetable,stationTime,STOP_ZOOM,STOP_NAME_ZOOM} from './stop-timetable.mjs?v=0.010';
 const $=id=>document.getElementById(id),days=['','星期一','星期二','星期三','星期四','星期五','星期六','星期日'];
 let compiled,map,layer,currentFrame,playing=false,last=0,simTime=28800,speed=60,selectedDay=Number(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Taipei',weekday:'short'}).format(new Date()).replace(/Mon|Tue|Wed|Thu|Fri|Sat|Sun/g,x=>({Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6,Sun:7}[x]))),pending=false;
 if(!selectedDay)selectedDay=1;
@@ -112,9 +112,9 @@ async function start(){
   if(document.documentElement.dataset.editorPreview==='true'){
    const text=localStorage.getItem('p140-editor-preview-v1');if(!text)throw Error('請先在工作台按「播放目前草稿」');network=JSON.parse(text);
    document.querySelector('.demo-badge').textContent='編輯草稿預覽';document.querySelector('.brand p').textContent='此預覽不會變更正式路網。';
-  }else{const response=await fetch('data/bus_network.json?v=0.008');if(!response.ok)throw Error('無法讀取模擬路網 JSON');network=await response.json();}
+  }else{const response=await fetch('data/bus_network.json?v=0.010');if(!response.ok)throw Error('無法讀取模擬路網 JSON');network=await response.json();}
   compiled=compileNetwork(network);stopIndex=buildStopIndex(compiled);
-  map=L.map('map',{zoomControl:true,attributionControl:true,zoomAnimation:false,fadeAnimation:false,minZoom:9,maxZoom:19}).setView([23.9905,121.6055],14);
+  map=L.map('map',{zoomControl:true,attributionControl:true,zoomAnimation:false,fadeAnimation:false,minZoom:7,maxZoom:19}).setView([23.9905,121.6055],14);
   stationLayer=L.layerGroup().addTo(map);
   const tile=L.tileLayer('https://wmts.nlsc.gov.tw/wmts/EMAP/default/GoogleMapsCompatible/{z}/{y}/{x}',{maxZoom:19,attribution:'底圖 © <a href="https://maps.nlsc.gov.tw/" target="_blank" rel="noopener">內政部國土測繪中心</a>'}).addTo(map);
   let tileErrors=0;tile.on('tileerror',()=>{if(++tileErrors>=4)$('tile-warning').hidden=false;});tile.on('tileload',()=>{$('tile-warning').hidden=true;});
@@ -129,8 +129,8 @@ async function start(){
   if(pts.length)map.fitBounds(pts,{paddingTopLeft:[60,70],paddingBottomRight:[60,165],maxZoom:14});
   const initial={center:[map.getCenter().lat,map.getCenter().lng],zoom:map.getZoom()};$('reset-view').onclick=()=>map.setView(initial.center,initial.zoom,{animate:false});
   document.querySelector('.legend-title span').textContent=network.routes.length+' 條'+(isEditorPreview?'草稿':'')+'路線';
-  if(!isEditorPreview)document.querySelector('.demo-badge').textContent=network.routes.map(r=>r.shortName).join('＋')+' · 資料試行';
-  const sources=$('route-sources');sources.replaceChildren();for(const r of network.routes){const li=document.createElement('li'),hasOperatorTimes=Object.values(r.timingProfiles).some(tm=>Array.isArray(tm.estimationMetadata?.officialArrivalOffsetSec));li.textContent=r.shortName+'：'+(hasOperatorTimes?'業者逐站預估表＋動畫時間平滑。':'已整理的班次資料；途中到站時間為模型估算。');sources.append(li);}
+  if(!isEditorPreview)document.querySelector('.demo-badge').textContent=network.routes.length+' 條路線 · 資料試行';
+  const sources=$('route-sources');sources.replaceChildren();for(const r of network.routes){const li=document.createElement('li'),profiles=Object.values(r.timingProfiles),hasOperatorTimes=profiles.some(tm=>Array.isArray(tm.estimationMetadata?.officialArrivalOffsetSec)),smoothed=profiles.some(tm=>tm.estimationMetadata?.animationAdjustmentSec?.some(sec=>Number.isFinite(sec)&&sec!==0));li.textContent=r.shortName+'：'+(r.name.includes('原班表模擬')?'原班表模擬；已有官方停駛資訊，非現行營運宣告。':hasOperatorTimes?(smoothed?'業者逐站預估表＋動畫時間平滑。':'業者逐站預估表；保留原表到站分鐘。'):'已確認的班次資料；途中到站時間為模型估算。');sources.append(li);}
   for(const r of network.routes){const node=document.createElement('span');node.className='legend-route';const dot=document.createElement('i');dot.style.background=r.color;const text=document.createElement('span');text.textContent=r.shortName;node.append(dot,text);$('legend-items').append(node);}
   map.on('zoomend',updateStationLayer);updateStationLayer();
   $('play').disabled=false;$('loading').hidden=true;render();
