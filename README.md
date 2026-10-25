@@ -1,6 +1,6 @@
-# P140 V0.011｜GitHub Pages 完整部署包
+# P140 V0.012｜GitHub Pages 完整部署包
 
-2026-10-25 整合。解壓後將同名外層資料夾內的全部內容上傳至 GitHub Pages 發布根目錄，確保 index.html 位於最上層。沒有額外 dist 層，不需建置、資料庫或 API 金鑰。
+2026-10-25 更新。V0.012 修正手機版全路網說明牌遮擋畫面；路網內容與 V0.011 完全相同。解壓後將同名外層資料夾內的全部內容上傳至 GitHub Pages 發布根目錄，確保 index.html 位於最上層。沒有額外 dist 層，不需建置、資料庫或 API 金鑰。
 
 ## 本次內容
 
@@ -42,10 +42,10 @@
 
 ## 部署步驟
 
-1. 解壓 P140_GitHubPages_V0.011.zip。
+1. 解壓 P140_GitHubPages_V0.012.zip。
 2. 將同名資料夾內的全部內容上傳至 GitHub 專案發布根目錄，覆蓋同名舊檔；保留 data/、vendor/、reference/、tools/ 和 .nojekyll。
 3. 沿用原有 GitHub Pages 設定；若使用分支發布，發布目錄須對應 index.html 所在目錄。
-4. 發布完成後確認頁面左上角為 V0.011，圖例為 26 條路線。舊快取可重新整理。
+4. 發布完成後確認頁面左上角為 V0.012，圖例為 26 條路線。舊快取可重新整理。
 
 ZIP 不含工作臺。若既有 GitHub 倉庫仍有 admin.html、admin.mjs、admin.css、editor-core.mjs、preview.html、editor-data/、editor-assets/，新增 ZIP 不會自動刪除這些舊檔；需要前台專用部署時可自行移除。
 
@@ -74,6 +74,9 @@ node tools/merge_routes.mjs
 
 ## 前台與檢查
 
+- 手機寬度 740px 以下，「全路網」預設收合為小標籤。點「展開」查看圖例，點「收合」隱藏；展開內容可捲動，頂端按鈕保留可操作。
+- 電腦版預設展開，同樣可收合；切換至手機尺寸時自動收合。
+- 手機可使用 Escape 收合；按鈕支援鍵盤 Enter／Space。
 - 地圖全覽涵蓋梨山至成功；26 路圖例自動換行。
 - 星期一 09:30 有 27 輛模擬公車；時間軸與星期切換維持當前地圖範圍。
 - 放大地圖可查看站點，點選站點先看接下來最多 3 班，再展開全天時刻。
@@ -87,3 +90,11 @@ node tools/merge_routes.mjs
 工作臺繼續使用原網址，無須放入 GitHub：
 
 [開啟公車路線工作臺](https://p140-hualien-bus-simulator.bagilu382895.chatgpt.site/admin.html)
+
+## SDS v3.4 與本次交付
+
+本版依隨附 docs/SBI-P-SDS_v3.4.md 檢查，報告位於 docs/SDS_COMPLIANCE.md 與 docs/SDS_COMPLIANCE.json。
+
+config-sample.js 是未使用的設定範本，本靜態版不需複製為 config.js，也不載入 Supabase。database/README.md 說明本版無資料庫及 migration；不建立空白授權 SQL，不調整共用服務。docs/MOBILE_QA.md 記錄手機尺寸檢查。tools/check_sds.py 可於 Python 3 環境重新進行交付內容靜態檢查。
+
+本次是下載部署包，不含 Git 歷史，也未對已發布的 GitHub 站點或其環境執行線上檢查。海報未包含於本次手機修正版，正式網址與 A3 海報仍列為 REVIEW，未宣稱完成海報驗證。

@@ -1,9 +1,19 @@
-import {compileNetwork,frameAt,formatTime,VERSION,meters} from './core.mjs?v=0.011';
-import {buildStopIndex,stationTimetable,stationTime,STOP_ZOOM,STOP_NAME_ZOOM} from './stop-timetable.mjs?v=0.011';
+import {compileNetwork,frameAt,formatTime,VERSION,meters} from './core.mjs?v=0.012';
+import {buildStopIndex,stationTimetable,stationTime,STOP_ZOOM,STOP_NAME_ZOOM} from './stop-timetable.mjs?v=0.012';
 const $=id=>document.getElementById(id),days=['','星期一','星期二','星期三','星期四','星期五','星期六','星期日'];
 let compiled,map,layer,currentFrame,playing=false,last=0,simTime=28800,speed=60,selectedDay=Number(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Taipei',weekday:'short'}).format(new Date()).replace(/Mon|Tue|Wed|Thu|Fri|Sat|Sun/g,x=>({Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6,Sun:7}[x]))),pending=false;
 if(!selectedDay)selectedDay=1;
 let selectedBusId=null,busHitBoxes=[],stopIndex,stationLayer,stationMarkers=new Map(),selectedStationId=null,stationCardKey='',stationAllKey='';
+// Keep the toggle outside the scrolling body so it remains reachable on phones.
+const compactLegend=window.matchMedia('(max-width:740px)');
+function setLegendCollapsed(collapsed){
+ document.querySelector('.legend').dataset.collapsed=String(collapsed);
+ $('legend-toggle').setAttribute('aria-expanded',String(!collapsed));
+ $('legend-content').hidden=collapsed;$('legend-action').textContent=collapsed?'展開':'收合';
+}
+setLegendCollapsed(compactLegend.matches);
+compactLegend.addEventListener('change',event=>setLegendCollapsed(event.matches));
+$('legend-toggle').onclick=()=>setLegendCollapsed($('legend-toggle').getAttribute('aria-expanded')==='true');
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function rounded(ctx,x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r);}
 const overlaps=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
@@ -112,7 +122,7 @@ async function start(){
   if(document.documentElement.dataset.editorPreview==='true'){
    const text=localStorage.getItem('p140-editor-preview-v1');if(!text)throw Error('請先在工作台按「播放目前草稿」');network=JSON.parse(text);
    document.querySelector('.demo-badge').textContent='編輯草稿預覽';document.querySelector('.brand p').textContent='此預覽不會變更正式路網。';
-  }else{const response=await fetch('data/bus_network.json?v=0.011');if(!response.ok)throw Error('無法讀取模擬路網 JSON');network=await response.json();}
+  }else{const response=await fetch('data/bus_network.json?v=0.012');if(!response.ok)throw Error('無法讀取模擬路網 JSON');network=await response.json();}
   compiled=compileNetwork(network);stopIndex=buildStopIndex(compiled);
   map=L.map('map',{zoomControl:true,attributionControl:true,zoomAnimation:false,fadeAnimation:false,minZoom:7,maxZoom:19}).setView([23.9905,121.6055],14);
   stationLayer=L.layerGroup().addTo(map);
@@ -128,7 +138,7 @@ async function start(){
   const pts=network.routes.flatMap(r=>Object.values(r.patterns).flatMap(p=>p.path.map(c=>[c[1],c[0]])));
   if(pts.length)map.fitBounds(pts,{paddingTopLeft:[60,70],paddingBottomRight:[60,165],maxZoom:14});
   const initial={center:[map.getCenter().lat,map.getCenter().lng],zoom:map.getZoom()};$('reset-view').onclick=()=>map.setView(initial.center,initial.zoom,{animate:false});
-  document.querySelector('.legend-title span').textContent=network.routes.length+' 條'+(isEditorPreview?'草稿':'')+'路線';
+  $('legend-count').textContent=network.routes.length+' 條'+(isEditorPreview?'草稿':'')+'路線';
   if(!isEditorPreview)document.querySelector('.demo-badge').textContent=network.routes.length+' 條路線 · 資料試行';
   const sources=$('route-sources');sources.replaceChildren();for(const r of network.routes){const li=document.createElement('li'),profiles=Object.values(r.timingProfiles),hasOperatorTimes=profiles.some(tm=>Array.isArray(tm.estimationMetadata?.officialArrivalOffsetSec)),smoothed=profiles.some(tm=>tm.estimationMetadata?.animationAdjustmentSec?.some(sec=>Number.isFinite(sec)&&sec!==0));li.textContent=r.shortName+'：'+(r.name.includes('原班表模擬')?'原班表模擬；已有官方停駛資訊，非現行營運宣告。':hasOperatorTimes?(smoothed?'業者逐站預估表＋動畫時間平滑。':'業者逐站預估表；保留原表到站分鐘。'):'已確認的班次資料；途中到站時間為模型估算。');sources.append(li);}
   for(const r of network.routes){const node=document.createElement('span');node.className='legend-route';const dot=document.createElement('i');dot.style.background=r.color;const text=document.createElement('span');text.textContent=r.shortName;node.append(dot,text);$('legend-items').append(node);}
@@ -142,7 +152,7 @@ $('timeline').addEventListener('input',e=>{simTime=Number(e.target.value);last=0
 $('speed').onchange=e=>{speed=Number(e.target.value);last=0;};
 $('jump-morning').onclick=()=>{simTime=28800;last=0;render();};
 $('clear-focus').onclick=()=>{selectedBusId=null;render();};
-$('close-station').onclick=closeStation;document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeStation();selectedBusId=null;render();}});
+$('close-station').onclick=closeStation;document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(compactLegend.matches)setLegendCollapsed(true);closeStation();selectedBusId=null;render();}});
 $('info').onclick=()=>{$('about').showModal();};$('close-info').onclick=()=>$('about').close();
 $('about').addEventListener('click',e=>{if(e.target===$('about')){const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();}});
 document.addEventListener('visibilitychange',()=>{last=0;});

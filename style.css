@@ -3,3 +3,24 @@
 
 .route-sources{font-size:12px;line-height:1.9;color:#65776b;padding-left:20px}.route-sources li{margin:5px 0}
 .station-marker{border:0!important;background:transparent!important;display:grid;place-items:center;cursor:pointer;border-radius:50%}.station-marker span{display:block;width:9px;height:9px;border:2px solid #466e64;background:#fffef5;border-radius:50%;box-shadow:0 1px 4px #153c3540}.station-marker:hover span,.station-marker.selected span{width:12px;height:12px;background:#166b63;border-color:white;box-shadow:0 0 0 2px #166b63}.station-marker:focus-visible{outline:3px solid #c4a261;outline-offset:1px}.leaflet-tooltip{font:11px "Microsoft JhengHei",sans-serif;max-width:240px;white-space:normal}.station-card{position:absolute;right:20px;top:66px;z-index:650;width:350px;max-height:calc(100% - 85px);overflow:auto;background:#fafcf7f7;border:1px solid #fff;border-radius:12px;padding:16px;box-shadow:0 8px 30px #173a3028;overscroll-behavior:contain;scrollbar-width:thin}.station-card[hidden]{display:none}.station-card-header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.station-card h2{font-size:18px;line-height:1.5;margin:6px 0 0}.station-card-header button{border:0;border-radius:6px;background:#eaf0e5;color:#526b5d;font-size:23px;line-height:1;width:30px;height:30px;flex-shrink:0;cursor:pointer}.station-meta{font-size:11px;line-height:1.7;color:#647c6b;margin:9px 0}.station-routes{display:flex;gap:6px}.station-route-tag{display:inline-flex;justify-content:center;align-items:center;border:1px solid var(--route-color);color:var(--route-color);border-radius:5px;font-size:11px;font-weight:650;min-width:35px;padding:3px 5px;background:#ffffffb0;align-self:start}.station-note,.station-footnote{font-size:10px;line-height:1.8;color:#7e8170;margin:10px 0}.station-card h3{font-size:12px;margin:17px 0 7px}.station-time-list{list-style:none;padding:0;margin:0}.station-time-row{display:grid;grid-template-columns:58px 37px minmax(0,1fr);gap:8px;align-items:start;padding:10px 2px;border-bottom:1px solid #e1e7db}.station-time-row.current{background:#edf3e5;border-radius:5px}.station-time-row.past{opacity:.5}.station-time-clock strong{font-size:15px;font-variant-numeric:tabular-nums;line-height:1.5}.station-time-clock small{display:block;font-size:9px;line-height:1.7;color:#7c836e}.station-time-direction b{display:block;font-size:11px;font-weight:550;line-height:1.7;overflow-wrap:anywhere}.station-time-direction small,.source-original{display:block;font-size:9px;line-height:1.7;color:#7e8776}.source-original{color:#92733b}.station-empty{font-size:11px;line-height:1.9;padding:12px 0;color:#7b8977}#station-all{border-top:1px solid #d9e2d1;margin-top:14px;padding-top:12px}#station-all summary{cursor:pointer;font-size:11px;color:#166b63;line-height:1.8}#station-all summary:focus-visible{outline:2px solid #c4a261;outline-offset:3px}.all-day-times{max-height:260px;overflow:auto;margin-top:8px;overscroll-behavior:contain;scrollbar-width:thin}.station-footnote{border-top:1px solid #e2e7db;padding-top:10px;margin-bottom:0}@media(max-width:740px){.station-card{right:12px;left:12px;top:auto;bottom:12px;width:auto;max-height:56%;padding:13px}.station-card h2{font-size:16px}.station-card-header .eyebrow{font-size:9px}.station-meta,.station-note{margin:6px 0}.station-card h3{margin-top:11px}.station-time-row{padding:7px 2px}.all-day-times{max-height:160px}.station-open .legend{display:none}.station-footnote{font-size:9px}.station-time-direction b{font-size:11px}}
+
+/* V0.012: compact, dismissible legend with a fixed touch target. */
+.legend{display:flex;flex-direction:column;width:355px;min-width:0;padding:0;max-height:calc(100% - 80px);overflow:hidden;pointer-events:auto}
+.legend[data-collapsed=true]{width:auto}
+.legend-toggle{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-shrink:0;width:100%;min-height:44px;padding:10px 13px;border:0;border-radius:9px;background:transparent;text-align:left}
+.legend-toggle:hover{background:#eaf0e6}
+.legend-toggle:focus-visible{outline-offset:-4px}
+.legend-title{align-items:center;gap:12px;white-space:nowrap}
+#legend-action{font-size:11px;color:var(--green);white-space:nowrap}
+.legend-content{min-height:0;overflow:auto;overscroll-behavior:contain;touch-action:pan-y;padding:0 13px 13px;scrollbar-width:thin}
+.legend-content[hidden]{display:none}
+#legend-items{margin-top:0;gap:8px 13px}
+#trace-focus{flex-shrink:0;padding:0 13px 10px;margin-top:0;max-width:none}
+@media(max-width:740px){
+ .app{min-height:0}
+ .legend{left:12px;bottom:15px;width:280px;max-width:calc(100% - 24px);max-height:min(240px,calc(100% - 72px))}
+ .legend-title{font-size:11px}
+ .legend-content{padding-bottom:11px}
+ #legend-items{gap:9px 12px}
+ .legend-route{font-size:11px}
+}

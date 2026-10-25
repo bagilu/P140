@@ -1,0 +1,90 @@
+{
+  "projectCode": "P140",
+  "sdsVersion": "3.4",
+  "webVersion": "V0.012",
+  "checkedDate": "2026-10-25",
+  "commitSHA": null,
+  "scope": "下載部署包；無正式站點或共用資料庫變更",
+  "review": "自動靜態檢查及瀏覽器 UI 檢查；人工作品審核尚未指定",
+  "summary": {
+    "PASS": 13,
+    "REVIEW": 2
+  },
+  "checks": [
+    {
+      "code": "QA-01",
+      "status": "PASS",
+      "evidence": "不適用：本版無 Supabase、資料表、RPC 或 SQL；RLS 未涉及。"
+    },
+    {
+      "code": "QA-02",
+      "status": "PASS",
+      "evidence": "前台未呼叫 Table/View API；靜態 JSON fetch 不屬於資料庫 API。"
+    },
+    {
+      "code": "QA-03",
+      "status": "PASS",
+      "evidence": "不適用：無 PostgreSQL 資料交換；僅讀取本包 JSON。"
+    },
+    {
+      "code": "QA-04",
+      "status": "PASS",
+      "evidence": "不適用：本版無 Supabase、資料表、RPC 或 SQL；Data API schema exposure 未涉及。"
+    },
+    {
+      "code": "QA-05",
+      "status": "PASS",
+      "evidence": "不適用：本版無 Supabase、資料表、RPC 或 SQL；table grants 未涉及。"
+    },
+    {
+      "code": "QA-06",
+      "status": "PASS",
+      "evidence": "不適用：本版無 Supabase、資料表、RPC 或 SQL；RLS policies 未涉及。"
+    },
+    {
+      "code": "QA-07",
+      "status": "PASS",
+      "evidence": "不適用：本版無 Supabase、資料表、RPC 或 SQL；RPC return fields 未涉及。"
+    },
+    {
+      "code": "QA-08",
+      "status": "PASS",
+      "evidence": "不適用：本版無 Supabase、資料表、RPC 或 SQL；RPC EXECUTE grants 未涉及。"
+    },
+    {
+      "code": "QA-09",
+      "status": "PASS",
+      "evidence": "不適用：本版無 Supabase、資料表、RPC 或 SQL；function execution identity 未涉及。"
+    },
+    {
+      "code": "QA-10",
+      "status": "PASS",
+      "evidence": "無 sequence 權限或伺服器端服務；前台無 service_role 設定。"
+    },
+    {
+      "code": "QA-11",
+      "status": "PASS",
+      "evidence": "不適用：無登入或密碼欄位。"
+    },
+    {
+      "code": "QA-12",
+      "status": "REVIEW",
+      "evidence": "交付檔無 config.js 或可辨識 secret/private key；本包無 Git 歷史，無法完成 Git 歷史掃描。"
+    },
+    {
+      "code": "QA-13",
+      "status": "PASS",
+      "evidence": "不適用：database 僅有說明文件，無 SQL，無跨專案或全域授權操作。"
+    },
+    {
+      "code": "QA-14",
+      "status": "REVIEW",
+      "evidence": "README、config-sample.js、database、docs 已提供；ZIP 同名外層由打包工具驗證。此次為手機 UI 修正，未附海報；正式 GitHub 網址與 A3 PDF/SVG/QR 驗證待確認。"
+    },
+    {
+      "code": "QA-15",
+      "status": "PASS",
+      "evidence": "Web Version V0.012；第一方 CSS/JS 及路網快取版本一致。"
+    }
+  ]
+}
