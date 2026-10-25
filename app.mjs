@@ -1,5 +1,5 @@
-import {compileNetwork,frameAt,formatTime,VERSION,meters} from './core.mjs?v=0.010';
-import {buildStopIndex,stationTimetable,stationTime,STOP_ZOOM,STOP_NAME_ZOOM} from './stop-timetable.mjs?v=0.010';
+import {compileNetwork,frameAt,formatTime,VERSION,meters} from './core.mjs?v=0.011';
+import {buildStopIndex,stationTimetable,stationTime,STOP_ZOOM,STOP_NAME_ZOOM} from './stop-timetable.mjs?v=0.011';
 const $=id=>document.getElementById(id),days=['','星期一','星期二','星期三','星期四','星期五','星期六','星期日'];
 let compiled,map,layer,currentFrame,playing=false,last=0,simTime=28800,speed=60,selectedDay=Number(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Taipei',weekday:'short'}).format(new Date()).replace(/Mon|Tue|Wed|Thu|Fri|Sat|Sun/g,x=>({Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6,Sun:7}[x]))),pending=false;
 if(!selectedDay)selectedDay=1;
@@ -112,7 +112,7 @@ async function start(){
   if(document.documentElement.dataset.editorPreview==='true'){
    const text=localStorage.getItem('p140-editor-preview-v1');if(!text)throw Error('請先在工作台按「播放目前草稿」');network=JSON.parse(text);
    document.querySelector('.demo-badge').textContent='編輯草稿預覽';document.querySelector('.brand p').textContent='此預覽不會變更正式路網。';
-  }else{const response=await fetch('data/bus_network.json?v=0.010');if(!response.ok)throw Error('無法讀取模擬路網 JSON');network=await response.json();}
+  }else{const response=await fetch('data/bus_network.json?v=0.011');if(!response.ok)throw Error('無法讀取模擬路網 JSON');network=await response.json();}
   compiled=compileNetwork(network);stopIndex=buildStopIndex(compiled);
   map=L.map('map',{zoomControl:true,attributionControl:true,zoomAnimation:false,fadeAnimation:false,minZoom:7,maxZoom:19}).setView([23.9905,121.6055],14);
   stationLayer=L.layerGroup().addTo(map);

@@ -1,5 +1,5 @@
 {
-  "version": "V0.010",
+  "version": "V0.011",
   "generatedAt": "2026-10-25",
   "sourceRoutes": [
     {
@@ -23,6 +23,22 @@
       "source": "previous_V0.009_route_file",
       "file": "routes/hualien_303.json",
       "sha256": "52888fb756bd92e8086b95ebbe6cde9bd079fefcddcf43d958a84b49a3a5d4a5",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "305",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_305.json",
+      "sha256": "7d4abd7f256dbe34b2e3bfb9c2b5363c532bdece61f07cdd2fe71932263c293e",
+      "bytePreserved": true,
+      "mergedNormalization": []
+    },
+    {
+      "routeCode": "305A",
+      "source": "user_confirmed_upload",
+      "file": "routes/hualien_305A.json",
+      "sha256": "04af8fe7c227b632736fd7f186a942f4b820056bac533d0706da4419ae5d93a4",
       "bytePreserved": true,
       "mergedNormalization": []
     },
@@ -348,6 +364,7 @@
     "Merged 311 pattern direction is restored to loop using retained metadata; paths, stops, times and trips unchanged.",
     "Uploaded files with rerouted roads or revised times are authoritative; no re-estimation performed.",
     "Reference trial backups are not loaded into the frontend.",
-    "1141 original timetable simulation remains included as supplied; it is not a current operation claim."
+    "1141 original timetable simulation remains included as supplied; it is not a current operation claim.",
+    "305 and 305A confirmed uploads now included; older trial backups remain reference-only."
   ]
 }

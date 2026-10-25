@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "dataVersion": "P140-V0.010-24-routes",
+  "dataVersion": "P140-V0.011-26-routes",
   "generatedAt": "2026-10-25",
   "routes": [
     {
@@ -20,6 +20,18 @@
       "file": "routes/hualien_303.json",
       "dataVersion": "hualien_303-2026-10-24",
       "generatedAt": "2026-10-24"
+    },
+    {
+      "routeId": "hualien_305",
+      "file": "routes/hualien_305.json",
+      "dataVersion": "hualien_305-2026-10-25",
+      "generatedAt": "2026-10-25"
+    },
+    {
+      "routeId": "hualien_305A",
+      "file": "routes/hualien_305A.json",
+      "dataVersion": "hualien_305A-2026-10-25",
+      "generatedAt": "2026-10-25"
     },
     {
       "routeId": "hualien_308",
